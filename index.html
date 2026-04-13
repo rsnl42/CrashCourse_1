@@ -12,15 +12,33 @@
         /* Make the map fill the entire screen */
         body { margin: 0; padding: 0; }
         #map { height: 100vh; width: 100%; }
-        
+
+        /* Style for the fire icon */
+        .fire-icon {
+            font-size: 24px;
+            text-align: center;
+            line-height: 24px;
+        }
+
+        /* Style for permanent labels */
+        .leaflet-tooltip-own {
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid #d32f2f;
+            border-radius: 4px;
+            color: #d32f2f;
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
+
         /* Optional: Style for the popup */
         .leaflet-popup-content-wrapper {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             border-radius: 8px;
         }
     </style>
-</head>
-<body>
+    </head>
+    <body>
 
     <div id="map"></div>
 
@@ -31,7 +49,6 @@
 
     <script>
         // 1. Initialize the map
-        // Coordinates for the approximate center of Australia
         const map = L.map('map').setView([-25.2744, 133.7751], 4);
 
         // 2. Add OpenStreetMap tile layer
@@ -40,7 +57,15 @@
             attribution: '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
-        // 3. Define high bushfire risk areas
+        // 3. Define custom fire icon
+        const fireIcon = L.divIcon({
+            html: '<div class="fire-icon">🔥</div>',
+            className: 'custom-div-icon',
+            iconSize: [30, 30],
+            iconAnchor: [15, 15]
+        });
+
+        // 4. Define high bushfire risk areas
         const riskAreas = [
             { name: "Melbourne (Dandenong Ranges)", coords: [-37.8931, 145.3582], description: "High-risk interface with dense forests and extreme fire weather." },
             { name: "Sydney (Blue Mountains)", coords: [-33.7128, 150.3119], description: "Vulnerable to ember attacks and high forest fuel loads." },
@@ -50,10 +75,16 @@
             { name: "Hobart (Mt Wellington Fringes)", coords: [-42.8947, 147.2373], description: "High fuel loads and suburban interface risks during heatwaves." }
         ];
 
-        // 4. Add markers for each risk area
+        // 5. Add markers with fire icons and permanent labels
         riskAreas.forEach(area => {
-            L.marker(area.coords)
+            L.marker(area.coords, { icon: fireIcon })
                 .addTo(map)
+                .bindTooltip(area.name, {
+                    permanent: true,
+                    direction: 'top',
+                    className: 'leaflet-tooltip-own',
+                    offset: [0, -10]
+                })
                 .bindPopup(`<b>${area.name}</b><br>${area.description}`);
         });
     </script>
