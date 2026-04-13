@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Map of Australia</title>
+    <title>High Bushfire Risk Areas in Australia</title>
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
           integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
@@ -32,30 +32,29 @@
     <script>
         // 1. Initialize the map
         // Coordinates for the approximate center of Australia
-        // Zoom level 4 is good for viewing the entire continent
         const map = L.map('map').setView([-25.2744, 133.7751], 4);
 
-        // 2. Add OpenStreetMap tile layer (the actual map imagery)
+        // 2. Add OpenStreetMap tile layer
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
-        // 3. Add a marker for Canberra (the capital)
-        const canberraMarker = L.marker([-35.2809, 149.1300]).addTo(map);
-        canberraMarker.bindPopup("<b>Canberra</b><br>Australia's Capital City").openPopup();
-
-        // 4. (Optional) Add markers for other major cities
-        const cities = [
-            { name: "Sydney", coords: [-33.8688, 151.2093] },
-            { name: "Melbourne", coords: [-37.8136, 144.9631] },
-            { name: "Brisbane", coords: [-27.4705, 153.0260] },
-            { name: "Perth", coords: [-31.9505, 115.8605] },
-            { name: "Adelaide", coords: [-34.9285, 138.6007] }
+        // 3. Define high bushfire risk areas
+        const riskAreas = [
+            { name: "Melbourne (Dandenong Ranges)", coords: [-37.8931, 145.3582], description: "High-risk interface with dense forests and extreme fire weather." },
+            { name: "Sydney (Blue Mountains)", coords: [-33.7128, 150.3119], description: "Vulnerable to ember attacks and high forest fuel loads." },
+            { name: "Adelaide Hills", coords: [-34.9984, 138.7188], description: "Steep, wooded terrain close to residential areas." },
+            { name: "Perth Hills", coords: [-31.8974, 116.1667], description: "Hot inland winds and dry vegetation create significant risk." },
+            { name: "Canberra (Western Edge)", coords: [-35.3411, 149.0347], description: "Known as the 'Bush Capital' with high integration of nature reserves." },
+            { name: "Hobart (Mt Wellington Fringes)", coords: [-42.8947, 147.2373], description: "High fuel loads and suburban interface risks during heatwaves." }
         ];
 
-        cities.forEach(city => {
-            L.marker(city.coords).addTo(map).bindPopup(city.name);
+        // 4. Add markers for each risk area
+        riskAreas.forEach(area => {
+            L.marker(area.coords)
+                .addTo(map)
+                .bindPopup(`<b>${area.name}</b><br>${area.description}`);
         });
     </script>
 </body>
