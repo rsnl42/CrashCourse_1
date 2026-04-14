@@ -65,13 +65,15 @@
         function getRadius(value, category) {
             if (value <= 0) return 0;
             
-            // Scaling logic based on category ranges
+            // Scaling logic to ensure visibility across wide ranges
             if (category === 'cases') {
-                return Math.sqrt(value) * 2; // Linearish scaling for small numbers
+                return Math.sqrt(value) * 3; 
             } else if (category === 'dead') {
-                return Math.log10(value + 1) * 6; // Logarithmic scaling for high variance
+                // Dead can range from 1 to 100,000+
+                return Math.sqrt(value) * 0.3 + 5; 
             } else if (category === 'displaced') {
-                return Math.log10(value + 1) * 4; // Logarithmic scaling for very large numbers
+                // Displaced can range from 1 to 100,000,000+
+                return Math.sqrt(value) * 0.01 + 5;
             }
             return 5;
         }
