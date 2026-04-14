@@ -35,13 +35,20 @@
         }).addTo(map);
 
         indiaData.forEach(p => {
+            const sev = p.severity;
+            let fillColor;
+            if (sev === 1 || String(sev) === '1.0') fillColor = '#7fbfff'; // light blue
+            else if (sev === 1.5 || String(sev) === '1.5') fillColor = '#ff8c00'; // orange
+            else if (sev === 2 || String(sev) === '2.0') fillColor = '#ff0000'; // red
+            else fillColor = '#007bff';
+
             L.circleMarker([p.lat, p.lng], {
                 radius: 5,
-                fillColor: "#007bff",
+                fillColor: fillColor,
                 color: "#004085",
                 weight: 1,
                 opacity: 0.8,
-                fillOpacity: 0.6
+                fillOpacity: 0.8
             }).bindPopup(`
                 <div style="font-family: sans-serif;">
                     <b>Date:</b> ${p.began || p.date || 'N/A'}<br>
@@ -52,6 +59,22 @@
                 </div>
             `).addTo(map);
         });
+
+        // Legend
+        const legend = L.control({position: 'bottomleft'});
+        legend.onAdd = function (map) {
+            const div = L.DomUtil.create('div', 'info legend');
+            div.style.background = 'white';
+            div.style.padding = '6px 8px';
+            div.style.borderRadius = '5px';
+            div.style.boxShadow = '0 2px 6px rgba(0,0,0,0.2)';
+            div.innerHTML = '<b>Severity</b><br>' +
+                '<i style="background:#7fbfff;width:12px;height:12px;display:inline-block;margin-right:6px;border:1px solid #004085"></i> 1.0<br>' +
+                '<i style="background:#ff8c00;width:12px;height:12px;display:inline-block;margin-right:6px;border:1px solid #004085"></i> 1.5<br>' +
+                '<i style="background:#ff0000;width:12px;height:12px;display:inline-block;margin-right:6px;border:1px solid #004085"></i> 2.0';
+            return div;
+        };
+        legend.addTo(map);
     </script>
 </body>
 </html>
