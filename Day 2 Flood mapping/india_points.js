@@ -27,7 +27,8 @@ const indiaData = [
     "displaced": 152000,
     "began": "Unknown",
     "ended": "Unknown",
-    "severity": 2.0
+    "severity": 2.0,
+    "place": "N/A"
   },
   {
     "lat": 21.1495,
@@ -37,7 +38,8 @@ const indiaData = [
     "displaced": 150000,
     "began": "Unknown",
     "ended": "Unknown",
-    "severity": 2.0
+    "severity": 2.0,
+    "place": "N/A"
   },
   {
     "lat": 25.6339,
@@ -97,7 +99,8 @@ const indiaData = [
     "displaced": 500000,
     "began": "Unknown",
     "ended": "Unknown",
-    "severity": 2.0
+    "severity": 2.0,
+    "place": "N/A"
   },
   {
     "lat": 22.0189,
@@ -137,7 +140,8 @@ const indiaData = [
     "displaced": 1250000,
     "began": "Unknown",
     "ended": "Unknown",
-    "severity": 2.0
+    "severity": 2.0,
+    "place": "Jhatra, Punjab"
   },
   {
     "lat": 19.1131,
@@ -167,7 +171,8 @@ const indiaData = [
     "displaced": 32000,
     "began": "Unknown",
     "ended": "Unknown",
-    "severity": 2.0
+    "severity": 2.0,
+    "place": "Dudhpatli, Assam"
   },
   {
     "lat": 26.4375,
@@ -207,7 +212,8 @@ const indiaData = [
     "displaced": 0,
     "began": "Unknown",
     "ended": "Unknown",
-    "severity": 2.0
+    "severity": 2.0,
+    "place": "N/A"
   },
   {
     "lat": 26.7055,
@@ -277,7 +283,8 @@ const indiaData = [
     "displaced": 300000,
     "began": "Unknown",
     "ended": "Unknown",
-    "severity": 2.0
+    "severity": 2.0,
+    "place": "N/A"
   },
   {
     "lat": 26.6059,
@@ -397,7 +404,8 @@ const indiaData = [
     "displaced": 20000,
     "began": "Unknown",
     "ended": "Unknown",
-    "severity": 2.0
+    "severity": 2.0,
+    "place": "N/A"
   },
   {
     "lat": 24.9382,
@@ -417,7 +425,8 @@ const indiaData = [
     "displaced": 9370926,
     "began": "Unknown",
     "ended": "Unknown",
-    "severity": 2.0
+    "severity": 2.0,
+    "place": "Dewangonj Upazilla Health Complex, ময়মনসিংহ বিভাগ"
   },
   {
     "lat": 27.9917,
@@ -667,7 +676,8 @@ const indiaData = [
     "displaced": 140000,
     "began": "Unknown",
     "ended": "Unknown",
-    "severity": 2.0
+    "severity": 2.0,
+    "place": "Bharat Petroleum, Andhra Pradesh"
   },
   {
     "lat": 24.0572,
@@ -807,7 +817,8 @@ const indiaData = [
     "displaced": 10000000,
     "began": "Unknown",
     "ended": "Unknown",
-    "severity": 2.0
+    "severity": 2.0,
+    "place": "N/A"
   },
   {
     "lat": 27.4268,
@@ -817,7 +828,8 @@ const indiaData = [
     "displaced": 50000,
     "began": "Unknown",
     "ended": "Unknown",
-    "severity": 2.0
+    "severity": 2.0,
+    "place": "N/A"
   },
   {
     "lat": 31.806,
@@ -847,7 +859,8 @@ const indiaData = [
     "displaced": 3000000,
     "began": "Unknown",
     "ended": "Unknown",
-    "severity": 2.0
+    "severity": 2.0,
+    "place": "N/A"
   },
   {
     "lat": 26.9607,
@@ -877,7 +890,8 @@ const indiaData = [
     "displaced": 24000000,
     "began": "Unknown",
     "ended": "Unknown",
-    "severity": 2.0
+    "severity": 2.0,
+    "place": "N/A"
   },
   {
     "lat": 15.811,
@@ -927,7 +941,8 @@ const indiaData = [
     "displaced": 2000000,
     "began": "Unknown",
     "ended": "Unknown",
-    "severity": 2.0
+    "severity": 2.0,
+    "place": "N/A"
   },
   {
     "lat": 30.7738,
@@ -1147,7 +1162,8 @@ const indiaData = [
     "displaced": 40000000,
     "began": "Unknown",
     "ended": "Unknown",
-    "severity": 2.0
+    "severity": 2.0,
+    "place": "N/A"
   },
   {
     "lat": 21.0247,
@@ -1187,7 +1203,8 @@ const indiaData = [
     "displaced": 500000,
     "began": "Unknown",
     "ended": "Unknown",
-    "severity": 2.0
+    "severity": 2.0,
+    "place": "N/A"
   },
   {
     "lat": 20.9765,
@@ -1337,7 +1354,8 @@ const indiaData = [
     "displaced": 10800,
     "began": "Unknown",
     "ended": "Unknown",
-    "severity": 2.0
+    "severity": 2.0,
+    "place": "Palam Kadavu, Kerala"
   },
   {
     "lat": 26.5993,
@@ -1397,7 +1415,8 @@ const indiaData = [
     "displaced": 140000,
     "began": "Unknown",
     "ended": "Unknown",
-    "severity": 2.0
+    "severity": 2.0,
+    "place": "Dhaman, Maharashtra"
   },
   {
     "lat": 18.1046,
@@ -1637,7 +1656,8 @@ const indiaData = [
     "displaced": 1600000,
     "began": "Unknown",
     "ended": "Unknown",
-    "severity": 2.0
+    "severity": 2.0,
+    "place": "N/A"
   },
   {
     "lat": 25.2411,
@@ -1657,7 +1677,8 @@ const indiaData = [
     "displaced": 225000,
     "began": "Unknown",
     "ended": "Unknown",
-    "severity": 2.0
+    "severity": 2.0,
+    "place": "N/A"
   },
   {
     "lat": 16.6523,
@@ -1687,7 +1708,8 @@ const indiaData = [
     "displaced": 0,
     "began": "Unknown",
     "ended": "Unknown",
-    "severity": 2.0
+    "severity": 2.0,
+    "place": "N/A"
   },
   {
     "lat": 20.2249,
@@ -1757,7 +1779,8 @@ const indiaData = [
     "displaced": 37000,
     "began": "Unknown",
     "ended": "Unknown",
-    "severity": 2.0
+    "severity": 2.0,
+    "place": "N/A"
   },
   {
     "lat": 15.7081,
@@ -1767,7 +1790,8 @@ const indiaData = [
     "displaced": 0,
     "began": "Unknown",
     "ended": "Unknown",
-    "severity": 2.0
+    "severity": 2.0,
+    "place": "N/A"
   },
   {
     "lat": 11.4729,
@@ -1797,7 +1821,8 @@ const indiaData = [
     "displaced": 300,
     "began": "Unknown",
     "ended": "Unknown",
-    "severity": 2.0
+    "severity": 2.0,
+    "place": "Sipajhar, Assam"
   },
   {
     "lat": 26.6381,
@@ -1967,7 +1992,8 @@ const indiaData = [
     "displaced": 700000,
     "began": "Unknown",
     "ended": "Unknown",
-    "severity": 2.0
+    "severity": 2.0,
+    "place": "Dihi Narayani, West Bengal"
   },
   {
     "lat": 26.3755,
@@ -1977,7 +2003,8 @@ const indiaData = [
     "displaced": 70000,
     "began": "Unknown",
     "ended": "Unknown",
-    "severity": 2.0
+    "severity": 2.0,
+    "place": "SubCentre, Chapahi, Bihar"
   },
   {
     "lat": 26.5897,
@@ -2067,7 +2094,8 @@ const indiaData = [
     "displaced": 200,
     "began": "Unknown",
     "ended": "Unknown",
-    "severity": 2.0
+    "severity": 2.0,
+    "place": "N/A"
   },
   {
     "lat": 26.8031,
@@ -2077,7 +2105,8 @@ const indiaData = [
     "displaced": 2000000,
     "began": "Unknown",
     "ended": "Unknown",
-    "severity": 2.0
+    "severity": 2.0,
+    "place": "N/A"
   },
   {
     "lat": 11.8283,
@@ -2087,7 +2116,8 @@ const indiaData = [
     "displaced": 70000,
     "began": "Unknown",
     "ended": "Unknown",
-    "severity": 2.0
+    "severity": 2.0,
+    "place": "N/A"
   },
   {
     "lat": 32.7135,
@@ -2117,7 +2147,8 @@ const indiaData = [
     "displaced": 2000000,
     "began": "Unknown",
     "ended": "Unknown",
-    "severity": 2.0
+    "severity": 2.0,
+    "place": "N/A"
   },
   {
     "lat": 21.2719,
@@ -2127,7 +2158,8 @@ const indiaData = [
     "displaced": 250000,
     "began": "Unknown",
     "ended": "Unknown",
-    "severity": 2.0
+    "severity": 2.0,
+    "place": "N/A"
   },
   {
     "lat": 24.7174,
@@ -2267,7 +2299,8 @@ const indiaData = [
     "displaced": 300000,
     "began": "Unknown",
     "ended": "Unknown",
-    "severity": 2.0
+    "severity": 2.0,
+    "place": "N/A"
   },
   {
     "lat": 26.8946,
@@ -2287,7 +2320,8 @@ const indiaData = [
     "displaced": 400000,
     "began": "Unknown",
     "ended": "Unknown",
-    "severity": 2.0
+    "severity": 2.0,
+    "place": "N/A"
   },
   {
     "lat": 27.464,
@@ -2387,7 +2421,8 @@ const indiaData = [
     "displaced": 422106,
     "began": "Unknown",
     "ended": "Unknown",
-    "severity": 2.0
+    "severity": 2.0,
+    "place": "N/A"
   },
   {
     "lat": 10.489,
@@ -2627,7 +2662,8 @@ const indiaData = [
     "displaced": 10000,
     "began": "Unknown",
     "ended": "Unknown",
-    "severity": 2.0
+    "severity": 2.0,
+    "place": "N/A"
   },
   {
     "lat": 27.3406,
@@ -2637,7 +2673,8 @@ const indiaData = [
     "displaced": 10000,
     "began": "Unknown",
     "ended": "Unknown",
-    "severity": 2.0
+    "severity": 2.0,
+    "place": "Dibrugarh West, Assam"
   },
   {
     "lat": 20.3337,
@@ -2717,7 +2754,8 @@ const indiaData = [
     "displaced": 140,
     "began": "Unknown",
     "ended": "Unknown",
-    "severity": 2.0
+    "severity": 2.0,
+    "place": "N/A"
   },
   {
     "lat": 21.6184,
