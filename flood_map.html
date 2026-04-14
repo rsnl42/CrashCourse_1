@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historical Flood Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <style>
+        body, html { height: 100%; margin: 0; }
+        #map { height: 100%; width: 100%; }
+        .info-box {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.3);
+            font-family: Arial, sans-serif;
+            max-width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div class="info-box">
+        <h3>Historical Flood Map</h3>
+        <p>This map shows <strong>241 countries</strong> represented in the Dartmouth Flood Observatory (DFO) archive.</p>
+        <p>Pins are placed at the average coordinates of all recorded flood events in each country.</p>
+    </div>
+    <div id="map"></div>
+
+    <script src="Day 2 Flood mapping/map_data.js"></script>
+    <script>
+        // Initialize the map
+        const map = L.map('map').setView([20, 0], 2);
+
+        // Add a base layer (OpenStreetMap)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap'
+        }).addTo(map);
+
+        // Add markers for each country
+        floodData.forEach(country => {
+            const marker = L.marker([country.lat, country.lng]).addTo(map);
+            marker.bindPopup(`
+                <strong>${country.name}</strong><br>
+                Total Flood Events Recorded: ${country.count}
+            `);
+        });
+    </script>
+</body>
+</html>

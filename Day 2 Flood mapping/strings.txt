@@ -1,0 +1,1124 @@
+ID
+GlideNumber
+Country
+OtherCountry
+long
+lat
+Area
+Began
+Ended
+Validation
+Dead
+Displaced
+MainCause
+Severity
+Algeria
+News
+Heavy rain
+Brazil
+Phillipines
+Torrential rain
+Indonesia
+Mozambique
+Comoros islands
+Tropical cyclone
+New Zealand
+USA
+Rain and snowmelt
+Bolivia
+Heavy Rain
+China
+Ice jam/break-up
+Argentina
+Bangladesh
+Philippines
+India
+West Germany
+Chad
+Sudan
+Nepal
+Austria
+Ethiopia
+Japan
+Viet Nam
+Sweden
+Dominican Republic
+Nigeria
+Mexico
+Benin
+Thailand
+Jamaica
+Venezuela
+Trinidad
+Peru
+Argentina 
+Iran
+Monsoonal rain
+Solomon Islands
+Chile 
+Columbia 
+Canada 
+China 
+Vietnam
+Uruguay 
+Azores Islands 
+Mexico 
+Tunisia
+Alaska 
+Haiti 
+Madagascar 
+Georgia
+Indonesia 
+Ecuador  
+Dam/Levy, break or release
+Peru 
+Tajikistan 
+Snowmelt
+Ecuador 
+Yugoslavia
+Australia 
+Poland 
+Dominican Republic 
+USA 
+Italy
+South Korea 
+Iran 
+Bangladesh 
+Venezuela 
+South Africa 
+Guatamala
+Spain
+Lebanon
+Taiwan
+Jamaica 
+Costa Rica
+Brazil 
+South Africa
+Turkey 
+Czechoslovakia 
+Kenya 
+Japan 
+Rwanda
+Cuba 
+Sri Lanka 
+Afghanistan 
+China  
+Turkey
+India 
+Ukraine 
+Nigeria 
+USSR 
+Pakistan 
+South Korea  
+Spain 
+New Zealand 
+USSR
+Taiwan 
+Nicaragua 
+Uganda 
+Burkina Faso
+Niger 
+El Savador
+Senegal 
+Nepal 
+Thailand 
+France 
+Ghana 
+Guatemala 
+Uganda
+Gabon 
+Scotland
+Portugal
+Zambia
+Yemen
+Monsoon rain
+Extra-tropical cyclone
+Chile
+Sri Lanka
+South Korea
+Fiji
+Namibia
+Bermuda
+Burundi
+Djibouti
+Ghana
+Malawi
+New Caledonia
+Oman
+Pakistan
+Russia
+Somalia
+North Korea
+Tanzania
+Australia
+Tropical Cyclone
+Antigua
+Paraguay
+Guam
+UK
+France
+Avalanche related
+Guyana
+Soviet Union
+Tajikistan
+Nicaragua
+Bangledesh
+Myanamar
+Tobago
+Honduras
+England
+Britain, Ireland
+Ecuador
+Afghanistan
+Britain
+Jordan
+Israel
+Ice jam or ice break-up
+Colombia
+Myanmar
+Laos
+Romania
+Czechoslovakia
+Poland
+Cambodia
+Philippine
+Egypt
+French Polynesia
+Malaysia
+Brief torrential rain
+Puerto Rico
+Syria
+Cuba
+Canada
+Uzbekistan
+Papua New Guinea
+Kyrgyzstan
+Burma
+Tidal surge
+El Salvador
+Montenegro
+Albania
+Zimbabwe
+Yemen  
+Kazakhstan
+Somalia 
+Haiti
+UK 
+Russia 
+Ethiopia 
+Belarus
+Ukraine
+Sudan 
+Honduras 
+Panama
+Germany
+Papua New Guinea 
+Madagascar
+Armenia
+Monsoonal Rain
+Niger
+Moldova
+Cameroon
+Guatemala
+Greece
+Botswana
+Norway
+Azerbaijan
+Togo
+Morocco
+Caribbean
+Martinique
+Mauritania
+Senegal
+Saudi Arabia
+United Arab Emerates
+Kenya
+Czech Republic
+Liberia
+Mongolia
+Brief Torrential Rain
+Bosnia
+Iceland
+Bulgaria
+Palestine
+Philipines
+Moldava
+Congo
+Democratic Republic of the Congo
+Vanuatu
+Central African Republic
+Siberia
+Bangaldesh
+Slovakia
+Tibet
+Belgium
+Netherlands
+Croatia
+ Peru
+Columbia
+Hungary
+Switzerland
+ Tajikistan
+El Salvador 
+Democratic Republic of Congo
+Colombia 
+Brazil  
+Angola
+Philippines 
+Cambodia 
+Zambia 
+Timor
+Vietnam 
+North Korea 
+Belize
+Israel 
+Ireland
+Indonesia  
+Tanzania 
+Malawi 
+Malaysia 
+Portugal 
+Bolivia 
+Saudi Arabia 
+Angola 
+Belarus 
+DR Congo 
+East Timor 
+Cameroon 
+Ivory Coast 
+Yemen 
+Chad 
+Guinea
+Mali
+Rwanda 
+Indonesia  
+Malaysia  
+Algeria 
+Mozambique 
+Zimbabwe 
+Democratic Republic Congo 
+Lithuania
+DR Congo
+USA.
+Canary Islands
+Africa
+Uruguay
+Europe
+Texas
+Alaska
+Sierra Leone
+Macedonia
+Zaire
+Ice Jams
+Rain and snow
+Rainy Season
+Zimbawe
+Snow Melt
+Rain and Snow Melt
+Comoros Islands
+American Samoa
+East Timor
+Sudan and Eritrea
+Estonia
+Torrential Rain
+Monsoonal Rain and Dam Break
+Canada and USA
+Boliva
+Iraq
+Malayasia
+Bosnia-Herzegovina
+Bhutan
+Bahamas
+Venezulea
+Kazahkistan
+Serbia
+Finland
+Western Sahara
+Congo Republic
+FL-2006-000001-IDN
+FL-2006-000009-GUY
+FL-2006-000010-BOL
+FL-2006-000017-BRA
+FL-2006-000025-PNG
+FL-2006-000018-IRQ
+FL-2006-000023-DZA
+Lesotho
+FL-2006-000034-ECU
+FF-2006-000039-YEM
+FL-2006-000027-IDN
+FL-2006-000041-SRB
+FL-2006-000029-NAM
+FL-2006-000042-COL
+FL-2006-000045-CZE
+FL-2006-000045-HUN
+FL-2006-000045-SRB
+Serbia-Montenegro
+FL-2006-000074-YEM
+FF-2006-000046-KEN
+FL-2006-000047-COD
+FL-2006-000045-ROM
+FF-2006-000049-IDN
+see notes
+FL-2006-000076-AFG
+FL-2006-000057-SUR
+Suriname
+FL-2006-000065-TZA
+FL-2006-000062-THA
+FF-2006-000082-IND
+FL-2006-000068-CHN
+FF-2006-000069-IDN
+FL-2006-000096-IND
+FL-2006-000093-USA
+FL-2006-000095-CHN
+FL-2006-000071-ROM
+FL-2006-000085-UKR
+FL-2006-000094-IND
+FL-2006-000098-PHI
+FL-2006-000092-KOR
+FL-2006-000102-JPN
+FL-2006-000106-MRT
+TC-2006-000105-CHN
+FL-2006-000137-IND
+FL-2006-000128-AFG
+FL-2006-000117-IND
+TC-2006-000116-CHN
+FL-2006-000112-ETH
+TC-2006-000114-CHN
+FL-2006-000122-ETH
+FL-2006-000120-BFA
+FL-2006-000136-VNM
+FL-2006-000130-KHM
+FL-2006-000123-SDN
+FL-2006-000125-THA
+FL-2006-000124-UGA
+FL-2006-000127-NPL
+TC-2006-000132-MEX
+FL-2006-000131-BGD
+FL-2006-000139-TCD
+TC-2006-000138-MEX
+TC-2006-000144-PHL
+FL-2006-000147-MMR
+FL-2006-000147-THA
+FL-2006-000159-KEN
+FL-2006-000161-SOM
+FL-2006-000155-LKA
+FL-2006-000157-ETH
+FL-2006-000156-TUR
+TC-2006-000153-PHL
+FF-2006-000163-AFG
+FF-2006-000168-AFG
+FL-2006-000174-PAN
+FL-2006-000171-HTI
+TC-2006-000175-PHL
+FL-2006-000191-LKA
+FL-2006-000189-MYS
+FL-2006-000192-IDN
+FL-2007-000003-PHL
+MS-2007-000004-BRA
+FL-2007-000018-MWI
+FL-2007-000017-BDI
+FF-2007-000008-LKA
+FL-2007-000016-MYS
+FL-2007-000030-NAM
+FL-2007-000012-BOL
+FF-2007-000020-AGO
+FL-2007-000022-ARG
+FL-2007-000023-IDN
+FL-2007-000025-FJI
+TC-2007-000028-MDG
+LS-2007-000032-IDN
+FL-2007-000036-FJI
+FL-2007-000045-AFG
+LS-2007-000037-PAK
+FL-2007-000044-ARG
+FL-2007-000040-HTI
+FL-2007-000051-TUN
+FF-2007-000047-THA
+FF-2007-000049-TJK
+FL-2007-000052-LKA
+FL-2007-000053-MMR
+FL-2007-000054-AFG
+FL-2007-000057-URY
+FL-2007-000076-KEN
+FL-2007-000068-COL
+FF-2007-000070-CHN
+FL-2007-000077-CHN
+LS-2007-000080-BGD
+FF-2007-000081-NPL
+FF-2007-000082-PAK
+FF-2007-000083-IND
+TC-2007-000084-IND
+TC-2007-000085-PAK
+FF-2007-000091-AFG
+TC-2007-000084-PAK
+LS-2007-000098-PAK
+FL-2007-000096-IND
+FL-2007-000093-SDN
+FL-2007-000094-JPN
+FL-2007-000112-CHN
+FL-2007-000106-IDN
+FL-2007-000111-GBR
+FL-2007-000108-TJK
+FF-2007-000114-RUS
+FF-2007-000117-NPL
+FL-2007-000145-ETH
+FL-2007-000123-NGA
+FL-2007-000122-VNM
+FL-2007-000127-MRT
+FL-2007-000125-PHL
+Phillippines
+FL-2007-000126-PRK
+FL-2007-000132-BFA
+FL-2007-000146-MMR
+FL-2007-000161-UGA
+FL-2007-000144-LBR
+FL-2007-000151-TCD
+FL-2007-000131-SEN
+FL-2007-000155-ROM
+FL-2007-000199-THA
+FL-2007-000159-RWA
+Slovenia
+FL-2007-000176-CRI
+TC-2007-000178-VNM
+TC-2007-000179----
+FL-2007-000181-HTI
+FL-2007-000189-NIC
+FF-2007-000185-TUN
+FL-2007-000197-COD
+FL-2007-000203-IND
+TC-2007-000198-DOM
+FL-2007-000201-VNM
+FL-2007-000200-MEX
+FL-2007-000209-PNG
+TC-2007-000208-BGD
+FL-2007-000210-PHL
+FL-2007-000217-SRB
+Serbia and Montenegro
+FL-2007-000221-KEN
+FL-2007-000222-MYS
+ST-2007-000224-DOM
+FL-2007-000227-ZWE
+FL-2007-000228-LKA
+FL-2007-000231-BOL
+FL-2007-000230-IDN
+FL-2008-000010-BRA
+FL-2008-000014-AUS
+FL-2008-000038-ARG
+FL-2008-000018-ECU
+FL-2008-000004-NAM
+FL-2008-000031-PER
+FL-2008-000024-PHL
+TC-2008-000023-MDG
+FL-2008-000030-IDN
+FL-2008-000032-KAZ
+FL-2008-000041-TZA
+FL-2008-000045-BRA
+FL-2008-000053-LKA
+TC-2008-000057-MMR
+FF-2008-000063-PHL
+TC-2008-000065-PHL
+FL-2008-000069-CHL
+FL-2008-000076-COL
+FL-2008-000079-LKA
+FL-2008-000084-BLZ
+Tropical Storm Arthur
+FL-2008-000084-CHN
+TC-2008-000084-CHN
+FL-2008-000093-PHL
+Typhoon Fenshen
+FL-2008-000092-KEN
+FL-2008-000096-BGD
+Levee failure, early monsoonal rain
+FL-2008-000094-ZAF
+FL-2008-000095-SUR
+Tropical  Storm Fenshen
+FL-2008-000104-NPL
+Monsoon Rain
+FL-2008-000107
+Tropical Storm Kalmaegi
+TC-2008-000112-LBR
+FL-2008-000111-MEX
+Tropical Cyclone "Dolly"
+heavy rain
+monsoonal rainfall
+Tropical Storm "Fung-wong"
+Tropical Storm Fung-Wong
+FF-2008-000123-PAK
+FL-2008-000123-PAK
+FL-2008-125000-SDN
+TC-2008-000130-CHN
+Tropical Storm Kammuri
+FL-2008-000128-VNM
+Heavy monsoon rains
+FL-2008-000131-LAO
+Tropical Storm Kammuri; Heavy monso
+TC-2008-000132-DOM
+Tropical Storm Fay
+Dam Failure
+FF-2008-000141-ETH
+Heavy seasonal rains
+TC-2008-000143-HTI
+Tropical Storm Gustav
+Hurricane Gustav
+Monsoon Rains
+Tropical Storm Ike
+Tropical Storm Sinlaku
+Dam release and Heavy  Rain
+FF-2008-000173-VNM
+FL-2008-000166-GTM
+Tropical Storm Hagupit
+2008-000178
+2008-000180
+FL-2008-000182-RWA
+FL-2008-000191-CRI
+FL-2008-000191-Nic
+Tropical Depressions
+FF-2008-000227-ETH
+TF-2008-000230-CUB
+TC-2008-000229-VNM
+FF-2008-000233-PHL
+Tropical Storm Noul
+Dam Break, Heavy Rain
+FL-2008-000234-BRA
+TC-2008-000237-LKA
+FL-2008-000239-NIC
+High Tides
+United Kingdom
+FL-2008-200246-GUY
+TC-2009-00005-PHL
+Tropical Storm and Heavy Rain
+Tropical Storm Charlotte; Monsoon r
+FL-2009-000010-FJI
+FL-2009-000648
+Tropical Storm Dominic, Heavy Rains
+Tropical Storm Fanele
+FL-2009-000034-MAR
+FL-2009-000031-DOM
+Heavy Rain and Snowmelt
+FL-2009-000032-SLR
+FL-2009-000052-COL
+FL-2009-000039-CRI
+FL-2009-000044-BIH
+Bosnia and Herzogovina
+FL-2009-000045-BOL
+FL-2009-000053-IDN
+FL-2009-000063-AGO
+FF-2009-000069-IDN
+Snowmelt and Heavy Rain
+FL-2009-000068-ZMB
+FL-2009-000080-AFG
+FL-2009-000075-BDI
+FL-2009-000089-BRA
+TC-2009-000093-PH
+snowmelt
+Tropical Storms
+FL-2009-000095-TJK
+Tropical Storm
+MS-2009-000115-CIV
+Cote d'Ivoire
+FL-2009-000113-CHN
+FL-2009-000117-GTM
+FL-2009-000121-CZE
+FL-2009-000120-BWA
+FL-2009-000139-PAK
+FL-2009-000140-MNG
+FL-2009-000124-VNM
+FL-2009-000123-BGD
+FL-2009-000122-IND
+FL-2009-00127BEN
+FL-2009-000135-MEX
+FL-2009-000133-ZAF
+TC-2009-000137-PHL
+FL-2009-000136-BIH
+Bosnia-Herzegovenia
+Levee failure
+Tropical Cyclone, Morakot
+TC-2009-000150-TWN
+Tropical Cyclone, Etau
+LS-2009-000158-SLE
+F-2009-000159-PAK
+FL-2009-000155-LAO
+FF-2009-000160-LKA
+Dam release and Heavy  Ra
+FL-2009-000164-SEN
+FL-2009-000166-SDN
+TC-2009-000193-PHL
+FL-2009-000192-MEX
+Dam release
+FF-2009-000196-IDN
+Heavy Rain, Dam Release
+FL-2009-000203-USA
+FL-2009-000207-VNM
+TC-2009-000205-PHL
+Tropical storm Ketsana/On
+TC-2009-000205-VNM
+Tropical storm Ketsana
+TS-2009-000209-ASM
+Tsunami
+FL-2009-000216-ITA
+FL-2009-000217-IND
+TC-2009-000214-PHL
+Typhoon Parma
+FL-2009-000219-NPL
+TC-2009-000221-JPN
+Typhoon Melor
+FF-2009-000229-SOM
+FL-2009-000226-PRY
+FL-2009-000234-PHL
+Tropical Storm Mirinae
+FL-2009-000238-SLV
+FL-2009-000237-THA
+Tropical Storm Ida
+Singapore
+FF-2009-000246-LKA
+FL-2009-000248-URY
+FL-2009-000247-MYS
+FL-2009-000251-SAU
+TC-2009-000258-FJI
+Tropical Storm Mick
+FF-2009-000260-LKA
+FL-2009-000261-PER
+FL-2010-000003-KEN
+Heavy Rain, Tropical Cycl
+FL-2010-000008-BOL
+FL-2010-000012-EGY
+FL-2010-000021-AFG
+FL-2010-000023-ECU
+Storm Surge and Heavy Rai
+FL-2010-000037-HTI
+FL-2010-000046-MOZ
+FL-2010-000038-ZMB
+FL-2010-000041-SOM
+FL-2010-000042-SRB
+FL-2010-000049-AGO
+FL-2010-000051-KAZ
+Heavy Rain Snowmelt Dam B
+FL-2010-000063-IDN
+Latvia
+FL-2010-000067-BRA
+FL-2010-000070-BGD
+FL-2010-000077-NAM
+FL-2010-000086-AFG
+FL-2010-000087-TJK
+FF-2010-000094-CZE,
+FL-2010-000092-LKA
+FL-2010-000122-CHN
+TC-2010-000097-IND
+TC-2010-000105-GTM
+Tropical Cyclone Agatha
+FL-2010-000107-PHL
+TC-2010-000108-PAK
+Tropical Cyclone Phet
+FL-2010-000115-MMR
+FL-2010-000120-BRA
+Bosnia and Herzegovina
+FL-2010-000118-CIV,
+FL-2010-000121-DOM
+TC-2010-000123-MEX
+Tropical Cyclone Alex
+FL-2010-000129-UKR
+FL-2010-000125-IND
+FL-2010-000130-MDA
+Heavy  Rain
+Tropical Storm "Basyang"
+Tropical Storm Chanthu
+Dam Failure, Heavy Rain
+FL-2010-000145-BFA
+Burkino Faso
+FL-2010-000141-PAK
+FL-2010-000176-MRT
+Tropical Storm Hermine
+Torrential Rains
+Heavy Rain and Dam Break
+Tropical Storm Fanapi
+Tropical Storm Matthew
+Tropical Storm Nicole
+FL-2010-000194-VNM
+Heavy Rain and Storm Surge
+FL-2010-000219-PHL
+Torrential Rain and Mudslides
+TC-2010-000216-HTI
+Hurricane Tomas
+FL-2010-000253-LKA
+FL-2010-000241-VNM
+FL-2010-000252-SRB
+FL-2010-000248-ALB
+FL-2010-000249-IND
+Cylone Tasha, Monsoon Rain, Cyclone
+FL-2011-000002- BRA
+FL-2011-000013-MOZ
+FL-2011-000003-LKA
+FL-2011-000014-SAU
+Tropical Storm Wilma
+FL-2011-000021-MYS
+FL-2011-000020-BOL
+FL-2011-000019-LSO
+FL-2011-000022-AFG
+Heavy Rain and Snow
+Tasmania
+Tropical Storm Aere
+Heavy Rain,and Dam release
+Ivory Coast
+Tropical Storm Haima
+Tropical Storm Arlene
+Dam releases, Monsoonal Rain
+Tropical Storm-Emily
+Tropical Storms, Monsoonal Rain
+FL-2011-00071-VNM
+Tropical Storm, Monsoonal Rain
+Tropical Storm Irene
+Tropical stroms Pendring and Nalgae
+Tropical Storm Nesat
+Gutamala
+Tropical storm Jova, Heavy Rain
+Tropical Storm Washi
+FL-2012-000003-BRA
+FL-2012-000017-MWI
+Tropical Storms Dando, Funso
+FL-2012-000019-BGR
+Dam Break, Snowmelt, Heavy Rain
+Camaroun
+FL-2012-000032-BOL
+FL-2012-000037-PSE
+Gaza
+Tropical Storm Irina
+FL-2012-000063-RUS
+FL-2012-000056-PRY
+FL-2012-000071-NPL
+Avalance Breach
+FF-2012-000079-GEO
+FL-2012-000083-HND
+Tropical Storm Debby
+FF-2012-000115-RUS
+FL-2012-000114-JPN
+FF-2012-000120-GEO
+Monoonal Rain
+Tropical Storm Saola
+Typhoons  Damrey and Saola
+FL-2012-000150-SDN
+South Sudan
+FL-000139-JPN
+TC-2012-000152-HTI
+Tropical Storm Isaac
+FF-2012-000148-PAK
+Hurricane Isaac
+FL-2012-000161-VNM
+TC-2012-000159-PRK
+The Gambia
+TC-2012-000180-CUB; TC-2012-000180-
+Tropical Storm Sandy
+TC-2012-000181-VNM;TC-2012-000179-P
+Tropical Storm Son-Tinh
+Tropical Storm Nilam
+Torrential Rain, Hgh Tides
+Tropical Storm Bopha
+Brunei
+Tropical Storm Auring
+FL-2013-000006-IDN
+Tropical Storm Oswald
+FL-2013-000012-SYC
+Seychelles
+Fl-2013-000014-BWA
+FL-2013-000017-PNG
+HeavyRain
+Monsoonal Rain, Tropical Storm Rust
+Mauritius
+Ice Jam and Ice Melt
+2013-TC-000060-MMR and BGD
+Tropical Storm Mahasen
+2013-TC-000060-LKA
+Tropical Storm Sulik
+Burma/Myanmar
+Monsoon Rain, began with #4078
+Heavy Rain, began with #4079
+Monsoonal Rain and Offshore Tropica
+Tropical Storm Utor
+Tropical Storm Phailin
+Tropical Storm Nari
+Tropical Storm Fitow
+Tropical Storm Haiyan/Yolanda
+FL-2013-000141-SOM
+Storm Surge
+FL-2013-000148-MYS
+FL-2013-000149-THA
+FL-2013-000157-BRA
+FL-2013-000159-LCA
+Saint Vincent
+St. Lucia
+FL-2014-000008-BOL
+Tropical Storm Fletcher
+SS-2014-000032-MHL
+FL-2014-000030-PRY
+Dam Break
+FL-2014-000038-ZAF
+FL-2014-000045-SLB
+heavy Rain
+FF-2014-000060-AFG
+FF-2014-000059-SRB
+FL-2014-000063-TJK
+FL-2014-000062-CHN
+FL-2014-000070-LKA
+Tropical Storm Boris
+TC-2014-000071-MEX
+Heay Rain
+Monsoonal Ran
+Jökulhlaup
+Heavy Rain and High Tide
+Typhoon Rammasun
+Papua New Gunea
+Tropical Storm Cristobal
+Tropical Storm Trudy
+Tropical Storm Hudhug
+Torrential Rain; Tropical Storm Gon
+FL-2014-000159-MAR
+Torrrential Rain
+FL-2014-000163-COL
+FL-2014-000168-MYS
+Tropical Storm Jangmai
+FL-2015-000006-MWI
+FL-2015-000008-BOL
+FL-2015-000009-ALB
+FL-2015-000004-MDG
+Tropical Storms Fundi and Chedza
+Tropical Storm Marcia
+FL-2015-000027-CHL
+FL-2015-000029-IND
+Tropical Storm Maysak
+Kazahkstan
+FL-2015-000049-KEN
+FL-2015-000057-CHN
+FL-2015-000056-COL
+FL-2015-000060-USA
+FL-2015-000055-TJK
+FL-2015-000064-IND
+FL-2015-000065-GHA
+FL-2015-000066-NPL
+news
+Tropical Storm Kujira
+FL-2015-000076-CMR
+FL-2015-000088-IRN
+FL-2015-000098-VNM
+Monsoonal Rain and Tropical Storm K
+FF-2015-000115-MKD
+FL-2015-000110-ARG
+TC-2015-000124-JPN
+Tropical Storm Etau
+Heavy Rain, Tropical Storm Joaquin
+Landslide
+TC-2015-000143-PHL
+Tropical Storm Koppu
+Uruguay,
+TC-2015-000144-MEX
+Tropical Storm Patricia
+FL-2015-000146-DZA
+FL-2015-000145-SOM
+TC-2015-000142-BHS
+Tropical Storm Joaquin
+TC-2015-000163-IND
+Tropical Storm Rovan
+FL-2015-000162-QAT
+Qatar
+FL-2015-000165-MDV
+Maldives
+FL-2015-000171-PRY
+TC-2015-000170-PHL
+Tropical storms Melor, Onyok
+FL-2006-000011-TZA
+TC-2016-000014-FJI
+Tropical Storm Winston
+FL-2016-000009-IDN
+FL-2016-000021-PAK
+FL-2016-000037-SAU
+Snowmelt and Ice Jams
+Tropical Storm Fantala
+Flood List
+Flood LIst
+FL-2016-000044-CHN
+DFO
+Snowmelt and Rain
+FL-2016-000056-USA
+FF-2016-000062-IND
+FL-2016-000058-MMR
+FL-2016-000068-NPL
+FL-2016-000072-SDN
+FL-2016-000091-NER
+FL-2016-000094-IND
+FL-2016-000084-PHL
+FL-2016-000075-BGD
+FL-2016-000077-BTN
+Tropical Storm Malakas
+TC-2016-000100-TWN
+Tropical Storm Meranti
+FL-2016-000097-PRK
+Tropical Storm Lionrock
+Tropial Storm Chyba
+FL-2016-000114-EGY
+TC-2016-000125-CRI
+Tropical Storm Otto
+Monsoonal  Rain
+FL-2016-000133-VNM
+FL-2017-000004-THA
+Winter Storm Axel
+FL-2017-000012-MOZ
+FL-2017-000010-PHL
+FL-2017-000021-ZAF
+Cyclone Dineo and heavy rain
+FL-2017-000020-ZWE
+FL-2017-000018-PER
+FL-2017-000027-NAM
+MS-2017-000033-COL
+TC-2017-000031-AUS
+Tropical Cyclone Debbie
+FL-2017-000038-IRN
+FL-2017-000039-ARG
+FL-2017-000040-KAZ
+FL-2017-000067-BRA
+Tropical Storm Beatriz
+FL-2017-000064-IND
+LS-2017-000068-BGD
+FL-2017-000078-NER
+FL-2017-000096-THA
+FF-2017-000101-VNM
+Torrential Rain and Snowmelt
+TC-2017-000105-MEX
+Tropical Storm Franklin
+Heavy Rain and HIgh Tides
+MS-2017-000109-SLE
+FL-2017-000108-BGD
+FL-2017-000107-NPL
+Tropical Storm Harvey
+Northern Ireland
+TC-2017-000120-CHN
+Tropical Storm Hato
+TC-2017-000132-CUB
+Tropical Storm Irma
+FL-2017-000126-NGA
+TC-2017-000131-VNM
+Tropical Storm Doksuri
+Tropical Storm Talim
+TC-2017-0000136-ATG
+Virgin Islands
+Tropical Storm Maria
+TC-2017-000148-NIC
+Tropical Storm Nate
+FL-2017-000160-HND
+TC-2017-000159-VNM
+Tropical Storm Damrey
+Tropical Depression
+Tropical Storm Cempaka
+Unitd Kingdom
+FL-2017-000-174-ALB
+TC-2017-000172-LKA
+Tropical Storm Ockhi
+TC-2017-000180-PHL
+Tropical Storm Kai-Tak
+United Arab Emirates
+TC-2017-000182-PHL
+Tropical Storm Tembin
+Storm Surge Eleanor
+TC-2018-0000001-MDG
+Tropical Storm Ava
+Reunion
+Tropical Storm Berguitta
+FloodLIst and GLIDE
+FloodList
+Malta
+FL-2018-000014-ARG
+FloodList and News
+Tropical Storm Gita
+FL-2018-000018-MOZ
+Tropical Storm Kelvin
+FL-2018-000015-BOL
+FloodLIst
+Heavy RAin
+Tropical Storm Eliakim
+Tropical Storm Sagar
+Tropical Storm Alberto
+Tropical Storm Ewiniar
+Tropical Storm Praipiroon
+Tropical Storm Beryl
+Tropical Storm  Son-Tinh
+Xe-Pian Xe-Namnoy Dam Break
+Tropical Storm Lane
+Tropical Stom Florence
+Storm Zorba
+Heavy Rain, Dam releases
+Tropical Storm Titli
+Tropical Storm Michael
+Tropical Storm Luban
+News Reports
+Tropical Storm Willa
+River Gauging
+Tropical Storm Usagi
+Cyprus
+Tropical Storm Pabuk
+Tropical Storm  Usman
+Heavy Rain, Tropical Storm Idai
+Snowmelt, Heavy Rain, Ice Jams
+Heavy Rain and Torrential Rain
+International Charter
+Heavy Rain and Ice Melt
+Tropical Cyclone Fani
+Tropical Storm Kenneth
+Libya
+Torrential Rain and Tropical Storm
+Glacial Lake Outburst
+Heavy Ran
+Tropical Storm Dorian
+Tropical Storm Imelda
+Tropical Storm Hagibis
+Tropical Storm Hikaa
+Tropical Storm Narda
+Tropical Storm Mitag
+Typhoon 21
+Democratic  Republic of the Congo
+Tropical Storm Ramon
+Tropical Storm Kammuri/Tisoy
+Republic of Congo
+Tropical Storm Belna
+Tropical Storm Pawan
+Storm Surge Gloria
+Madascar
+Heavy Rain Storm Dennis
+Tropical Storm Herold
+Ice Jam
+NASA-Earth-Observatory
+Dam break
+Tropical Storm Amphan
+Dam breaks and Heavy Rain
+Democratic Republic Congo
+Tropical Storm Amanda
+Tropical Storm Track
+Tropical Storm Nisarga
+Cote D'Iavoir
+Monsoonal Rain and Dam release
+Tropical Storm Hanna
+Camaroon
+Dam Release and Heavy Rain
+Tropical Storm Laura
+Tropical Storm Sally
+Tropical Storm Eta
+Tropical Storm Molave
+Tropical Storm Vamco
+Tropical Storm Iota
+Tropical Storm Gati
+Storm Bella
+Storm Vicky
+USGS Gauging
+Tropical Storm Eloise
+Tropical Storm Ana
+Glacier collapse and dam breaks
+Tropical Storm Dijuan (Auring)
+Tropical Storm Saroja
+Snow melt and Ice jams
+NASA Flood Alerts
+Snowmelt and ice jams
+Tropical Storm Yaas and Storm Surge
+Tropical Storm Tauktae
+Tropical Storm Dante
+Tropical Storm Claudette
+FloodList and other media
+News Media
+Tropical Storm Grace
+GFMS Prediction
+Tropical Storm Dianmu
