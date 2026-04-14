@@ -1928,3 +1928,8 @@ const floodData = [
     "displaced": 0
   }
 ];
+const floodMaxes = {
+  "cases": 481,
+  "dead": 163915,
+  "displaced": 188496618
+};

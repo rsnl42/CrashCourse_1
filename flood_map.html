@@ -3,58 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Historical Flood Map</title>
+    <title>Global Historical Flood Map (Viridis)</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <style>
-        body, html { height: 100%; margin: 0; background: #f8f9fa; }
+        body, html { height: 100%; margin: 0; background: #222; }
         #map { height: 100%; width: 100%; }
         .panel {
             position: absolute; top: 10px; right: 10px; z-index: 1000;
-            background: white; padding: 15px; border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1); font-family: sans-serif; width: 250px;
+            background: rgba(255, 255, 255, 0.9); padding: 15px; border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3); font-family: sans-serif; width: 250px;
         }
         select { width: 100%; padding: 8px; margin-top: 10px; cursor: pointer; }
+        .legend {
+            background: white; padding: 10px; border-radius: 5px;
+            line-height: 1.5em; font-size: 0.8em;
+        }
+        .legend-scale {
+            display: flex; height: 15px; width: 100%; margin: 5px 0;
+            background: linear-gradient(to right, #440154, #3b528b, #21918c, #5ec962, #fde725);
+            border: 1px solid #ccc;
+        }
     </style>
 </head>
 <body>
     <div class="panel">
-        <h3 style="margin:0 0 10px 0; color: #007bff;">Flood Impact Map</h3>
-        <label>Show data for:</label>
+        <h3 style="margin:0 0 10px 0; color: #333;">Flood Impact (Viridis)</h3>
+        <label>Select Metric:</label>
         <select id="metric" onchange="draw()">
             <option value="cases">Total Cases</option>
             <option value="dead">Total Dead</option>
             <option value="displaced">Total Displaced</option>
         </select>
-        <p id="hint" style="font-size: 0.8em; color: #666; margin-top: 10px;">
-            All 241 countries are shown. Small dots represent zero or missing data.
-        </p>
+        <hr>
+        <div class="legend">
+            <strong>Color Scale:</strong>
+            <div class="legend-scale"></div>
+            <div style="display: flex; justify-content: space-between;">
+                <span>Low</span>
+                <span>High</span>
+            </div>
+            <p id="na-info" style="margin: 5px 0 0 0; color: #666;">
+                <i style="background: #ccc; width: 12px; height: 12px; display: inline-block; border-radius: 50%;"></i> Gray = N/A
+            </p>
+        </div>
     </div>
     <div id="map"></div>
     <script src="Day 2 Flood mapping/map_data.js"></script>
     <script>
+        // Use a dark theme for better color contrast
         const map = L.map('map').setView([15, 0], 2);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap' }).addTo(map);
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+            attribution: '© OpenStreetMap, © CARTO'
+        }).addTo(map);
+
         let layerGroup = L.layerGroup().addTo(map);
 
-        function getRadius(val, metric) {
-            if (val === null || val === undefined) return 3; // N/A
-            if (val === 0) return 4; // Zero
-            // Scaled radius: log base + 4px minimum
-            return Math.log10(val + 1) * 4 + 4;
+        // Viridis Palette Interpolation
+        function getViridisColor(fraction) {
+            // Simple interpolation through Viridis-like colors
+            const colors = [
+                [68, 1, 84],   // Purple
+                [59, 82, 139],  // Blue
+                [33, 145, 140], // Teal
+                [94, 201, 98],  // Green
+                [253, 231, 37]  // Yellow
+            ];
+            
+            const idx = Math.min(Math.floor(fraction * (colors.length - 1)), colors.length - 2);
+            const low = colors[idx];
+            const high = colors[idx + 1];
+            const segFraction = (fraction * (colors.length - 1)) - idx;
+            
+            const r = Math.round(low[0] + (high[0] - low[0]) * segFraction);
+            const g = Math.round(low[1] + (high[1] - low[1]) * segFraction);
+            const b = Math.round(low[2] + (high[2] - low[2]) * segFraction);
+            
+            return `rgb(${r},${g},${b})`;
+        }
+
+        function getColor(val, metric) {
+            if (val === null || val === undefined) return "#ccc"; // N/A
+            if (val === 0) return "#440154"; // Minimum (Purple)
+            
+            const max = floodMaxes[metric];
+            // Use log scale for color mapping to spread values better
+            const fraction = Math.log10(val + 1) / Math.log10(max + 1);
+            return getViridisColor(Math.min(fraction, 1));
         }
 
         function draw() {
             const m = document.getElementById('metric').value;
             layerGroup.clearLayers();
+            
             floodData.forEach(c => {
                 const val = c[m];
-                const r = getRadius(val, m);
+                const color = getColor(val, m);
                 const displayVal = (val === null) ? "N/A" : val.toLocaleString();
                 
                 L.circleMarker([c.lat, c.lng], {
-                    radius: r, fillColor: "#007bff", color: "#004085",
-                    weight: 0.5, opacity: 1, fillOpacity: 0.6
+                    radius: 7, // Fixed size for better color visibility
+                    fillColor: color,
+                    color: "#fff",
+                    weight: 1,
+                    opacity: 1,
+                    fillOpacity: 0.9
                 }).bindPopup(`<strong>${c.name}</strong><br>${m.toUpperCase()}: ${displayVal}`)
                   .addTo(layerGroup);
             });

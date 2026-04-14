@@ -13,8 +13,7 @@ def get_country_coordinates(file_path):
         with zip_ref.open('xl/worksheets/sheet1.xml') as f:
             tree = ET.parse(f)
             root = tree.getroot()
-            
-            country_data = {} # {country: [sum_lat, sum_long, count, [dead_vals], [displaced_vals]]}
+            country_data = {} # {country: [sum_lat, sum_long, count, [dead], [disp]]}
             
             rows = root.findall('.//ns:row', ns)
             for row in rows:
@@ -56,20 +55,23 @@ def get_country_coordinates(file_path):
                     if disp_val is not None: country_data[country][4].append(disp_val)
             
             final_data = []
+            max_stats = {"cases": 0, "dead": 0, "displaced": 0}
             for country, values in country_data.items():
                 dead_total = sum(values[3]) if values[3] else None
                 disp_total = sum(values[4]) if values[4] else None
+                
+                max_stats["cases"] = max(max_stats["cases"], values[2])
+                if dead_total: max_stats["dead"] = max(max_stats["dead"], dead_total)
+                if disp_total: max_stats["displaced"] = max(max_stats["displaced"], disp_total)
+
                 final_data.append({
-                    "name": country,
-                    "lat": values[0] / values[2],
-                    "lng": values[1] / values[2],
-                    "cases": values[2],
-                    "dead": dead_total,
-                    "displaced": disp_total
+                    "name": country, "lat": values[0] / values[2], "lng": values[1] / values[2],
+                    "cases": values[2], "dead": dead_total, "displaced": disp_total
                 })
-            return final_data
+            return {"countries": final_data, "stats": max_stats}
 
 if __name__ == "__main__":
-    data = get_country_coordinates('Day 2 Flood mapping/floodarchive.xlsx')
+    result = get_country_coordinates('Day 2 Flood mapping/floodarchive.xlsx')
     with open('Day 2 Flood mapping/map_data.js', 'w') as f:
-        f.write("const floodData = " + json.dumps(data, indent=2) + ";")
+        f.write("const floodData = " + json.dumps(result["countries"], indent=2) + ";\n")
+        f.write("const floodMaxes = " + json.dumps(result["stats"], indent=2) + ";")
