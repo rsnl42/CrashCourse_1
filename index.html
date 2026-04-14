@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Disaster Preparedness: India & Australia</title>
+    <title>Disaster Preparedness: India Floods & Australia Bushfires</title>
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
           integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
@@ -13,8 +13,8 @@
         body { margin: 0; padding: 0; display: flex; height: 100vh; width: 100%; overflow: hidden; }
         .map-container { height: 100%; width: 50%; border: 1px solid #ccc; box-sizing: border-box; }
 
-        /* Style for the fire icon */
-        .fire-icon {
+        /* Icon styles */
+        .fire-icon, .water-icon {
             font-size: 24px;
             text-align: center;
             line-height: 24px;
@@ -23,12 +23,17 @@
         /* Style for permanent labels */
         .leaflet-tooltip-own {
             background-color: rgba(255, 255, 255, 0.9);
-            border: 1px solid #d32f2f;
+            border: 1px solid #2f66d3; /* Default to water blue */
             border-radius: 4px;
-            color: #d32f2f;
+            color: #2f66d3;
             font-weight: bold;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
+
+        .aus-label {
+            border-color: #d32f2f;
+            color: #d32f2f;
         }
 
         .leaflet-popup-content-wrapper {
@@ -49,10 +54,11 @@
 
     <script>
         // --- India Map Setup ---
-        const mapInd = L.map('mapInd').setView([20.5937, 78.9629], 5);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        // Using a "No Labels" tile layer to clean the map as requested
+        const mapInd = L.map('mapInd').setView([22.5937, 78.9629], 5);
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
             maxZoom: 19,
-            attribution: '© OpenStreetMap'
+            attribution: '© OpenStreetMap © CartoDB'
         }).addTo(mapInd);
 
         // --- Australia Map Setup ---
@@ -62,7 +68,7 @@
             attribution: '© OpenStreetMap'
         }).addTo(mapAus);
 
-        // Define custom fire icon
+        // Define Icons
         const fireIcon = L.divIcon({
             html: '<div class="fire-icon">🔥</div>',
             className: 'custom-div-icon',
@@ -70,7 +76,27 @@
             iconAnchor: [15, 15]
         });
 
-        // Define high bushfire risk areas for Australia
+        const waterIcon = L.divIcon({
+            html: '<div class="water-icon">💧</div>',
+            className: 'custom-div-icon',
+            iconSize: [30, 30],
+            iconAnchor: [15, 15]
+        });
+
+        // --- India Data: High-Risk Flood States (Capitals) ---
+        const indiaFloodAreas = [
+            { name: "Bihar (Patna)", coords: [25.5941, 85.1376], description: "India's most flood-prone state; over 70% of land at risk." },
+            { name: "Assam (Guwahati)", coords: [26.1445, 91.7362], description: "Annual deluges from the Brahmaputra river system." },
+            { name: "West Bengal (Kolkata)", coords: [22.5726, 88.3639], description: "High risk of riverine and coastal flooding from cyclones." },
+            { name: "Uttar Pradesh (Lucknow)", coords: [26.8467, 80.9462], description: "High historical fatalities from major river flooding." },
+            { name: "Punjab (Chandigarh)", coords: [30.7333, 76.7794], description: "Historically high risk due to the five major rivers network." },
+            { name: "Kerala (Thiruvananthapuram)", coords: [8.5241, 76.9366], description: "Vulnerable to extreme rainfall and catastrophic flash floods." },
+            { name: "Odisha (Bhubaneswar)", coords: [20.2961, 85.8245], description: "Frequent floods following severe cyclonic activity." },
+            { name: "Maharashtra (Mumbai)", coords: [19.0760, 72.8777], description: "High frequency of urban flooding and extreme rain events." },
+            { name: "Gujarat (Gandhinagar)", coords: [23.2156, 72.6369], description: "Prone to both riverine and dam-related flood disasters." }
+        ];
+
+        // --- Australia Data: High-Risk Bushfire Areas ---
         const ausRiskAreas = [
             { name: "Melbourne (Dandenong Ranges)", coords: [-37.8931, 145.3582], description: "High-risk interface with dense forests and extreme fire weather." },
             { name: "Sydney (Blue Mountains)", coords: [-33.7128, 150.3119], description: "Vulnerable to ember attacks and high forest fuel loads." },
@@ -80,14 +106,27 @@
             { name: "Hobart (Mt Wellington Fringes)", coords: [-42.8947, 147.2373], description: "High fuel loads and suburban interface risks during heatwaves." }
         ];
 
-        // Add markers to Australia map
+        // Add Flood Markers to India Map
+        indiaFloodAreas.forEach(area => {
+            L.marker(area.coords, { icon: waterIcon })
+                .addTo(mapInd)
+                .bindTooltip(area.name, {
+                    permanent: true,
+                    direction: 'top',
+                    className: 'leaflet-tooltip-own',
+                    offset: [0, -10]
+                })
+                .bindPopup(`<b>${area.name}</b><br>${area.description}`);
+        });
+
+        // Add Fire Markers to Australia Map
         ausRiskAreas.forEach(area => {
             L.marker(area.coords, { icon: fireIcon })
                 .addTo(mapAus)
                 .bindTooltip(area.name, {
                     permanent: true,
                     direction: 'top',
-                    className: 'leaflet-tooltip-own',
+                    className: 'leaflet-tooltip-own aus-label',
                     offset: [0, -10]
                 })
                 .bindPopup(`<b>${area.name}</b><br>${area.description}`);
