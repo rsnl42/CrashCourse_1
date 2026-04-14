@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historical Floods in India</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        body, html { height: 100%; margin: 0; background: #f0f4f8; }
+        #map { height: 100%; width: 100%; }
+        .panel {
+            position: absolute; top: 10px; right: 10px; z-index: 1000;
+            background: white; padding: 15px; border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 64, 128, 0.2); font-family: sans-serif; 
+            width: 250px; border-left: 5px solid #007bff;
+        }
+        h2 { margin: 0 0 5px 0; color: #004085; font-size: 1.2em; }
+        p { margin: 5px 0; font-size: 0.9em; color: #555; }
+    </style>
+</head>
+<body>
+    <div class="panel">
+        <h2>India Flood History</h2>
+        <p>Showing all historical flood events recorded for India in the DFO archive.</p>
+        <p><strong>Markers:</strong> Individual flood points.</p>
+    </div>
+    <div id="map"></div>
+    <script src="Day 2 Flood mapping/india_points.js"></script>
+    <script>
+        const map = L.map('map').setView([22.5, 82.0], 5); // Centered on India
+        
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+            attribution: '© OpenStreetMap, © CARTO'
+        }).addTo(map);
+
+        indiaData.forEach(p => {
+            L.circleMarker([p.lat, p.lng], {
+                radius: 5,
+                fillColor: "#007bff",
+                color: "#004085",
+                weight: 1,
+                opacity: 0.8,
+                fillOpacity: 0.6
+            }).bindPopup(`
+                <div style="font-family: sans-serif;">
+                    <strong style="color: #004085;">Flood Event</strong><br>
+                    <hr style="margin: 5px 0;">
+                    <b>Date:</b> ${p.date}<br>
+                    <b>Cause:</b> ${p.cause}<br>
+                    <b>Deaths:</b> ${p.dead}
+                </div>
+            `).addTo(map);
+        });
+    </script>
+</body>
+</html>
