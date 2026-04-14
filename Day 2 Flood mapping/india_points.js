@@ -28,7 +28,8 @@ const indiaData = [
     "began": "Unknown",
     "ended": "Unknown",
     "severity": 2.0,
-    "place": "N/A"
+    "place": "N/A",
+    "Place": "Katokhar, Uttar Pradesh"
   },
   {
     "lat": 21.1495,
@@ -39,7 +40,8 @@ const indiaData = [
     "began": "Unknown",
     "ended": "Unknown",
     "severity": 2.0,
-    "place": "N/A"
+    "place": "N/A",
+    "Place": "Basudebpur, Odisha"
   },
   {
     "lat": 25.6339,
@@ -100,7 +102,8 @@ const indiaData = [
     "began": "Unknown",
     "ended": "Unknown",
     "severity": 2.0,
-    "place": "N/A"
+    "place": "N/A",
+    "Place": "\u0915\u0948\u0932\u093e\u0932\u0940, \u0938\u0941\u0926\u0942\u0930\u092a\u0936\u094d\u091a\u093f\u092e \u092a\u094d\u0930\u0926\u0947\u0936"
   },
   {
     "lat": 22.0189,
@@ -141,7 +144,8 @@ const indiaData = [
     "began": "Unknown",
     "ended": "Unknown",
     "severity": 2.0,
-    "place": "Jhatra, Punjab"
+    "place": "Jhatra, Punjab",
+    "Place": "Jhatra, Punjab"
   },
   {
     "lat": 19.1131,
@@ -172,7 +176,8 @@ const indiaData = [
     "began": "Unknown",
     "ended": "Unknown",
     "severity": 2.0,
-    "place": "Dudhpatli, Assam"
+    "place": "Dudhpatli, Assam",
+    "Place": "Udarbond, Assam"
   },
   {
     "lat": 26.4375,
@@ -213,7 +218,8 @@ const indiaData = [
     "began": "Unknown",
     "ended": "Unknown",
     "severity": 2.0,
-    "place": "N/A"
+    "place": "N/A",
+    "Place": "Balipara, Assam"
   },
   {
     "lat": 26.7055,
@@ -284,7 +290,8 @@ const indiaData = [
     "began": "Unknown",
     "ended": "Unknown",
     "severity": 2.0,
-    "place": "N/A"
+    "place": "N/A",
+    "Place": "Aronda, Maharashtra"
   },
   {
     "lat": 26.6059,
@@ -405,7 +412,8 @@ const indiaData = [
     "began": "Unknown",
     "ended": "Unknown",
     "severity": 2.0,
-    "place": "N/A"
+    "place": "N/A",
+    "Place": "Kottamitta, Tamil Nadu"
   },
   {
     "lat": 24.9382,
@@ -426,7 +434,8 @@ const indiaData = [
     "began": "Unknown",
     "ended": "Unknown",
     "severity": 2.0,
-    "place": "Dewangonj Upazilla Health Complex, ময়মনসিংহ বিভাগ"
+    "place": "Dewangonj Upazilla Health Complex, \u09ae\u09af\u09bc\u09ae\u09a8\u09b8\u09bf\u0982\u09b9 \u09ac\u09bf\u09ad\u09be\u0997",
+    "Place": "\u09a6\u09c7\u0993\u09af\u09bc\u09be\u09a8\u0997\u099e\u09cd\u099c, \u09ae\u09af\u09bc\u09ae\u09a8\u09b8\u09bf\u0982\u09b9 \u09ac\u09bf\u09ad\u09be\u0997"
   },
   {
     "lat": 27.9917,
@@ -677,7 +686,8 @@ const indiaData = [
     "began": "Unknown",
     "ended": "Unknown",
     "severity": 2.0,
-    "place": "Bharat Petroleum, Andhra Pradesh"
+    "place": "Bharat Petroleum, Andhra Pradesh",
+    "Place": "Rajamahendravaram ( Rajahmundry ), Andhra Pradesh"
   },
   {
     "lat": 24.0572,
@@ -818,7 +828,8 @@ const indiaData = [
     "began": "Unknown",
     "ended": "Unknown",
     "severity": 2.0,
-    "place": "N/A"
+    "place": "N/A",
+    "Place": "Khamar, Odisha"
   },
   {
     "lat": 27.4268,
@@ -829,7 +840,8 @@ const indiaData = [
     "began": "Unknown",
     "ended": "Unknown",
     "severity": 2.0,
-    "place": "N/A"
+    "place": "N/A",
+    "Place": "Changamari Habi, Assam"
   },
   {
     "lat": 31.806,
@@ -860,7 +872,8 @@ const indiaData = [
     "began": "Unknown",
     "ended": "Unknown",
     "severity": 2.0,
-    "place": "N/A"
+    "place": "N/A",
+    "Place": "Nalgonda mandal, Telangana"
   },
   {
     "lat": 26.9607,
@@ -891,7 +904,8 @@ const indiaData = [
     "began": "Unknown",
     "ended": "Unknown",
     "severity": 2.0,
-    "place": "N/A"
+    "place": "N/A",
+    "Place": "Domkal, West Bengal"
   },
   {
     "lat": 15.811,
@@ -942,7 +956,8 @@ const indiaData = [
     "began": "Unknown",
     "ended": "Unknown",
     "severity": 2.0,
-    "place": "N/A"
+    "place": "N/A",
+    "Place": "Chhendipada, Odisha"
   },
   {
     "lat": 30.7738,
@@ -1163,7 +1178,8 @@ const indiaData = [
     "began": "Unknown",
     "ended": "Unknown",
     "severity": 2.0,
-    "place": "N/A"
+    "place": "N/A",
+    "Place": "Teghra, Bihar"
   },
   {
     "lat": 21.0247,
@@ -1204,7 +1220,8 @@ const indiaData = [
     "began": "Unknown",
     "ended": "Unknown",
     "severity": 2.0,
-    "place": "N/A"
+    "place": "N/A",
+    "Place": "Mangrol Taluka, Gujarat"
   },
   {
     "lat": 20.9765,
@@ -1355,7 +1372,8 @@ const indiaData = [
     "began": "Unknown",
     "ended": "Unknown",
     "severity": 2.0,
-    "place": "Palam Kadavu, Kerala"
+    "place": "Palam Kadavu, Kerala",
+    "Place": "Chavakkad, Kerala"
   },
   {
     "lat": 26.5993,
@@ -1416,7 +1434,8 @@ const indiaData = [
     "began": "Unknown",
     "ended": "Unknown",
     "severity": 2.0,
-    "place": "Dhaman, Maharashtra"
+    "place": "Dhaman, Maharashtra",
+    "Place": "Dindori, Maharashtra"
   },
   {
     "lat": 18.1046,
@@ -1657,7 +1676,8 @@ const indiaData = [
     "began": "Unknown",
     "ended": "Unknown",
     "severity": 2.0,
-    "place": "N/A"
+    "place": "N/A",
+    "Place": "Mawsynram, Meghalaya"
   },
   {
     "lat": 25.2411,
@@ -1678,7 +1698,8 @@ const indiaData = [
     "began": "Unknown",
     "ended": "Unknown",
     "severity": 2.0,
-    "place": "N/A"
+    "place": "N/A",
+    "Place": "Dochogla Maenchhuna, \u0f66\u0fa4\u0f74\u0f0b\u0f53\u0f0b\u0f41\u0f0b\u0f62\u0fab\u0f7c\u0f44\u0f0b\u0f41\u0f42\u0f0b"
   },
   {
     "lat": 16.6523,
@@ -1709,7 +1730,8 @@ const indiaData = [
     "began": "Unknown",
     "ended": "Unknown",
     "severity": 2.0,
-    "place": "N/A"
+    "place": "N/A",
+    "Place": "Kishorenagar, Odisha"
   },
   {
     "lat": 20.2249,
@@ -1780,7 +1802,8 @@ const indiaData = [
     "began": "Unknown",
     "ended": "Unknown",
     "severity": 2.0,
-    "place": "N/A"
+    "place": "N/A",
+    "Place": "Uluberia - II, West Bengal"
   },
   {
     "lat": 15.7081,
@@ -1791,7 +1814,8 @@ const indiaData = [
     "began": "Unknown",
     "ended": "Unknown",
     "severity": 2.0,
-    "place": "N/A"
+    "place": "N/A",
+    "Place": "Chowtakur, Andhra Pradesh"
   },
   {
     "lat": 11.4729,
@@ -1822,7 +1846,8 @@ const indiaData = [
     "began": "Unknown",
     "ended": "Unknown",
     "severity": 2.0,
-    "place": "Sipajhar, Assam"
+    "place": "Sipajhar, Assam",
+    "Place": "Sipajhar, Assam"
   },
   {
     "lat": 26.6381,
@@ -1993,7 +2018,8 @@ const indiaData = [
     "began": "Unknown",
     "ended": "Unknown",
     "severity": 2.0,
-    "place": "Dihi Narayani, West Bengal"
+    "place": "Dihi Narayani, West Bengal",
+    "Place": "Karimabad, West Bengal"
   },
   {
     "lat": 26.3755,
@@ -2004,7 +2030,8 @@ const indiaData = [
     "began": "Unknown",
     "ended": "Unknown",
     "severity": 2.0,
-    "place": "SubCentre, Chapahi, Bihar"
+    "place": "SubCentre, Chapahi, Bihar",
+    "Place": "Andhratharhi, Bihar"
   },
   {
     "lat": 26.5897,
@@ -2095,7 +2122,8 @@ const indiaData = [
     "began": "Unknown",
     "ended": "Unknown",
     "severity": 2.0,
-    "place": "N/A"
+    "place": "N/A",
+    "Place": "Bilaspur, Himachal Pradesh"
   },
   {
     "lat": 26.8031,
@@ -2106,7 +2134,8 @@ const indiaData = [
     "began": "Unknown",
     "ended": "Unknown",
     "severity": 2.0,
-    "place": "N/A"
+    "place": "N/A",
+    "Place": "Gohpur, Assam"
   },
   {
     "lat": 11.8283,
@@ -2117,7 +2146,8 @@ const indiaData = [
     "began": "Unknown",
     "ended": "Unknown",
     "severity": 2.0,
-    "place": "N/A"
+    "place": "N/A",
+    "Place": "Sankarapuram, Tamil Nadu"
   },
   {
     "lat": 32.7135,
@@ -2148,7 +2178,8 @@ const indiaData = [
     "began": "Unknown",
     "ended": "Unknown",
     "severity": 2.0,
-    "place": "N/A"
+    "place": "N/A",
+    "Place": "Dibrugarh West, Assam"
   },
   {
     "lat": 21.2719,
@@ -2159,7 +2190,8 @@ const indiaData = [
     "began": "Unknown",
     "ended": "Unknown",
     "severity": 2.0,
-    "place": "N/A"
+    "place": "N/A",
+    "Place": "Rairakhol, Odisha"
   },
   {
     "lat": 24.7174,
@@ -2300,7 +2332,8 @@ const indiaData = [
     "began": "Unknown",
     "ended": "Unknown",
     "severity": 2.0,
-    "place": "N/A"
+    "place": "N/A",
+    "Place": "Kadipur, Uttar Pradesh"
   },
   {
     "lat": 26.8946,
@@ -2321,7 +2354,8 @@ const indiaData = [
     "began": "Unknown",
     "ended": "Unknown",
     "severity": 2.0,
-    "place": "N/A"
+    "place": "N/A",
+    "Place": "Kallakkurichi, Tamil Nadu"
   },
   {
     "lat": 27.464,
@@ -2422,7 +2456,8 @@ const indiaData = [
     "began": "Unknown",
     "ended": "Unknown",
     "severity": 2.0,
-    "place": "N/A"
+    "place": "N/A",
+    "Place": "disaunigang, Uttar Pradesh"
   },
   {
     "lat": 10.489,
@@ -2663,7 +2698,8 @@ const indiaData = [
     "began": "Unknown",
     "ended": "Unknown",
     "severity": 2.0,
-    "place": "N/A"
+    "place": "N/A",
+    "Place": "Telkoi, Odisha"
   },
   {
     "lat": 27.3406,
@@ -2674,7 +2710,8 @@ const indiaData = [
     "began": "Unknown",
     "ended": "Unknown",
     "severity": 2.0,
-    "place": "Dibrugarh West, Assam"
+    "place": "Dibrugarh West, Assam",
+    "Place": "Dibrugarh West, Assam"
   },
   {
     "lat": 20.3337,
@@ -2755,7 +2792,8 @@ const indiaData = [
     "began": "Unknown",
     "ended": "Unknown",
     "severity": 2.0,
-    "place": "N/A"
+    "place": "N/A",
+    "Place": "Kapkot, Uttarakhand"
   },
   {
     "lat": 21.6184,
