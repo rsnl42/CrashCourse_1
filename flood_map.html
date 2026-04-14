@@ -3,71 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Historical Flood Map (Viridis)</title>
+    <title>Global Historical Flood Map (Light)</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <style>
-        body, html { height: 100%; margin: 0; background: #222; }
+        body, html { height: 100%; margin: 0; background: #fff; }
         #map { height: 100%; width: 100%; }
         .panel {
             position: absolute; top: 10px; right: 10px; z-index: 1000;
-            background: rgba(255, 255, 255, 0.9); padding: 15px; border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3); font-family: sans-serif; width: 250px;
+            background: rgba(255, 255, 255, 0.95); padding: 15px; border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1); font-family: sans-serif; width: 250px;
+            border: 1px solid #ddd;
         }
-        select { width: 100%; padding: 8px; margin-top: 10px; cursor: pointer; }
+        select { width: 100%; padding: 8px; margin-top: 10px; cursor: pointer; border: 1px solid #ccc; border-radius: 4px; }
         .legend {
-            background: white; padding: 10px; border-radius: 5px;
-            line-height: 1.5em; font-size: 0.8em;
+            background: #f9f9f9; padding: 10px; border-radius: 5px;
+            line-height: 1.5em; font-size: 0.85em; margin-top: 10px;
+            border: 1px solid #eee;
         }
         .legend-scale {
             display: flex; height: 15px; width: 100%; margin: 5px 0;
-            background: linear-gradient(to right, #440154, #3b528b, #21918c, #5ec962, #fde725);
-            border: 1px solid #ccc;
+            background: linear-gradient(to right, #ffeda0, #feb24c, #f03b20);
+            border: 1px solid #bbb;
         }
+        h3 { margin: 0 0 10px 0; color: #d73027; font-size: 1.2em; }
     </style>
 </head>
 <body>
     <div class="panel">
-        <h3 style="margin:0 0 10px 0; color: #333;">Flood Impact (Viridis)</h3>
+        <h3>Flood Impact Analysis</h3>
         <label>Select Metric:</label>
         <select id="metric" onchange="draw()">
             <option value="cases">Total Cases</option>
             <option value="dead">Total Dead</option>
             <option value="displaced">Total Displaced</option>
         </select>
-        <hr>
         <div class="legend">
-            <strong>Color Scale:</strong>
+            <strong>Impact Intensity:</strong>
             <div class="legend-scale"></div>
-            <div style="display: flex; justify-content: space-between;">
+            <div style="display: flex; justify-content: space-between; font-weight: bold; color: #555;">
                 <span>Low</span>
                 <span>High</span>
             </div>
-            <p id="na-info" style="margin: 5px 0 0 0; color: #666;">
-                <i style="background: #ccc; width: 12px; height: 12px; display: inline-block; border-radius: 50%;"></i> Gray = N/A
+            <p style="margin: 8px 0 0 0; color: #777; font-size: 0.9em;">
+                <i style="background: #ccc; width: 10px; height: 10px; display: inline-block; border-radius: 50%; border: 1px solid #999;"></i> Gray = N/A
             </p>
         </div>
     </div>
     <div id="map"></div>
     <script src="Day 2 Flood mapping/map_data.js"></script>
     <script>
-        // Use a dark theme for better color contrast
+        // Initialize map with a clean light theme
         const map = L.map('map').setView([15, 0], 2);
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
             attribution: '© OpenStreetMap, © CARTO'
         }).addTo(map);
 
         let layerGroup = L.layerGroup().addTo(map);
 
-        // Viridis Palette Interpolation
-        function getViridisColor(fraction) {
-            // Simple interpolation through Viridis-like colors
+        // Yellow-Orange-Red Palette (YlOrRd)
+        function getImpactColor(fraction) {
             const colors = [
-                [68, 1, 84],   // Purple
-                [59, 82, 139],  // Blue
-                [33, 145, 140], // Teal
-                [94, 201, 98],  // Green
-                [253, 231, 37]  // Yellow
+                [255, 237, 160], // Light Yellow
+                [254, 178, 76],  // Orange
+                [240, 59, 32]    // Red
             ];
             
             const idx = Math.min(Math.floor(fraction * (colors.length - 1)), colors.length - 2);
@@ -83,13 +82,13 @@
         }
 
         function getColor(val, metric) {
-            if (val === null || val === undefined) return "#ccc"; // N/A
-            if (val === 0) return "#440154"; // Minimum (Purple)
+            if (val === null || val === undefined) return "#ccc"; 
+            if (val === 0) return "#ffeda0"; // Min color
             
             const max = floodMaxes[metric];
-            // Use log scale for color mapping to spread values better
+            // Use Log scale to handle massive data ranges (e.g. 1 to 100M)
             const fraction = Math.log10(val + 1) / Math.log10(max + 1);
-            return getViridisColor(Math.min(fraction, 1));
+            return getImpactColor(Math.min(fraction, 1));
         }
 
         function draw() {
@@ -102,14 +101,18 @@
                 const displayVal = (val === null) ? "N/A" : val.toLocaleString();
                 
                 L.circleMarker([c.lat, c.lng], {
-                    radius: 7, // Fixed size for better color visibility
+                    radius: 7,
                     fillColor: color,
-                    color: "#fff",
-                    weight: 1,
+                    color: "#666", // Subtle border for clarity
+                    weight: 0.5,
                     opacity: 1,
-                    fillOpacity: 0.9
-                }).bindPopup(`<strong>${c.name}</strong><br>${m.toUpperCase()}: ${displayVal}`)
-                  .addTo(layerGroup);
+                    fillOpacity: 0.7 // Reduced opacity as requested
+                }).bindPopup(`
+                    <div style="font-family: sans-serif;">
+                        <strong style="color: #333;">${c.name}</strong><br>
+                        <span style="color: #666;">${m.toUpperCase()}:</span> <b>${displayVal}</b>
+                    </div>
+                `).addTo(layerGroup);
             });
         }
         draw();
