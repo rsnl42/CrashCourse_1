@@ -20,7 +20,7 @@ def extract_india_points(file_path):
             for row in rows:
                 cells = row.findall('ns:c', ns)
                 country, lon, lat = None, None, None
-                cause, dead, began = None, None, None
+                cause, dead, began, ended, severity, displaced = None, None, None, None, None, None
                 
                 for cell in cells:
                     r = cell.get('r')
@@ -44,8 +44,16 @@ def extract_india_points(file_path):
                     elif col == 'K':
                         try: dead = int(float(val))
                         except: pass
+                    elif col == 'L':
+                        try: displaced = int(float(val))
+                        except: pass
                     elif col == 'H' and t == 's':
                         began = shared_strings[int(val)].strip()
+                    elif col == 'I' and t == 's':
+                        ended = shared_strings[int(val)].strip()
+                    elif col == 'N':
+                        try: severity = float(val)
+                        except: pass
                 
                 if country == "India" and lat is not None and lon is not None:
                     india_points.append({
@@ -53,13 +61,16 @@ def extract_india_points(file_path):
                         "lng": lon,
                         "cause": cause if cause else "Unknown",
                         "dead": dead if dead is not None else "N/A",
-                        "date": began if began else "Unknown"
+                        "displaced": displaced if displaced is not None else "N/A",
+                        "began": began if began else "Unknown",
+                        "ended": ended if ended else "Unknown",
+                        "severity": severity if severity is not None else "N/A"
                     })
             
             return india_points
 
 if __name__ == "__main__":
-    points = extract_india_points('Day 2 Flood mapping/floodarchive.xlsx')
-    with open('Day 2 Flood mapping/india_points.js', 'w') as f:
+    points = extract_india_points('floodarchive.xlsx')
+    with open('india_points.js', 'w') as f:
         f.write("const indiaData = " + json.dumps(points, indent=2) + ";")
     print(f"Extracted {len(points)} flood events for India.")

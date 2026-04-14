@@ -44,11 +44,11 @@
                 fillOpacity: 0.6
             }).bindPopup(`
                 <div style="font-family: sans-serif;">
-                    <strong style="color: #004085;">Flood Event</strong><br>
-                    <hr style="margin: 5px 0;">
-                    <b>Date:</b> ${p.date}<br>
-                    <b>Cause:</b> ${p.cause}<br>
-                    <b>Deaths:</b> ${p.dead}
+                    <b>Date:</b> ${p.began || p.date || 'N/A'}<br>
+                    <b>Cause:</b> ${p.cause || 'N/A'}<br>
+                    <b>Severity:</b> ${(p.severity !== undefined && p.severity !== null) ? p.severity : 'N/A'}<br>
+                    <b>Deaths:</b> ${p.dead != null ? p.dead : 'N/A'}<br>
+                    <b>Displaced:</b> ${p.displaced != null ? p.displaced : 'N/A'}
                 </div>
             `).addTo(map);
         });
