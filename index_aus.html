@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Disaster Preparedness: India & Australia</title>
+    <title>High Bushfire Risk Areas in Australia</title>
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
           integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
           crossorigin=""/>
     <style>
-        /* Split the screen into two equal halves */
-        body { margin: 0; padding: 0; display: flex; height: 100vh; width: 100%; overflow: hidden; }
-        .map-container { height: 100%; width: 50%; border: 1px solid #ccc; box-sizing: border-box; }
+        /* Make the map fill the entire screen */
+        body { margin: 0; padding: 0; }
+        #map { height: 100vh; width: 100%; }
 
         /* Style for the fire icon */
         .fire-icon {
@@ -31,16 +31,16 @@
             box-shadow: 0 1px 3px rgba(0,0,0,0.2);
         }
 
+        /* Optional: Style for the popup */
         .leaflet-popup-content-wrapper {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             border-radius: 8px;
         }
     </style>
-</head>
-<body>
+    </head>
+    <body>
 
-    <div id="mapInd" class="map-container"></div>
-    <div id="mapAus" class="map-container"></div>
+    <div id="map"></div>
 
     <!-- Leaflet JavaScript -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
@@ -48,21 +48,16 @@
             crossorigin=""></script>
 
     <script>
-        // --- India Map Setup ---
-        const mapInd = L.map('mapInd').setView([20.5937, 78.9629], 5);
+        // 1. Initialize the map
+        const map = L.map('map').setView([-25.2744, 133.7751], 4);
+
+        // 2. Add OpenStreetMap tile layer
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
-            attribution: '© OpenStreetMap'
-        }).addTo(mapInd);
+            attribution: '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
 
-        // --- Australia Map Setup ---
-        const mapAus = L.map('mapAus').setView([-25.2744, 133.7751], 4);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '© OpenStreetMap'
-        }).addTo(mapAus);
-
-        // Define custom fire icon
+        // 3. Define custom fire icon
         const fireIcon = L.divIcon({
             html: '<div class="fire-icon">🔥</div>',
             className: 'custom-div-icon',
@@ -70,8 +65,8 @@
             iconAnchor: [15, 15]
         });
 
-        // Define high bushfire risk areas for Australia
-        const ausRiskAreas = [
+        // 4. Define high bushfire risk areas
+        const riskAreas = [
             { name: "Melbourne (Dandenong Ranges)", coords: [-37.8931, 145.3582], description: "High-risk interface with dense forests and extreme fire weather." },
             { name: "Sydney (Blue Mountains)", coords: [-33.7128, 150.3119], description: "Vulnerable to ember attacks and high forest fuel loads." },
             { name: "Adelaide Hills", coords: [-34.9984, 138.7188], description: "Steep, wooded terrain close to residential areas." },
@@ -80,10 +75,10 @@
             { name: "Hobart (Mt Wellington Fringes)", coords: [-42.8947, 147.2373], description: "High fuel loads and suburban interface risks during heatwaves." }
         ];
 
-        // Add markers to Australia map
-        ausRiskAreas.forEach(area => {
+        // 5. Add markers with fire icons and permanent labels
+        riskAreas.forEach(area => {
             L.marker(area.coords, { icon: fireIcon })
-                .addTo(mapAus)
+                .addTo(map)
                 .bindTooltip(area.name, {
                     permanent: true,
                     direction: 'top',
