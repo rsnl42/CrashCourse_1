@@ -54,6 +54,7 @@
                     <b>Date:</b> ${p.began || p.date || 'N/A'}<br>
                     <b>Cause:</b> ${p.cause || 'N/A'}<br>
                     <b>Severity:</b> ${(p.severity !== undefined && p.severity !== null) ? p.severity : 'N/A'}<br>
+                    ${(p.severity === 2 || String(p.severity) === '2.0') ? ('<b>Place:</b> ' + (p.place || 'N/A') + '<br>') : ''}
                     <b>Deaths:</b> ${p.dead != null ? p.dead : 'N/A'}<br>
                     <b>Displaced:</b> ${p.displaced != null ? p.displaced : 'N/A'}
                 </div>
