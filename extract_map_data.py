@@ -51,10 +51,14 @@ def get_country_coordinates(file_path):
                 
                 if country and country != "Country" and lat is not None and lon is not None:
                     if country not in country_data:
-                        country_data[country] = [0, 0, 0]
+                        country_data[country] = [0, 0, 0, 0, 0] # [sum_lat, sum_long, cases, dead, displaced]
                     country_data[country][0] += lat
                     country_data[country][1] += lon
                     country_data[country][2] += 1
+                    try: country_data[country][3] += int(dead) if dead else 0
+                    except: pass
+                    try: country_data[country][4] += int(displaced) if displaced else 0
+                    except: pass
             
             # Calculate averages
             final_data = []
@@ -63,7 +67,9 @@ def get_country_coordinates(file_path):
                     "name": country,
                     "lat": values[0] / values[2],
                     "lng": values[1] / values[2],
-                    "count": values[2]
+                    "cases": values[2],
+                    "dead": values[3],
+                    "displaced": values[4]
                 })
             
             return final_data
