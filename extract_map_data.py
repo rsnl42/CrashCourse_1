@@ -16,28 +16,27 @@ def get_country_coordinates(file_path):
             tree = ET.parse(f)
             root = tree.getroot()
             
-            country_data = {} # {country: [sum_lat, sum_long, count]}
+            country_data = {} # {country: [sum_lat, sum_long, cases, dead, displaced]}
             
-            # Column mapping: C=Country (2), E=Long (4), F=Lat (5)
-            # Cell refs look like C2, E2, F2
-            
+            # Column mapping: C=Country, E=Long, F=Lat, K=Dead, L=Displaced
             rows = root.findall('.//ns:row', ns)
             for row in rows:
                 cells = row.findall('ns:c', ns)
                 country = None
                 lon = None
                 lat = None
+                dead = 0
+                displaced = 0
                 
                 for cell in cells:
                     r = cell.get('r')
                     if not r: continue
                     col = "".join([c for c in r if not c.isdigit()])
                     
-                    # Get value
-                    t = cell.get('t')
                     v_elem = cell.find('ns:v', ns)
                     if v_elem is None: continue
                     val = v_elem.text
+                    t = cell.get('t')
                     
                     if col == 'C': # Country
                         if t == 's':
@@ -48,6 +47,12 @@ def get_country_coordinates(file_path):
                     elif col == 'F': # Lat
                         try: lat = float(val)
                         except: pass
+                    elif col == 'K': # Dead
+                        try: dead = int(float(val))
+                        except: dead = 0
+                    elif col == 'L': # Displaced
+                        try: displaced = int(float(val))
+                        except: displaced = 0
                 
                 if country and country != "Country" and lat is not None and lon is not None:
                     if country not in country_data:
@@ -55,12 +60,10 @@ def get_country_coordinates(file_path):
                     country_data[country][0] += lat
                     country_data[country][1] += lon
                     country_data[country][2] += 1
-                    try: country_data[country][3] += int(dead) if dead else 0
-                    except: pass
-                    try: country_data[country][4] += int(displaced) if displaced else 0
-                    except: pass
+                    country_data[country][3] += dead
+                    country_data[country][4] += displaced
             
-            # Calculate averages
+            # Calculate final data
             final_data = []
             for country, values in country_data.items():
                 final_data.append({
@@ -78,4 +81,4 @@ if __name__ == "__main__":
     data = get_country_coordinates('Day 2 Flood mapping/floodarchive.xlsx')
     with open('Day 2 Flood mapping/map_data.js', 'w') as f:
         f.write("const floodData = " + json.dumps(data, indent=2) + ";")
-    print(f"Extracted {len(data)} countries.")
+    print(f"Extracted {len(data)} countries with full statistics.")
