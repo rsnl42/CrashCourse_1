@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Preparedness: India & Australia Risk Map</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
+          crossorigin=""/>
+    <style>
+        /* Split the screen into two equal halves */
+        body { margin: 0; padding: 0; display: flex; height: 100vh; width: 100%; overflow: hidden; }
+        .map-container { height: 100%; width: 50%; border: 1px solid #ccc; box-sizing: border-box; position: relative; }
+
+        /* Title and Legend Overlays */
+        .map-title {
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 8px 20px;
+            border-radius: 8px;
+            border: 1px solid #aaa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            font-size: 1.2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            pointer-events: none;
+        }
+
+        .map-legend {
+            position: absolute;
+            bottom: 30px;
+            left: 20px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 10px 15px;
+            border-radius: 8px;
+            border: 1px solid #aaa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 14px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .legend-item { display: flex; align-items: center; margin-bottom: 5px; }
+        .legend-icon { font-size: 20px; margin-right: 10px; width: 24px; text-align: center; }
+
+        /* Icon styles */
+        .marker-emoji {
+            font-size: 24px;
+            text-align: center;
+            line-height: 24px;
+            white-space: nowrap;
+        }
+
+        /* Style for permanent labels */
+        .leaflet-tooltip-own {
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid #333;
+            border-radius: 4px;
+            color: #333;
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
+
+        /* Color coding for tooltips */
+        .india-label { border-color: #2f66d3; color: #2f66d3; }
+        .aus-label { border-color: #d32f2f; color: #d32f2f; }
+
+        .leaflet-popup-content-wrapper {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="mapInd" class="map-container">
+        <h2 class="map-title">India: Flood & Drought Risk</h2>
+        <div class="map-legend">
+            <strong>Legend</strong>
+            <div class="legend-item"><span class="legend-icon">💧</span> Flood Prone</div>
+            <div class="legend-item"><span class="legend-icon">🌵</span> Drought Prone</div>
+            <div class="legend-item"><span class="legend-icon">💧🌵</span> Dual Risk</div>
+        </div>
+    </div>
+    <div id="mapAus" class="map-container">
+        <h2 class="map-title">Australia: Bushfire Risk</h2>
+        <div class="map-legend">
+            <strong>Legend</strong>
+            <div class="legend-item"><span class="legend-icon">🔥</span> Bushfire Risk</div>
+        </div>
+    </div>
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" 
+            crossorigin=""></script>
+
+    <script>
+        // --- India Map Setup (No Labels) ---
+        const mapInd = L.map('mapInd').setView([22.5937, 78.9629], 5);
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap © CartoDB'
+        }).addTo(mapInd);
+
+        // --- Australia Map Setup ---
+        const mapAus = L.map('mapAus').setView([-25.2744, 133.7751], 4);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap'
+        }).addTo(mapAus);
+
+        // --- Helper for creating icons with one or more emojis ---
+        function createEmojiIcon(emojis) {
+            return L.divIcon({
+                html: `<div class="marker-emoji">${emojis}</div>`,
+                className: 'custom-div-icon',
+                iconSize: [60, 30],
+                iconAnchor: [30, 15]
+            });
+        }
+
+        // --- India Risk Data ---
+        const indiaRiskAreas = [
+            { name: "Bihar (Patna)", coords: [25.5941, 85.1376], icon: "💧", desc: "India's most flood-prone state." },
+            { name: "Assam (Guwahati)", coords: [26.1445, 91.7362], icon: "💧", desc: "Annual deluges from the Brahmaputra." },
+            { name: "West Bengal (Kolkata)", coords: [22.5726, 88.3639], icon: "💧", desc: "Risk of riverine and coastal flooding." },
+            { name: "Punjab (Chandigarh)", coords: [30.7333, 76.7794], icon: "💧", desc: "Historically high risk from river networks." },
+            { name: "Kerala (Thiruvananthapuram)", coords: [8.5241, 76.9366], icon: "💧", desc: "Vulnerable to catastrophic flash floods." },
+            { name: "Rajasthan (Jaipur)", coords: [26.9124, 75.7873], icon: "🌵", desc: "The most drought-prone state in India." },
+            { name: "Karnataka (Bengaluru)", coords: [12.9716, 77.5946], icon: "🌵", desc: "North Karnataka faces chronic water scarcity." },
+            { name: "Andhra Pradesh (Amaravati)", coords: [16.5062, 80.6480], icon: "🌵", desc: "Rayalaseema region is historically drought-prone." },
+            { name: "Madhya Pradesh (Bhopal)", coords: [23.2599, 77.4126], icon: "🌵", desc: "Bundelkhand region faces recurring droughts." },
+            { name: "Tamil Nadu (Chennai)", coords: [13.0827, 80.2707], icon: "🌵", desc: "Faced extreme 'Day Zero' water crisis in 2019." },
+            { name: "Gujarat (Gandhinagar)", coords: [23.2156, 72.6369], icon: "💧🌵", desc: "Prone to both major floods and chronic droughts." },
+            { name: "Maharashtra (Mumbai)", coords: [19.0760, 72.8777], icon: "💧🌵", desc: "Faces urban flooding and severe regional droughts." },
+            { name: "Uttar Pradesh (Lucknow)", coords: [26.8467, 80.9462], icon: "💧🌵", desc: "High fatalities from floods; Bundelkhand is drought-prone." },
+            { name: "Odisha (Bhubaneswar)", coords: [20.2961, 85.8245], icon: "💧🌵", desc: "Cyclonic floods and KBK belt droughts." }
+        ];
+
+        // --- Australia Risk Data ---
+        const ausRiskAreas = [
+            { name: "Melbourne (Dandenong Ranges)", coords: [-37.8931, 145.3582], icon: "🔥", desc: "High-risk interface with dense forests." },
+            { name: "Sydney (Blue Mountains)", coords: [-33.7128, 150.3119], icon: "🔥", desc: "Vulnerable to ember attacks." },
+            { name: "Adelaide Hills", coords: [-34.9984, 138.7188], icon: "🔥", desc: "Steep, wooded terrain close to residential areas." },
+            { name: "Perth Hills", coords: [-31.8974, 116.1667], icon: "🔥", desc: "Hot inland winds and dry vegetation." },
+            { name: "Canberra (Western Edge)", coords: [-35.3411, 149.0347], icon: "🔥", desc: "Known as the 'Bush Capital'." },
+            { name: "Hobart (Mt Wellington Fringes)", coords: [-42.8947, 147.2373], icon: "🔥", desc: "High fuel loads during heatwaves." }
+        ];
+
+        // Add Markers to India Map
+        indiaRiskAreas.forEach(area => {
+            L.marker(area.coords, { icon: createEmojiIcon(area.icon) })
+                .addTo(mapInd)
+                .bindTooltip(area.name, {
+                    permanent: true,
+                    direction: 'top',
+                    className: 'leaflet-tooltip-own india-label',
+                    offset: [0, -10]
+                })
+                .bindPopup(`<b>${area.name}</b><br>${area.desc}`);
+        });
+
+        // Add Markers to Australia Map
+        ausRiskAreas.forEach(area => {
+            L.marker(area.coords, { icon: createEmojiIcon(area.icon) })
+                .addTo(mapAus)
+                .bindTooltip(area.name, {
+                    permanent: true,
+                    direction: 'top',
+                    className: 'leaflet-tooltip-own aus-label',
+                    offset: [0, -10]
+                })
+                .bindPopup(`<b>${area.name}</b><br>${area.desc}`);
+        });
+    </script>
+</body>
+</html>
