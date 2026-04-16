@@ -157,6 +157,20 @@
             font-size: 0.8rem;
             font-weight: bold;
         }
+
+        .data-snippet {
+            background: #272822;
+            color: #f8f8f2;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.75rem;
+            overflow-x: auto;
+            white-space: pre;
+            margin-top: 10px;
+            max-height: 150px;
+            border: 1px solid #444;
+        }
     </style>
 </head>
 <body>
@@ -226,6 +240,12 @@
                         <p><strong>Format:</strong> CSV, Excel</p>
                         <p><strong>Date Retrieved:</strong> April 16, 2026</p>
                         <p><strong>Description:</strong> Curated list of historical flood events globally since 1985.</p>
+                        <div class="data-snippet">ID,GlideNumber,Country,long,lat,Year,Severity
+1,0,ALGERIA,5.23026,35.8142,1985,1.0
+2,0,BRAZIL,-45.3489,-18.7111,1985,2.0
+3,0,PHILIPPINES,122.974,10.0207,1985,1.0
+4,0,INDONESIA,124.606,1.01489,1985,1.0
+5,0,MOZAMBIQUE,32.3491,-25.8693,1985,2.0</div>
                     </div>
                 </div>
                 <div class="card">
@@ -236,6 +256,21 @@
                         <p><strong>Format:</strong> JSON, GeoJSON</p>
                         <p><strong>Date Retrieved:</strong> April 16, 2026</p>
                         <p><strong>Description:</strong> Geospatial locations of hospitals and clinics in Uttar Pradesh, India.</p>
+                        <div class="data-snippet">{
+  "name": "Unnamed Hospital",
+  "lat": 25.2780, "lng": 82.9543,
+  "type": "hospital"
+},
+{
+  "name": "Mata Anandmayee Hospital",
+  "lat": 25.2794, "lng": 83.0116,
+  "type": "hospital"
+},
+{
+  "name": "Heritage Hospital",
+  "lat": 25.2810, "lng": 83.0012,
+  "type": "hospital"
+}</div>
                     </div>
                 </div>
                 <div class="card">
@@ -246,6 +281,11 @@
                         <p><strong>Format:</strong> Python/JS Objects</p>
                         <p><strong>Date Retrieved:</strong> April 16, 2026</p>
                         <p><strong>Description:</strong> Synthetic indicators for drought and bushfire risk mapping.</p>
+                        <div class="data-snippet">{ name: "Bihar", coords: [25.5, 85.1], icon: "💧" },
+{ name: "Rajasthan", coords: [26.9, 75.7], icon: "🌵" },
+{ name: "Melbourne", coords: [-37.8, 145.3], icon: "🔥" },
+{ name: "Sydney", coords: [-33.7, 150.3], icon: "🔥" },
+{ name: "Gujarat", coords: [23.2, 72.6], icon: "💧🌵" }</div>
                     </div>
                 </div>
             </div>
