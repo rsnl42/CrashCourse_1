@@ -88,15 +88,25 @@
 </footer>
 
 <script>
-    // Custom Color Palette
-    const customPalette = [
-        '#003d5c', '#594e90', '#bc4c96', '#ff5f66', '#ffa600'
+    /** 
+     * Okabe-Ito Colorblind Friendly Palette
+     * Designed to be readable by people with Protanopia, Deuteranopia, and Tritanopia.
+     */
+    const colorblindPalette = [
+        '#E69F00', // Orange
+        '#56B4E9', // Sky Blue
+        '#009E73', // Bluish Green
+        '#F0E442', // Yellow
+        '#0072B2', // Blue
+        '#D55E00', // Vermillion
+        '#CC79A7', // Reddish Purple
+        '#000000'  // Black (used sparingly)
     ];
 
     function getPaletteScale(count) {
         const scale = [];
         for (let i = 0; i < count; i++) {
-            scale.push(customPalette[i % customPalette.length]);
+            scale.push(colorblindPalette[i % colorblindPalette.length]);
         }
         return scale;
     }
@@ -131,11 +141,11 @@
                 label: 'Events per Year',
                 data: Object.values(dashboardData.events_by_year),
                 fill: true,
-                backgroundColor: 'rgba(0, 61, 92, 0.1)', // #003d5c with transparency
-                borderColor: '#003d5c',
+                backgroundColor: 'rgba(0, 114, 178, 0.1)', // #0072B2 with transparency
+                borderColor: '#0072B2',
                 borderWidth: 2,
                 tension: 0.3,
-                pointBackgroundColor: '#bc4c96',
+                pointBackgroundColor: '#D55E00',
                 pointRadius: 3
             }]
         },
