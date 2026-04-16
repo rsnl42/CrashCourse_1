@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flood Events Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="dashboard_data.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .card h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        canvas {
+            width: 100% !important;
+            height: 300px !important;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #777;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Global Flood Archive Dashboard</h1>
+    <p>Visualizing historical flood data from 1985 to present</p>
+</header>
+
+<div class="dashboard-grid">
+    <!-- Card 1: Events by Country -->
+    <div class="card">
+        <h3>Top 20 Countries by Flood Events</h3>
+        <canvas id="countryChart"></canvas>
+    </div>
+
+    <!-- Card 2: Events per Year -->
+    <div class="card">
+        <h3>Flood Events per Year</h3>
+        <canvas id="yearChart"></canvas>
+    </div>
+
+    <!-- Card 3: Events by Category -->
+    <div class="card">
+        <h3>Flood Events by Category</h3>
+        <canvas id="categoryChart"></canvas>
+    </div>
+
+    <!-- Card 4: Total Displaced by Severity -->
+    <div class="card">
+        <h3>Total Displaced by Severity</h3>
+        <canvas id="severityChart"></canvas>
+    </div>
+</div>
+
+<footer>
+    <p>Data Source: FloodArchive Cleaned CSV | Created with Chart.js</p>
+</footer>
+
+<script>
+    // 1. Events by Country
+    new Chart(document.getElementById('countryChart'), {
+        type: 'bar',
+        data: {
+            labels: Object.keys(dashboardData.events_by_country),
+            datasets: [{
+                label: '# of Events',
+                data: Object.values(dashboardData.events_by_country),
+                backgroundColor: 'rgba(54, 162, 235, 0.7)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: { legend: { display: false } },
+            scales: { y: { beginAtZero: true } }
+        }
+    });
+
+    // 2. Events per Year
+    new Chart(document.getElementById('yearChart'), {
+        type: 'line',
+        data: {
+            labels: Object.keys(dashboardData.events_by_year),
+            datasets: [{
+                label: 'Events per Year',
+                data: Object.values(dashboardData.events_by_year),
+                fill: true,
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                tension: 0.1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: { y: { beginAtZero: true } }
+        }
+    });
+
+    // 3. Events by Category
+    new Chart(document.getElementById('categoryChart'), {
+        type: 'bar',
+        data: {
+            labels: Object.keys(dashboardData.events_by_category),
+            datasets: [{
+                label: '# of Events',
+                data: Object.values(dashboardData.events_by_category),
+                backgroundColor: 'rgba(255, 159, 64, 0.7)',
+                borderColor: 'rgba(255, 159, 64, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            indexAxis: 'y',
+            responsive: true,
+            plugins: { legend: { display: false } }
+        }
+    });
+
+    // 4. Total Displaced by Severity
+    new Chart(document.getElementById('severityChart'), {
+        type: 'bar',
+        data: {
+            labels: Object.keys(dashboardData.displaced_by_severity),
+            datasets: [{
+                label: 'Total Displaced',
+                data: Object.values(dashboardData.displaced_by_severity),
+                backgroundColor: 'rgba(255, 99, 132, 0.7)',
+                borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: { y: { beginAtZero: true } }
+        }
+    });
+</script>
+
+</body>
+</html>
