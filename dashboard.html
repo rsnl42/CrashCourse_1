@@ -9,7 +9,7 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f2f5;
+            background-color: #f8f9fa;
             margin: 0;
             padding: 20px;
         }
@@ -27,7 +27,7 @@
         .card {
             background: #fff;
             border-radius: 12px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
             padding: 20px;
             display: flex;
             flex-direction: column;
@@ -35,7 +35,7 @@
         }
         .card h3 {
             margin-top: 0;
-            color: #1a1a1a;
+            color: #2c3e50;
             font-weight: 600;
         }
         canvas {
@@ -45,7 +45,7 @@
         footer {
             text-align: center;
             margin-top: 40px;
-            color: #666;
+            color: #7f8c8d;
             font-size: 0.9em;
         }
     </style>
@@ -88,18 +88,15 @@
 </footer>
 
 <script>
-    // Vibrant Color Palette
-    const vibrantColors = [
-        '#FF007F', '#00E5FF', '#76FF03', '#FFAB00', '#D500F9', 
-        '#2979FF', '#FF3D00', '#00E676', '#FFFF00', '#F50057',
-        '#64FFDA', '#FF6E40', '#18FFFF', '#7C4DFF', '#EEFF41',
-        '#B2FF59', '#FFD740', '#FF4081', '#40C4FF', '#00B8D4'
+    // Custom Color Palette
+    const customPalette = [
+        '#003d5c', '#594e90', '#bc4c96', '#ff5f66', '#ffa600'
     ];
 
-    function getVibrantScale(count) {
+    function getPaletteScale(count) {
         const scale = [];
         for (let i = 0; i < count; i++) {
-            scale.push(vibrantColors[i % vibrantColors.length]);
+            scale.push(customPalette[i % customPalette.length]);
         }
         return scale;
     }
@@ -113,7 +110,7 @@
             datasets: [{
                 label: '# of Events',
                 data: Object.values(dashboardData.events_by_country),
-                backgroundColor: getVibrantScale(countryLabels.length),
+                backgroundColor: getPaletteScale(countryLabels.length),
                 borderWidth: 0,
                 borderRadius: 4
             }]
@@ -134,12 +131,12 @@
                 label: 'Events per Year',
                 data: Object.values(dashboardData.events_by_year),
                 fill: true,
-                backgroundColor: 'rgba(0, 229, 255, 0.2)', // Bright Cyan with transparency
-                borderColor: '#00E5FF',
-                borderWidth: 3,
+                backgroundColor: 'rgba(0, 61, 92, 0.1)', // #003d5c with transparency
+                borderColor: '#003d5c',
+                borderWidth: 2,
                 tension: 0.3,
-                pointBackgroundColor: '#FF007F',
-                pointRadius: 4
+                pointBackgroundColor: '#bc4c96',
+                pointRadius: 3
             }]
         },
         options: {
@@ -157,7 +154,7 @@
             datasets: [{
                 label: '# of Events',
                 data: Object.values(dashboardData.events_by_category),
-                backgroundColor: getVibrantScale(categoryLabels.length),
+                backgroundColor: getPaletteScale(categoryLabels.length),
                 borderWidth: 0,
                 borderRadius: 4
             }]
@@ -178,9 +175,9 @@
             datasets: [{
                 label: 'Total Displaced',
                 data: Object.values(dashboardData.displaced_by_severity),
-                backgroundColor: ['#76FF03', '#FFAB00', '#FF3D00'], // Bright Lime, Amber, Deep Red
+                backgroundColor: getPaletteScale(severityLabels.length),
                 borderWidth: 0,
-                borderRadius: 8
+                borderRadius: 6
             }]
         },
         options: {
