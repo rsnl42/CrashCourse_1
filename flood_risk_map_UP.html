@@ -86,10 +86,10 @@
         // Hospital Layer (All)
         const hospitalLayer = L.layerGroup();
         const baseHospitalIcon = L.divIcon({
-            html: `
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 5V19M5 12H19" stroke="#007bff" stroke-width="4" stroke-linecap="round"/>
-                </svg>`,
+            html: `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <circle cx="12" cy="12" r="12" fill="#007bff"/> {/* Blue background */}
+                       <path d="M12 6V18M6 12H18" stroke="white" stroke-width="4" stroke-linecap="round"/> {/* White plus */}
+                   </svg>`,
             className: 'hospital-marker-small',
             iconSize: [12, 12],
             iconAnchor: [6, 6],
