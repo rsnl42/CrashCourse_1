@@ -27,23 +27,43 @@
     </div>
     <div id="map"></div>
     <script src="Day 2 Flood mapping/india_points.js"></script>
+    <script src="Day 3 at-risk Hospitals mapping (UP)/hospital_data_UP.js"></script>
+    <script src="Day 3 at-risk Hospitals mapping (UP)/hospitals_at_risk_UP.js"></script>
     <script>
-        const map = L.map('map').setView([22.5, 82.0], 5); // Centered on India
+        const map = L.map('map').setView([26.8467, 82.0], 7); // Focused on Eastern UP where at-risk clusters are
         
         L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
             attribution: '© OpenStreetMap, © CARTO'
         }).addTo(map);
 
+        // Flood Layers (by Severity)
+        const floodLayer1 = L.layerGroup();
+        const floodLayer1_5 = L.layerGroup();
+        const floodLayer2 = L.layerGroup();
+
         indiaData.forEach(p => {
             const sev = p.severity;
-            let fillColor;
-            if (sev === 1 || String(sev) === '1.0') fillColor = '#7fbfff'; // light blue
-            else if (sev === 1.5 || String(sev) === '1.5') fillColor = '#ff8c00'; // orange
-            else if (sev === 2 || String(sev) === '2.0') fillColor = '#ff0000'; // red
-            else fillColor = '#007bff';
+            let fillColor, radius, targetLayer;
+            if (sev === 1 || String(sev) === '1.0') {
+                fillColor = '#7fbfff';
+                radius = 5;
+                targetLayer = floodLayer1;
+            } else if (sev === 1.5 || String(sev) === '1.5') {
+                fillColor = '#ff8c00';
+                radius = 7.5; // 1.5x
+                targetLayer = floodLayer1_5;
+            } else if (sev === 2 || String(sev) === '2.0') {
+                fillColor = '#ff0000';
+                radius = 10;  // 2x
+                targetLayer = floodLayer2;
+            } else {
+                fillColor = '#007bff';
+                radius = 5;
+                targetLayer = floodLayer1;
+            }
 
             L.circleMarker([p.lat, p.lng], {
-                radius: 5,
+                radius: radius,
                 fillColor: fillColor,
                 color: "#004085",
                 weight: 1,
@@ -51,31 +71,141 @@
                 fillOpacity: 0.8
             }).bindPopup(`
                 <div style="font-family: sans-serif;">
+                    <b style="color:#d32f2f">Flood Event</b><br>
                     <b>Date:</b> ${p.began || p.date || 'N/A'}<br>
                     <b>Cause:</b> ${p.cause || 'N/A'}<br>
-                    <b>Severity:</b> ${(p.severity !== undefined && p.severity !== null) ? p.severity : 'N/A'}<br>
-                    ${(p.severity === 2 || String(p.severity) === '2.0') ? ('<b>Place:</b> ' + (p.Place || 'N/A') + '<br>') : ''}
-                    <b>Deaths:</b> ${p.dead != null ? p.dead : 'N/A'}<br>
-                    <b>Displaced:</b> ${p.displaced != null ? p.displaced : 'N/A'}
+                    <b>Severity:</b> ${p.severity || 'N/A'}
                 </div>
-            `).addTo(map);
+            `).addTo(targetLayer);
+        });
+        
+        floodLayer1.addTo(map);
+        floodLayer1_5.addTo(map);
+        floodLayer2.addTo(map);
+
+        // Hospital Layer (All)
+        const hospitalLayer = L.layerGroup();
+        const baseHospitalIcon = L.divIcon({
+            html: `
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="11" fill="#007bff" stroke="white" stroke-width="1.5"/>
+                    <path d="M12 7V17M7 12H17" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                </svg>`,
+            className: 'hospital-marker-small',
+            iconSize: [14, 14],
+            iconAnchor: [7, 7],
+            popupAnchor: [0, -7]
         });
 
-        // Legend
-        const legend = L.control({position: 'bottomleft'});
-        legend.onAdd = function (map) {
-            const div = L.DomUtil.create('div', 'info legend');
+        hospitalDataUP.forEach(h => {
+            L.marker([h.lat, h.lng], { icon: baseHospitalIcon })
+            .bindPopup(`<b>${h.name}</b><br>${h.city}`)
+            .addTo(hospitalLayer);
+        });
+        hospitalLayer.addTo(map);
+
+        // At-Risk Layers
+        const risk5kmLayer = L.layerGroup();
+        const risk10kmLayer = L.layerGroup();
+
+        const createPlusIcon = (color, size) => L.divIcon({
+            html: `
+                <svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="11" fill="${color}" stroke="white" stroke-width="1.5"/>
+                    <path d="M12 7V17M7 12H17" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                </svg>`,
+            className: 'risk-marker',
+            iconSize: [size, size],
+            iconAnchor: [size/2, size/2]
+        });
+
+        hospitalsAtRiskUP.radius_5km.forEach(h => {
+            L.marker([h.lat, h.lng], { icon: createPlusIcon('#ff0000', 24) })
+            .bindPopup(`
+                <div style="font-family: sans-serif;">
+                    <b style="color:#ff0000">⚠️ HIGH RISK HOSPITAL (5km)</b><br>
+                    <b>Name:</b> ${h.name}<br>
+                    <b>Distance:</b> ${h.distance_km} km to nearest flood<br>
+                    <b>Flood Cause:</b> ${h.flood_cause}
+                </div>
+            `).addTo(risk5kmLayer);
+        });
+
+        hospitalsAtRiskUP.radius_10km.forEach(h => {
+            L.marker([h.lat, h.lng], { icon: createPlusIcon('#ff8c00', 24) })
+            .bindPopup(`
+                <div style="font-family: sans-serif;">
+                    <b style="color:#ff8c00">⚠️ AT RISK HOSPITAL (10km)</b><br>
+                    <b>Name:</b> ${h.name}<br>
+                    <b>Distance:</b> ${h.distance_km} km to nearest flood<br>
+                    <b>Flood Cause:</b> ${h.flood_cause}
+                </div>
+            `).addTo(risk10kmLayer);
+        });
+
+        risk5kmLayer.addTo(map);
+        risk10kmLayer.addTo(map);
+
+        // Combined Layer Control + Legend
+        const combinedControl = L.control({position: 'bottomleft'});
+        combinedControl.onAdd = function (map) {
+            const div = L.DomUtil.create('div', 'combined-control');
             div.style.background = 'white';
-            div.style.padding = '6px 8px';
-            div.style.borderRadius = '5px';
-            div.style.boxShadow = '0 2px 6px rgba(0,0,0,0.2)';
-            div.innerHTML = '<b>Severity</b><br>' +
-                '<i style="background:#7fbfff;width:12px;height:12px;display:inline-block;margin-right:6px;border:1px solid #004085"></i> 1.0<br>' +
-                '<i style="background:#ff8c00;width:12px;height:12px;display:inline-block;margin-right:6px;border:1px solid #004085"></i> 1.5<br>' +
-                '<i style="background:#ff0000;width:12px;height:12px;display:inline-block;margin-right:6px;border:1px solid #004085"></i> 2.0';
+            div.style.padding = '12px';
+            div.style.borderRadius = '8px';
+            div.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+            div.style.fontFamily = 'sans-serif';
+            div.style.fontSize = '0.9em';
+            div.style.width = '240px';
+            div.style.borderLeft = '6px solid #007bff';
+
+            div.innerHTML = `
+                <div style="font-weight:bold; margin-bottom:10px; border-bottom:1px solid #eee; padding-bottom:5px; color:#004085">Map Controls & Legend</div>
+                
+                <div style="margin-bottom:12px">
+                    <div style="font-weight:600; margin-bottom:5px; font-size:0.85em; color:#666">FLOOD EVENTS</div>
+                    <label style="display:block; margin-bottom:3px; cursor:pointer"><input type="checkbox" checked onchange="toggleLayer('flood1', this)"> <i style="background:#7fbfff;width:10px;height:10px;display:inline-block;margin:0 4px;border:1px solid #004085;border-radius:50%"></i> Severity 1.0</label>
+                    <label style="display:block; margin-bottom:3px; cursor:pointer"><input type="checkbox" checked onchange="toggleLayer('flood1_5', this)"> <i style="background:#ff8c00;width:15px;height:15px;display:inline-block;margin:0 4px;border:1px solid #004085;border-radius:50%;vertical-align:middle"></i> Severity 1.5 (1.5x)</label>
+                    <label style="display:block; margin-bottom:5px; cursor:pointer"><input type="checkbox" checked onchange="toggleLayer('flood2', this)"> <i style="background:#ff0000;width:20px;height:20px;display:inline-block;margin:0 4px;border:1px solid #004085;border-radius:50%;vertical-align:middle"></i> Severity 2.0 (2x)</label>
+                </div>
+
+                <div>
+                    <div style="font-weight:600; margin-bottom:5px; font-size:0.85em; color:#666">HOSPITALS</div>
+                    <label style="display:block; margin-bottom:5px; cursor:pointer"><input type="checkbox" checked onchange="toggleLayer('all-hosp', this)"> 
+                        <svg width="12" height="12" style="vertical-align:middle; margin:0 2px"><circle cx="6" cy="6" r="5" fill="#007bff" stroke="white" stroke-width="1"/></svg> All Hospitals
+                    </label>
+                    <label style="display:block; margin-bottom:5px; cursor:pointer; color:#d32f2f; font-weight:600"><input type="checkbox" checked onchange="toggleLayer('risk-5', this)"> 
+                        <svg width="14" height="14" style="vertical-align:middle; margin:0 2px"><circle cx="7" cy="7" r="6" fill="#ff0000" stroke="white" stroke-width="1"/><path d="M7 4V10M4 7H10" stroke="white" stroke-width="2.5"/></svg> 5km (High Risk)
+                    </label>
+                    <label style="display:block; margin-bottom:5px; cursor:pointer; color:#e67e22; font-weight:600"><input type="checkbox" checked onchange="toggleLayer('risk-10', this)"> 
+                        <svg width="14" height="14" style="vertical-align:middle; margin:0 2px"><circle cx="7" cy="7" r="6" fill="#ff8c00" stroke="white" stroke-width="1"/><path d="M7 4V10M4 7H10" stroke="white" stroke-width="2"/></svg> 10km (At Risk)
+                    </label>
+                </div>
+            `;
+
+            // Prevent map clicks from triggering when clicking the legend
+            L.DomEvent.disableClickPropagation(div);
             return div;
         };
-        legend.addTo(map);
+        combinedControl.addTo(map);
+
+        function toggleLayer(type, checkbox) {
+            const layers = {
+                'flood1': floodLayer1,
+                'flood1_5': floodLayer1_5,
+                'flood2': floodLayer2,
+                'all-hosp': hospitalLayer,
+                'risk-5': risk5kmLayer,
+                'risk-10': risk10kmLayer
+            };
+            
+            const layer = layers[type];
+            if (checkbox.checked) {
+                map.addLayer(layer);
+            } else {
+                map.removeLayer(layer);
+            }
+        }
     </script>
 </body>
 </html>
