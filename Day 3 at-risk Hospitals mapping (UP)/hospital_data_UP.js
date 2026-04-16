@@ -1,0 +1,7002 @@
+const hospitalDataUP = [
+    {
+        "name": "Unnamed Hospital",
+        "lat": 25.2780626,
+        "lng": 82.954338,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Mata Anandmayee Hosiptal",
+        "lat": 25.2929029,
+        "lng": 83.0055074,
+        "city": "Varanasi",
+        "type": "hospital"
+    },
+    {
+        "name": "Unnamed Hospital",
+        "lat": 25.2986311,
+        "lng": 83.0021003,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Unnamed Hospital",
+        "lat": 25.3162104,
+        "lng": 83.0050584,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Unnamed Hospital",
+        "lat": 25.3384937,
+        "lng": 82.9959608,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Punjabi Hospital",
+        "lat": 25.3460988,
+        "lng": 83.0372616,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Mariampur Hospital",
+        "lat": 26.465464,
+        "lng": 80.305789,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Agarwal Hospital",
+        "lat": 26.464244,
+        "lng": 80.314388,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Rama Krishna Mission Hospital",
+        "lat": 26.468763,
+        "lng": 80.318223,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Lala Lajpat Rai and Associate Hospital",
+        "lat": 26.4781242,
+        "lng": 80.3114319,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Devishiv Hospital, Lucknow",
+        "lat": 26.8746885,
+        "lng": 80.9603472,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sri Narayan Ashram Hospital",
+        "lat": 25.4969605,
+        "lng": 81.8684147,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital Nandganj",
+        "lat": 25.5434374,
+        "lng": 83.4006007,
+        "city": "Ghazipur",
+        "type": "N/A"
+    },
+    {
+        "name": "Avadh Hospital And Heart Centre",
+        "lat": 26.8024464,
+        "lng": 80.8957547,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Samvedna Hospital, Varanasi",
+        "lat": 25.2965812,
+        "lng": 83.0013293,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Unnamed Hospital",
+        "lat": 27.4654664,
+        "lng": 83.4576314,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Priti Hospital",
+        "lat": 25.4573983,
+        "lng": 81.8541354,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Jeevan Jyoti Hospital, Allahabad",
+        "lat": 25.436294,
+        "lng": 81.8465893,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "government hospital",
+        "lat": 25.6164025,
+        "lng": 80.5241517,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Saraswathi Hospital and Research Centre",
+        "lat": 26.8929536,
+        "lng": 81.0676311,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Unnamed Hospital",
+        "lat": 26.9188249,
+        "lng": 80.9777199,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Unnamed Hospital",
+        "lat": 26.9044958,
+        "lng": 80.9745792,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Jagrani Hospital",
+        "lat": 26.8977996,
+        "lng": 80.9687508,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Unnamed Hospital",
+        "lat": 27.3475392,
+        "lng": 82.201884,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Unnamed Hospital",
+        "lat": 26.8176012,
+        "lng": 80.94033,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Unnamed Hospital",
+        "lat": 25.2747647,
+        "lng": 83.0048573,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Unnamed Hospital",
+        "lat": 27.4891213,
+        "lng": 83.4486669,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Heritage Hospitals Ltd",
+        "lat": 25.2788877,
+        "lng": 83.0028725,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Unnamed Hospital",
+        "lat": 26.1827577,
+        "lng": 83.222282,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Unnamed Hospital",
+        "lat": 27.1496198,
+        "lng": 81.9691946,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Unnamed Hospital",
+        "lat": 26.0913441,
+        "lng": 82.8593208,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Unnamed Hospital",
+        "lat": 27.477478,
+        "lng": 83.2841598,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "St Thomas Hospital",
+        "lat": 27.1781506,
+        "lng": 82.654815,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Unnamed Hospital",
+        "lat": 26.4791725,
+        "lng": 80.3056219,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Ajanta Hospital & IVF Centre",
+        "lat": 26.8146397,
+        "lng": 80.9044751,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Mansarovar Eye Hospital",
+        "lat": 26.8418872,
+        "lng": 80.9399218,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "S.R.N. Hospital, M.L. N. Medical College",
+        "lat": 25.4456103,
+        "lng": 81.8448926,
+        "city": "Allahabad",
+        "type": "hospital"
+    },
+    {
+        "name": "Star Hospital Pvt.Ltd.",
+        "lat": 26.7517492,
+        "lng": 83.3666557,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Shakuntla Multi Speciality Hospital",
+        "lat": 25.4248667,
+        "lng": 81.9247846,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Bhola Hospital",
+        "lat": 25.4534639,
+        "lng": 81.8558676,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Shifa Eye Research Centre(Ana Eye Hospital)",
+        "lat": 26.468316,
+        "lng": 80.3357461,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Shekhar Rastogi Eye Hospital",
+        "lat": 26.4945033,
+        "lng": 80.2790838,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Merry Gold Hospital",
+        "lat": 26.409045,
+        "lng": 80.3274326,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Vaishali Maternity and Infertility Centre",
+        "lat": 26.7902712,
+        "lng": 80.913268,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "R.K.Sindhi Sangh Maternity Hospital",
+        "lat": 26.4527897,
+        "lng": 80.302311,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Ambedkar Scan Hospital (Pvt.) Ltd.",
+        "lat": 25.1339452,
+        "lng": 82.5781942,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Ganga Childrens Hospital",
+        "lat": 26.7905447,
+        "lng": 80.898027,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sanjeevani Hospital, Gorakhpur",
+        "lat": 26.7530426,
+        "lng": 83.3768924,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Seema Hospital",
+        "lat": 26.3259352,
+        "lng": 82.9505861,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Rama Medical College Hospital, Kanpur Nagar",
+        "lat": 26.5671937,
+        "lng": 80.2208604,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Saroj Hospital and Research Centre",
+        "lat": 26.8270831,
+        "lng": 80.8660483,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Shivani Hospital Pvt Ltd",
+        "lat": 26.4718516,
+        "lng": 80.3020616,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Patel Hospital, Sant Kabir Nagar",
+        "lat": 26.7882737,
+        "lng": 82.9600798,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Nav Jyoti Eye Hospital and Laser Centre",
+        "lat": 26.7498804,
+        "lng": 83.3756076,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Shekhar Hospital and Research Center",
+        "lat": 25.357457,
+        "lng": 82.9647079,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Raj Chandra Hospital And Research Centre",
+        "lat": 26.799298,
+        "lng": 80.9056827,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Nishant Maternity And Children Hospital",
+        "lat": 25.3504181,
+        "lng": 82.9967603,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Sadhana Hospital",
+        "lat": 26.4398191,
+        "lng": 82.5485551,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sadbhavna Medical and Trauma Centre",
+        "lat": 26.8507359,
+        "lng": 80.8767825,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Nisa General and Welfare Hospital",
+        "lat": 26.0888381,
+        "lng": 83.2928762,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Karunashray Hospital",
+        "lat": 26.2629362,
+        "lng": 82.0750688,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Metro Hospital and Trauma Centre",
+        "lat": 26.8595311,
+        "lng": 80.9898859,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "New Yashlok Hospital",
+        "lat": 26.0794356,
+        "lng": 83.1869759,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Rida Hospital",
+        "lat": 26.8896937,
+        "lng": 80.9622954,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Samarpit Hospital",
+        "lat": 25.7470184,
+        "lng": 82.6795542,
+        "city": "jaunpur",
+        "type": "hospital"
+    },
+    {
+        "name": "Tulsi Hospitals Ltd",
+        "lat": 26.4794961,
+        "lng": 80.344069,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Krishnalok Hospital, Unnao",
+        "lat": 26.5532798,
+        "lng": 80.5038254,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Dwarka Hospital",
+        "lat": 25.437487,
+        "lng": 81.8450908,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Jeevani Hospital",
+        "lat": 26.4795897,
+        "lng": 80.3106406,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Akash Hospital",
+        "lat": 25.3848185,
+        "lng": 82.5858783,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "S.R Hospital and Diagnostic Point",
+        "lat": 26.4201391,
+        "lng": 80.3293204,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Parth Hospital, Jaunpur",
+        "lat": 25.7367334,
+        "lng": 82.6761398,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Shri Gangaram Memorial Hospital",
+        "lat": 25.247891,
+        "lng": 82.9940164,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Maa Durga Hospital and Research Center",
+        "lat": 26.4984456,
+        "lng": 80.2374639,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Anand Lok Hospital",
+        "lat": 26.7778602,
+        "lng": 83.3577374,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Hamid Hospital",
+        "lat": 26.4721229,
+        "lng": 80.3406358,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Shri Hari Kamal Netra Neelaym and Laser Centre",
+        "lat": 26.8966428,
+        "lng": 80.9547544,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Mrityunjay Neuro-Ortho-Spinal-Trauma-Rehab-Maternity Centre",
+        "lat": 26.7549267,
+        "lng": 83.3688759,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Manjusha Medical and Research Centre",
+        "lat": 26.7723909,
+        "lng": 82.1343175,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Rishi Hospital",
+        "lat": 26.8663756,
+        "lng": 81.0220738,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Rehman Hospital",
+        "lat": 26.0809991,
+        "lng": 83.1910971,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Regency Hospital",
+        "lat": 26.4793574,
+        "lng": 80.3015634,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Real Reliance Hospital",
+        "lat": 25.3669118,
+        "lng": 83.0259106,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Ratandeep Hospital",
+        "lat": 26.4808825,
+        "lng": 80.2994223,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Royal Cancer Institute and Research Centre",
+        "lat": 26.479268,
+        "lng": 80.3160292,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Ranjana Nursing and Maternity Home",
+        "lat": 26.8487999,
+        "lng": 80.9039091,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Ranjana Hospital",
+        "lat": 25.4382354,
+        "lng": 81.8445128,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Ramakrishna Mission Home Of Service",
+        "lat": 25.3068304,
+        "lng": 82.9978198,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Dr.Shyama Prasad Mukherjee (Civil) Hospital",
+        "lat": 26.8446682,
+        "lng": 80.9489809,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Vardan Hospital, Ambedkar Nagar",
+        "lat": 26.4506262,
+        "lng": 82.779566,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "North Star Hospital and Joint Replacement center",
+        "lat": 26.4635912,
+        "lng": 80.359061,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Nitin Surgical Center",
+        "lat": 26.4355638,
+        "lng": 82.5496562,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Nishat Hospital",
+        "lat": 26.8504049,
+        "lng": 80.936254,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Rana Hospital Pvt. Ltd",
+        "lat": 26.8047816,
+        "lng": 83.3907406,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Singh Medical And Surgical Centre",
+        "lat": 25.3264652,
+        "lng": 82.9927117,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Get-Well Hospital",
+        "lat": 26.8964072,
+        "lng": 80.9547467,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Rama Shiv Hospital",
+        "lat": 26.4309735,
+        "lng": 80.307937,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Rama Hospital, Allahabad",
+        "lat": 25.452294,
+        "lng": 81.86083,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Madhav Eye Hospital",
+        "lat": 26.4952396,
+        "lng": 80.269344,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Sri Ram Janaki Netralaya",
+        "lat": 26.7426534,
+        "lng": 83.3697899,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Jamea Hospital",
+        "lat": 25.3246623,
+        "lng": 83.0149859,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Jan Kalyan Eye Hospiyal",
+        "lat": 26.8783845,
+        "lng": 80.9789613,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Geeta Hospital, Sultanpur",
+        "lat": 26.2513059,
+        "lng": 82.0689379,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Surya Super Speciality Hospital",
+        "lat": 25.3051973,
+        "lng": 82.9805182,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Surya Hospital",
+        "lat": 26.7951291,
+        "lng": 80.9165476,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "St Mary Hospital",
+        "lat": 25.315928,
+        "lng": 82.9106507,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Bhargava Hospital",
+        "lat": 26.4743257,
+        "lng": 80.350167,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Urmil Hospital, Lucknow",
+        "lat": 26.9024338,
+        "lng": 80.9382574,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "St. Catherine's Hospital",
+        "lat": 26.4581507,
+        "lng": 80.3603929,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "New Shiv Raj Hospital",
+        "lat": 26.422144,
+        "lng": 80.3196676,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Nasir Hospital",
+        "lat": 26.4311536,
+        "lng": 80.4056311,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Guru Kripa Jagriti Hospital And Research Centre",
+        "lat": 25.4583031,
+        "lng": 81.8403155,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Paliwal Eye and Retina Centre",
+        "lat": 26.4841176,
+        "lng": 80.3198902,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Chandra Mother And Eye Care Pvt Ltd",
+        "lat": 26.8661579,
+        "lng": 81.0056037,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Shikhar Hospital",
+        "lat": 25.4412243,
+        "lng": 81.8162088,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Saral Krishna Hospital",
+        "lat": 26.891931,
+        "lng": 80.9450716,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Mukti Mission Sewa Hospital",
+        "lat": 25.3500933,
+        "lng": 83.0317504,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Ajanta Hospital and Ivf Centre Pvt. Limited",
+        "lat": 26.8157204,
+        "lng": 80.9051429,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Jahangir Memorial Charitable Hospital",
+        "lat": 25.4025358,
+        "lng": 81.8692489,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Meghna Hospital and Research Center",
+        "lat": 25.2981978,
+        "lng": 82.9477684,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sri Krishna Hospital and Urology Centre",
+        "lat": 26.7441571,
+        "lng": 83.3768293,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Jain Hospital, Kanpur Nagar",
+        "lat": 26.4137606,
+        "lng": 80.3832681,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Madnani Medicare Pvt Ltd",
+        "lat": 25.4423942,
+        "lng": 81.8092552,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Shivam Akshayavat Hospital",
+        "lat": 25.3852492,
+        "lng": 81.8741452,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Lifeline Hospital and Research Centre",
+        "lat": 26.0506256,
+        "lng": 83.1871717,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Jamuna Sewa Sadan and Research Centre",
+        "lat": 25.3586252,
+        "lng": 82.952923,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Sanmukh Hospital",
+        "lat": 25.4302771,
+        "lng": 82.8618097,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Dewa Hospital, Jankipuram",
+        "lat": 26.9145412,
+        "lng": 80.9607169,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Biraj Maternity and Child Care",
+        "lat": 26.7813383,
+        "lng": 80.8987632,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Varanasi Hospital And Medical Research Centre",
+        "lat": 25.2932811,
+        "lng": 82.9965229,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Tc Eye Care",
+        "lat": 26.8586631,
+        "lng": 81.0074189,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Jeevan Deep Hospital, Bhadohi",
+        "lat": 25.3869981,
+        "lng": 82.592479,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Asha Hospital and Maternity Center",
+        "lat": 26.1506941,
+        "lng": 80.1642323,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Netra Jyoti Kendra, Faizabad",
+        "lat": 26.7734787,
+        "lng": 82.1444562,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Shakuntala Hospital",
+        "lat": 25.4537711,
+        "lng": 81.8426618,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Prabhkar Medical Centre",
+        "lat": 26.9034671,
+        "lng": 80.939966,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Urmila Hospital and Trauma Center",
+        "lat": 26.7549299,
+        "lng": 83.3688202,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Virendra Hospital, Allahabad",
+        "lat": 25.4539839,
+        "lng": 81.8402796,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Svasti Hospital",
+        "lat": 25.4767798,
+        "lng": 81.850069,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Kiran Hospital, Gonda",
+        "lat": 27.1524802,
+        "lng": 81.9702997,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Ajay Hospital Accident Care and Surgical Hospital",
+        "lat": 25.342448,
+        "lng": 82.9774846,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Rajeev Gandhi Memorial Hospital and Research Centre",
+        "lat": 26.0825114,
+        "lng": 83.1820835,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Chiranjeev Hospital and Heart Centre",
+        "lat": 26.8577682,
+        "lng": 80.9943619,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Dwivedi Hospital",
+        "lat": 26.4727891,
+        "lng": 80.2927013,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Krishnalok Hospital, Kanpur Nagar",
+        "lat": 26.4044301,
+        "lng": 80.315024,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "City Hospital and Orthopaedic and Taruma Center",
+        "lat": 25.4517419,
+        "lng": 81.8617031,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Swati Hospital and Research Center",
+        "lat": 26.4204133,
+        "lng": 80.3195925,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Janseva Hospital, Varanasi",
+        "lat": 25.3026937,
+        "lng": 82.952709,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Shalimar Hospital",
+        "lat": 26.8761679,
+        "lng": 80.9776597,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Arvind Surgical and Research Centre Pvt.Ltd.",
+        "lat": 25.4680026,
+        "lng": 81.8288192,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Mahsa Hospital",
+        "lat": 26.426279,
+        "lng": 80.400032,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Arunoday Hospital",
+        "lat": 25.3043668,
+        "lng": 82.9815736,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Sneha Hospital",
+        "lat": 25.2555496,
+        "lng": 82.9586595,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Varuna Hospital",
+        "lat": 25.3023421,
+        "lng": 82.9645711,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Vivek Hospital, Varanasi",
+        "lat": 25.3006034,
+        "lng": 82.9560819,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Nawabganj Seva Hospital",
+        "lat": 26.6196333,
+        "lng": 80.6698997,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Viveka Nand Hospital and Research Centre",
+        "lat": 25.1379724,
+        "lng": 82.5761953,
+        "city": "Mirzapur",
+        "type": "hospital"
+    },
+    {
+        "name": "Siddharth Multi Speciality Hospital Science and Research Center",
+        "lat": 25.7354553,
+        "lng": 82.6797527,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Huma Hospital",
+        "lat": 26.4387576,
+        "lng": 80.3438169,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "The South City Hospital and Trauma Centre",
+        "lat": 26.7711457,
+        "lng": 80.9430787,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Govind Hospital and Research Centre",
+        "lat": 26.7859225,
+        "lng": 80.9303905,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sarthak Surgical Center",
+        "lat": 25.3579308,
+        "lng": 83.0112496,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Tyagi Hospital",
+        "lat": 26.0772963,
+        "lng": 83.1807759,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Fortune Hospital",
+        "lat": 26.4879419,
+        "lng": 80.2893063,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Ktc's Vedanta (A Hospital And Research Centre) Kanpur Ortho And Trauma Centre Pvt Ltd",
+        "lat": 26.4788514,
+        "lng": 80.3229298,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Simhans Hospital",
+        "lat": 26.2345992,
+        "lng": 81.2409367,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sankatmochan Netralaya and Dental Care",
+        "lat": 25.2835877,
+        "lng": 82.9983911,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Navjeevan Hospital, Varanasi",
+        "lat": 25.2960203,
+        "lng": 82.9991037,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Faran Hopital",
+        "lat": 26.9301577,
+        "lng": 81.2104426,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Phoenix Hospital, Allahabad",
+        "lat": 25.4559399,
+        "lng": 81.8616736,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Rml Mehrotra Pathology",
+        "lat": 26.8783457,
+        "lng": 80.9326704,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sardar Patel Hospital",
+        "lat": 25.4431995,
+        "lng": 81.8715656,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Jeevan Hospital And Trauma Centre",
+        "lat": 26.8971164,
+        "lng": 80.9368868,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Sanjay Fracture Clinic and Maternity Centre",
+        "lat": 26.7342168,
+        "lng": 83.3665873,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Vedanta Hospital",
+        "lat": 26.0881073,
+        "lng": 83.1884345,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sun Eye Hospital And Laser Centre Pvt Ltd",
+        "lat": 26.8068548,
+        "lng": 80.8961092,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Dr. Sarojini Singh Hospital",
+        "lat": 25.2774771,
+        "lng": 82.9661643,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Soumya Hospital",
+        "lat": 25.3945146,
+        "lng": 82.566994,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Tej Bahadur Sapru Hospital",
+        "lat": 25.4729624,
+        "lng": 81.845818,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Nandini Medicare",
+        "lat": 25.3153485,
+        "lng": 82.9855648,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Dewa Hospital",
+        "lat": 26.9233446,
+        "lng": 81.1770464,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Dey's Hospital",
+        "lat": 26.4193612,
+        "lng": 80.3895941,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Precision Eye Care",
+        "lat": 26.8858601,
+        "lng": 80.9381582,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Prem Maternity Home",
+        "lat": 26.4694313,
+        "lng": 80.3202832,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Shyam Children and Maternity Centre",
+        "lat": 26.500529,
+        "lng": 80.2570769,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Shubham Hospitals",
+        "lat": 25.3117923,
+        "lng": 82.9856793,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Surgical and Maternity Centre Ahuja Hospital",
+        "lat": 26.8540339,
+        "lng": 81.0002527,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sulaxmi Hospital",
+        "lat": 26.5000165,
+        "lng": 80.3053232,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Yashlok Hospital, Faizabad",
+        "lat": 26.7728297,
+        "lng": 82.1616473,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Eye-Q Super Speciality Eye Hospitals, Rajajipuram",
+        "lat": 26.8401773,
+        "lng": 80.8764888,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Mayo Medical Centre Pvt.Ltd",
+        "lat": 26.8512145,
+        "lng": 80.9965847,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Balaji Hospital",
+        "lat": 27.3974104,
+        "lng": 80.1361676,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Jagdish Prasad Nigam Memorial Hospital Pvt Ltd",
+        "lat": 26.5375826,
+        "lng": 80.4776376,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Jagdish Hospital",
+        "lat": 26.7348828,
+        "lng": 83.3712637,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Jai Baba Hospital",
+        "lat": 26.5533374,
+        "lng": 80.4817924,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Jain Hospital, Allahabad",
+        "lat": 25.4485522,
+        "lng": 81.853981,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Rajrani Hospital",
+        "lat": 26.3994503,
+        "lng": 80.3146715,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Presidency Hospital",
+        "lat": 26.7499445,
+        "lng": 83.3748096,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Santushti Hospital Pvt Ltd.",
+        "lat": 25.2826176,
+        "lng": 82.975713,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "L.P.S . Institute Of Cardilogy",
+        "lat": 26.4812162,
+        "lng": 80.3034604,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Abha Nursing Home Pvt Ltd",
+        "lat": 26.4854512,
+        "lng": 80.325028,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Vardaan Hospital, Varanasi",
+        "lat": 25.2829826,
+        "lng": 82.9749083,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Ram Janani Hospital",
+        "lat": 26.7427666,
+        "lng": 83.3702049,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Maa Sharada Hospital",
+        "lat": 25.4394217,
+        "lng": 81.8572433,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Hnm Shah Hospital",
+        "lat": 25.4327624,
+        "lng": 81.8176049,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Krishna Heart Care and Maternity Home",
+        "lat": 25.7399794,
+        "lng": 82.6845337,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "J P Memorial Hospital",
+        "lat": 25.7568582,
+        "lng": 82.694088,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "R. N. Pandey Hospital and Maternity Centre",
+        "lat": 27.1273243,
+        "lng": 81.9552921,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Shiva Hospital, Lucknow",
+        "lat": 26.8993812,
+        "lng": 80.9618992,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sangam Hospital, Allahabad",
+        "lat": 25.4410889,
+        "lng": 81.8629107,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Priya Hospital, Allahabad",
+        "lat": 25.4502288,
+        "lng": 81.7779974,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Anand Mulispecilty Hospital",
+        "lat": 26.0773898,
+        "lng": 83.186404,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Candy Maternity and Surgical Care",
+        "lat": 26.7839347,
+        "lng": 83.3851853,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Shiv Netralay",
+        "lat": 26.7639761,
+        "lng": 83.3603922,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Annapurna Child and Maternity Clinic Pvt Ltd",
+        "lat": 26.7436375,
+        "lng": 83.357786,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Netra Jyoti Centre",
+        "lat": 25.358157,
+        "lng": 83.0145153,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Kanpur Trauma and Ortho. Centre",
+        "lat": 26.5020967,
+        "lng": 80.2507339,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Madhulok Hospital",
+        "lat": 26.4240594,
+        "lng": 80.3202206,
+        "city": "Kanpur",
+        "type": "hospital"
+    },
+    {
+        "name": "Lala Amba Prasad Smarak Chikitsalaya",
+        "lat": 26.4756865,
+        "lng": 80.3560156,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Harsha Hospital, Lucknow",
+        "lat": 26.8967834,
+        "lng": 80.9337847,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Lucknow Gastroenterology and Gynaecology Centre",
+        "lat": 26.8748754,
+        "lng": 80.9402738,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Shivnath Hospital",
+        "lat": 25.3667543,
+        "lng": 83.0424316,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Navjeevan Hospital, Sultanpur",
+        "lat": 26.2456502,
+        "lng": 82.0673682,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Madhuraj Multi Speciality Hospital",
+        "lat": 26.4795518,
+        "lng": 80.3175304,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Amardeep Hospital & Research Centre",
+        "lat": 25.4375479,
+        "lng": 81.8433035,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Divya Chikitsa Bhawan",
+        "lat": 25.2009431,
+        "lng": 80.4591904,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Raj Scanning Ltd and Lucknow Cancer Institute",
+        "lat": 26.8468326,
+        "lng": 80.9612767,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Rajendra Nagar Hospital",
+        "lat": 26.8407611,
+        "lng": 80.9179697,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Aliganj Orthopadic and Orthoscopy Centre",
+        "lat": 26.8943447,
+        "lng": 80.9422197,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Nav Jyoti Hospital, Allahabad",
+        "lat": 25.4327503,
+        "lng": 81.7877697,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sushila Maternity And Nursing Home",
+        "lat": 25.4598731,
+        "lng": 81.865886,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Timenear Hospital",
+        "lat": 26.7492319,
+        "lng": 83.3998413,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Broadwell Christian Hospital",
+        "lat": 25.9187229,
+        "lng": 80.8072815,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "C L Memorail Hospital and Maternity Home Pvt Ltd",
+        "lat": 26.4629904,
+        "lng": 80.3057024,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Brijraj Hospital",
+        "lat": 26.871304,
+        "lng": 80.900654,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Divyaman Hospital",
+        "lat": 26.7965627,
+        "lng": 83.3825947,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Abhilasha Hospital And Research Centre Pvt.Ltd",
+        "lat": 25.4458415,
+        "lng": 81.8525072,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "R.K. Hospital and Trauma Research Centre",
+        "lat": 26.053297,
+        "lng": 82.6870026,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "R.K Netralaya",
+        "lat": 25.3036115,
+        "lng": 82.9756862,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "R. C. Hospital",
+        "lat": 25.3010439,
+        "lng": 83.0836343,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "R K Devi Eye Research Institute",
+        "lat": 26.4819618,
+        "lng": 80.3172376,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Kilkari Shishu and Bal Chikitsa",
+        "lat": 26.8654616,
+        "lng": 80.9107393,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Hind Institute Of Medical Sciences",
+        "lat": 26.9065335,
+        "lng": 81.1225185,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Vandana Super Speciality Hospital",
+        "lat": 25.4613007,
+        "lng": 81.8338403,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "New Leelamani Hospital",
+        "lat": 26.4796137,
+        "lng": 80.3437733,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "M V Hospital and Research Centre",
+        "lat": 26.86873,
+        "lng": 80.9069976,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Dhiraji Hospital",
+        "lat": 25.6437776,
+        "lng": 82.920776,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Dr Subodh Agrawal Memorial (SAM) Eye Hospital",
+        "lat": 26.8578047,
+        "lng": 80.9424175,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Shri Baba Hospital and Trauma Centre",
+        "lat": 26.4602956,
+        "lng": 80.2594098,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Sheela Health Care",
+        "lat": 26.8124032,
+        "lng": 80.9085151,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Ashirvad Hospital and Research Center",
+        "lat": 25.3052664,
+        "lng": 82.9864379,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Sunita Hospital",
+        "lat": 25.7396424,
+        "lng": 82.6656336,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Santosh Hospital, Kanpur Nagar",
+        "lat": 26.4396126,
+        "lng": 80.3244178,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sudha Surgical Hospital",
+        "lat": 25.3512519,
+        "lng": 82.9779245,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Sarodaya Hospital, Allahabad",
+        "lat": 25.4544846,
+        "lng": 81.8572352,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Vishal Hospital and Heart Centre",
+        "lat": 26.9104561,
+        "lng": 80.9518227,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Shambhavi Hospital",
+        "lat": 26.7549173,
+        "lng": 83.379014,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Jeevan Jyoti Hospital and Medical Research Centre",
+        "lat": 26.7618646,
+        "lng": 83.3661206,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Pulse Hospital and Trauma Centre",
+        "lat": 26.7604851,
+        "lng": 80.9502523,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Aman Hospital",
+        "lat": 25.4592004,
+        "lng": 81.8383109,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Om Surgical Center and Maternity Home",
+        "lat": 25.3563214,
+        "lng": 83.0096523,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Vatsalya Hospital, Varanasi",
+        "lat": 25.3485773,
+        "lng": 82.9757857,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Utkarsh Hospital and Maternity Home",
+        "lat": 26.413784,
+        "lng": 80.3150207,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Chandra Hospital, Lucknow",
+        "lat": 26.8789677,
+        "lng": 81.0361232,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Dev Matenity Home",
+        "lat": 25.3423418,
+        "lng": 82.9768067,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Alliance Hospital",
+        "lat": 25.3190508,
+        "lng": 82.9965833,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Daliganj Hospital",
+        "lat": 26.8715497,
+        "lng": 80.9284915,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "New Life Hospital, Varanasi",
+        "lat": 25.3129735,
+        "lng": 82.9900937,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "New Metro Hospital",
+        "lat": 26.8629696,
+        "lng": 80.9101506,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "New Sahara Hospital",
+        "lat": 25.3317015,
+        "lng": 83.0236682,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Anand Hospital",
+        "lat": 25.2854642,
+        "lng": 83.1191824,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Anand Hospital",
+        "lat": 25.4639609,
+        "lng": 81.8480064,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Life Care Hospital, Gorakhpur",
+        "lat": 26.7439702,
+        "lng": 83.3719668,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Ruma Hospital",
+        "lat": 25.9305332,
+        "lng": 82.0049501,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "S D Hospital, Kanpur Nagar",
+        "lat": 26.441433,
+        "lng": 80.3266427,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "S P Surgical Centre",
+        "lat": 25.342606,
+        "lng": 82.9766337,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "S. C. Trivedi Memorial Mother and Child Trust Hospital",
+        "lat": 26.8915808,
+        "lng": 80.946484,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Shree Ram Laxminarayan Marwari Hindu Hospital - Varanasi",
+        "lat": 25.3093752,
+        "lng": 83.0070332,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Tilak Hospital and Maternity Home",
+        "lat": 25.4443541,
+        "lng": 81.8734278,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "The Relief Orthopaedic Center",
+        "lat": 26.2196384,
+        "lng": 81.2416332,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "The Orient Hospital",
+        "lat": 26.4252711,
+        "lng": 80.3092469,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "The Gastro Liver Hospital",
+        "lat": 26.4829828,
+        "lng": 80.313289,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Alaknanda Hospital Pvt Ltd.",
+        "lat": 25.2879096,
+        "lng": 83.001109,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Shivganga Hospital",
+        "lat": 25.2537156,
+        "lng": 82.9964612,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sushrut Hospital Maternity and Trauma Centre",
+        "lat": 26.8962346,
+        "lng": 80.9360992,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Shyam Hospital and Research Center",
+        "lat": 26.7389175,
+        "lng": 80.8561633,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Rukhsana Medical and Trauma Centre",
+        "lat": 26.8559474,
+        "lng": 80.9033789,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Shri Shyamlal Memorial Hospital",
+        "lat": 25.3804683,
+        "lng": 82.5691846,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Shri Vinayak Hospital",
+        "lat": 26.7705025,
+        "lng": 83.3836488,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Shriram Hospital",
+        "lat": 26.877733,
+        "lng": 80.9787894,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Shubh Netra Kendra",
+        "lat": 26.4945687,
+        "lng": 80.2792176,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Shubham Hospital, Varanasi",
+        "lat": 25.3440799,
+        "lng": 82.9882102,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Netra Jyoti Hospital and Research Center",
+        "lat": 25.2896883,
+        "lng": 83.0042418,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Javitri Hospital",
+        "lat": 26.7789033,
+        "lng": 80.9422975,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Shraddha Hospital, Jaunpur",
+        "lat": 25.7392249,
+        "lng": 82.6874994,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sheetala Care Centre",
+        "lat": 26.7449338,
+        "lng": 83.3656207,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Mahaveer Hospital And Trauma Centre",
+        "lat": 26.4625053,
+        "lng": 80.243741,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Ayushman Hospital, Varanasi",
+        "lat": 25.3039522,
+        "lng": 82.9867731,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Arushi Medical Center",
+        "lat": 26.8969322,
+        "lng": 80.9419575,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Jwala Hospital",
+        "lat": 26.8830384,
+        "lng": 80.9962669,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Shyama Hospital",
+        "lat": 25.3552798,
+        "lng": 82.9655729,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Globus Hospital for Joint Replacement",
+        "lat": 26.4758744,
+        "lng": 80.2943628,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Neera Hospital - Lucknow",
+        "lat": 26.8851346,
+        "lng": 80.9515183,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Tamanna Hospital",
+        "lat": 25.4577165,
+        "lng": 81.8638489,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Harsh Hospital and Maternity Home, Allahabad",
+        "lat": 25.4315028,
+        "lng": 81.8501569,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Hari Surgical Home",
+        "lat": 25.4787266,
+        "lng": 80.3305446,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Indraprastha Hospital, Unnao",
+        "lat": 26.4763701,
+        "lng": 80.383193,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Miranda Clinic",
+        "lat": 26.834993,
+        "lng": 80.909872,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Prabhat Hospital, Allahabad",
+        "lat": 25.5324295,
+        "lng": 81.8539981,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Famity Hospital and Research Centre",
+        "lat": 26.3958316,
+        "lng": 80.3241523,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Swastik Surgical",
+        "lat": 25.3592045,
+        "lng": 82.9591839,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Divya Lapro Endo Surgery Centre",
+        "lat": 26.7682732,
+        "lng": 82.1201393,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Laxmi Devi Kishanchand Memorial Hospital",
+        "lat": 26.4453476,
+        "lng": 80.2900936,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Metro Hospital, Kanpur Nagar",
+        "lat": 26.4921475,
+        "lng": 80.2837479,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Kamla Devi Memorial Hospital And Fertility Centre",
+        "lat": 26.8411505,
+        "lng": 80.9260262,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Khairabad Eye Hospital",
+        "lat": 26.4878566,
+        "lng": 80.3206587,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Avadh Hospital",
+        "lat": 27.1378404,
+        "lng": 81.9715001,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Prachi Hospital Pvt Ltd",
+        "lat": 25.5275209,
+        "lng": 81.8537596,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Indira Gandhi Eye Hospital And Research Centre",
+        "lat": 26.8508471,
+        "lng": 80.9325202,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Mother and Child Care Centre, Kanpur Nagar",
+        "lat": 26.4231234,
+        "lng": 80.3551532,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Swaraj Hospital",
+        "lat": 26.2664083,
+        "lng": 82.0744157,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Spm Hospital Research and Trauma Centre",
+        "lat": 26.5010511,
+        "lng": 80.2575342,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Sushila Devi Memorial Hospital",
+        "lat": 26.0574549,
+        "lng": 82.6841958,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Prasoon Hospital",
+        "lat": 25.363961,
+        "lng": 83.0360573,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Netaji Subhash Chandra Bose District Hospital",
+        "lat": 26.7478068,
+        "lng": 83.3657035,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Hanumant Endosurgery Center",
+        "lat": 26.8485713,
+        "lng": 80.9881197,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Pashupati Nursing Home",
+        "lat": 25.4526682,
+        "lng": 81.8558304,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Mangalam Hospital and Heart Centre, Faizabad",
+        "lat": 26.7637925,
+        "lng": 82.1475059,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Raghuveer Hospital, Raebareli",
+        "lat": 26.1639279,
+        "lng": 80.9699236,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Galaxy Hospital",
+        "lat": 25.3050931,
+        "lng": 82.9750063,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Dr. D. D. Tripathi Memorial Hospital",
+        "lat": 25.1558133,
+        "lng": 82.5830014,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "F.I. Hosptial",
+        "lat": 26.8420895,
+        "lng": 80.9369887,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Medical Care Centre and Hospital",
+        "lat": 26.8102996,
+        "lng": 80.9003149,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Chhaparia Hospital",
+        "lat": 26.7425732,
+        "lng": 83.3694841,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Kashi Medicare",
+        "lat": 25.350789,
+        "lng": 83.0037045,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Centre For Neurosciences and Trauma",
+        "lat": 26.885982,
+        "lng": 80.9811422,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Nelson Children Hospital",
+        "lat": 26.9281412,
+        "lng": 81.1880147,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Parvati Hospital Pvt Ltd",
+        "lat": 25.4542981,
+        "lng": 81.861392,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Angel Eyes Lasik Center",
+        "lat": 26.4805524,
+        "lng": 80.2997737,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Mahashweta Hospital Pvt. Ltd.",
+        "lat": 25.3400505,
+        "lng": 82.9920933,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "B. N. K. Hospital",
+        "lat": 26.8794653,
+        "lng": 80.9326687,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "G.S Chandraul Hospital and Reasearch Centre",
+        "lat": 25.4490511,
+        "lng": 81.7508575,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Isha Hosital",
+        "lat": 25.7330029,
+        "lng": 82.6725617,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Dr. Agrawals Life Line Hospital",
+        "lat": 25.4305145,
+        "lng": 81.8182694,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Apex Eye Hospital",
+        "lat": 25.7355797,
+        "lng": 82.6953149,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Care Hospital - Varanasi",
+        "lat": 25.2831802,
+        "lng": 82.9699691,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Suri Medical Foundation Hospital",
+        "lat": 26.8724637,
+        "lng": 80.9785107,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Ojha Hospital",
+        "lat": 25.455078,
+        "lng": 81.8636557,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Netra Nidan Eye Hospital",
+        "lat": 26.7570219,
+        "lng": 83.3698567,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Ganga Hospital, Allahabad",
+        "lat": 25.4652873,
+        "lng": 81.848852,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Vineeta Hospital Pvt Ltd",
+        "lat": 25.5225384,
+        "lng": 81.8654629,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Nangalia Hospital",
+        "lat": 26.7410605,
+        "lng": 83.3641767,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Mehrotra Ear , Nose, Throat Hospital and Research Centre",
+        "lat": 26.4728846,
+        "lng": 80.3205447,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "J.L.Rohatgi Hospital and Jawaharlal Rohatagi Smarak Netra Chikitsalaya",
+        "lat": 26.4788118,
+        "lng": 80.3056209,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Bk Heart Hospital Pvt Ltd",
+        "lat": 25.2826237,
+        "lng": 82.9706222,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Kilkari Child and Mother Care Centre",
+        "lat": 26.8938644,
+        "lng": 80.9364402,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Kids Care Hospital",
+        "lat": 25.2886212,
+        "lng": 82.9940888,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Rohit Laproscopic Surgical Center",
+        "lat": 25.3091348,
+        "lng": 82.9838206,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "J.P Hospital, Gorakhpur",
+        "lat": 26.7638895,
+        "lng": 83.3611089,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "J.P. Memorial Hospital- Allahabad",
+        "lat": 25.4467048,
+        "lng": 81.8536506,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Gayatri Hospital, Lucknow",
+        "lat": 26.8697132,
+        "lng": 80.9782691,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "District Hospital Hamirpur",
+        "lat": 25.9574948,
+        "lng": 80.1452288,
+        "city": "N/A",
+        "type": "centre"
+    },
+    {
+        "name": "Saubhagya Hospital, Kanpur Nagar",
+        "lat": 26.4919941,
+        "lng": 80.2473673,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Globe Medicare",
+        "lat": 26.8747475,
+        "lng": 80.9415139,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Swami Harshankaranand Ji Hospital and Research Center",
+        "lat": 25.2836471,
+        "lng": 82.9714912,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Raj Hospital, Kanpur Nagar",
+        "lat": 26.4294214,
+        "lng": 80.301827,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Sri Sai Surgical and Maternity Hospital",
+        "lat": 25.2821724,
+        "lng": 82.9919971,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Kanika Hospital Pvt Ltd",
+        "lat": 26.4757531,
+        "lng": 80.3248114,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Saba Hospital, Mau",
+        "lat": 26.0229049,
+        "lng": 82.9230016,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Canossa Hospital",
+        "lat": 25.8951054,
+        "lng": 81.9491571,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Shakuntala Hospital and Research Center",
+        "lat": 25.3060181,
+        "lng": 82.9371,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Nirmal Hospital and Laproscopic Surgery Centre",
+        "lat": 26.2081662,
+        "lng": 81.2423535,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Saba Hospital, Azamgarh",
+        "lat": 26.0852507,
+        "lng": 83.2846813,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Bharti Hospital, Gorakhpur",
+        "lat": 26.7518706,
+        "lng": 83.3689209,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Amir Bano Memorial Hospital",
+        "lat": 25.4814152,
+        "lng": 81.6709769,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Heartline Cardiac Care Centre",
+        "lat": 25.4528057,
+        "lng": 81.838245,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Zainiss Hospital",
+        "lat": 26.858501,
+        "lng": 80.9968033,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Gomti Hospital and Research Centre Pvt Ltd",
+        "lat": 26.2730487,
+        "lng": 82.0772918,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Susanjeevani Hospital Maternity and Eye Care Centre",
+        "lat": 26.8807738,
+        "lng": 80.9477935,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Gupta Hospital - Lucknow",
+        "lat": 26.7922704,
+        "lng": 80.8899697,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Green Cross Medical center",
+        "lat": 26.8796945,
+        "lng": 80.9316971,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Kulwanti Hospitals",
+        "lat": 26.4795707,
+        "lng": 80.2935573,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Udyaan Healthcare",
+        "lat": 26.7908918,
+        "lng": 80.9268576,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Aditya Urology Centre and Maternity Home",
+        "lat": 26.7846258,
+        "lng": 83.3534032,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sundaram Hospital, Allahabad",
+        "lat": 25.2884224,
+        "lng": 81.9295375,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Harshan Hriday Sansthan",
+        "lat": 26.7771505,
+        "lng": 82.1584004,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Fatima Hospital, Gorakhpur",
+        "lat": 26.7872957,
+        "lng": 83.3999861,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Vijay Memorial Hospital",
+        "lat": 25.4527421,
+        "lng": 81.7801378,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Krishna Life Line Hospital",
+        "lat": 26.7821153,
+        "lng": 80.9421828,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Raja Ram Hospital",
+        "lat": 26.4599666,
+        "lng": 80.247132,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Handa Hospital, Lucknow",
+        "lat": 26.8398841,
+        "lng": 80.9426891,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sushila General Hospital",
+        "lat": 26.4352451,
+        "lng": 80.3177847,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Life Line Hospital, Varanasi",
+        "lat": 25.2832627,
+        "lng": 82.9808334,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Kamakhaya Hospital",
+        "lat": 26.8704348,
+        "lng": 80.9033039,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Divya Deep Maternity and Heart Centre",
+        "lat": 26.8819032,
+        "lng": 80.9962414,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Manjula Hospital And Trauma Centre",
+        "lat": 26.8713828,
+        "lng": 80.9760343,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Mother And Child Care Centre, Lucknow",
+        "lat": 26.873197,
+        "lng": 80.8894768,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Seva Sadan Hospital, Kaushambi",
+        "lat": 25.5601363,
+        "lng": 81.4858512,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sah Hospital",
+        "lat": 25.3239083,
+        "lng": 83.0044448,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "L.N. Mishra Central Hospital",
+        "lat": 26.7660568,
+        "lng": 83.3785996,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Indo Gulf Jan Seva Trust Hospital",
+        "lat": 26.4890426,
+        "lng": 81.5486062,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Gaurav Charitable Hospital",
+        "lat": 26.2471333,
+        "lng": 82.0680146,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "K.K Hospital",
+        "lat": 26.8644818,
+        "lng": 80.9233041,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Lucknow Hospital",
+        "lat": 26.7954518,
+        "lng": 80.8906576,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Hindu Sewa Sadan Hospital",
+        "lat": 25.3118509,
+        "lng": 83.0085801,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Yashlok Hospital and Research Hospital",
+        "lat": 25.4601867,
+        "lng": 81.8657197,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Rajdhani Hospital, Lucknow",
+        "lat": 26.7736708,
+        "lng": 80.9431384,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Saraswati Heart Care",
+        "lat": 25.4530579,
+        "lng": 81.8561448,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Sri Sitaram Memorial Hospital",
+        "lat": 25.2851738,
+        "lng": 81.9339886,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Ashirwad Maternity and Surgical Centre Pvt. Ltd.",
+        "lat": 27.1374805,
+        "lng": 81.964256,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Srijan Hospital, Varanasi",
+        "lat": 25.3569528,
+        "lng": 83.0063687,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Sri Sai Netralaya",
+        "lat": 26.7836011,
+        "lng": 83.3566008,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "O P Chaudhary Hospital and Research Centre",
+        "lat": 26.7647348,
+        "lng": 80.9472428,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Jaya Hospital, Allahabad",
+        "lat": 25.4434163,
+        "lng": 81.8666491,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Satya Trauma and Maternity Center",
+        "lat": 26.4392169,
+        "lng": 80.2926692,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Guru Teg Bhadur Charitable Hospital, Kanpur Nagar",
+        "lat": 26.4677746,
+        "lng": 80.3070136,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Maa Vaishno Child And Maternity Clinic",
+        "lat": 26.742669,
+        "lng": 83.3693071,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "K G Nanda Hospital",
+        "lat": 25.260181,
+        "lng": 83.2550778,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Aashadeep Hospital",
+        "lat": 26.2525501,
+        "lng": 82.2279064,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Garg Hospital",
+        "lat": 26.7525803,
+        "lng": 83.3696571,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Prayag Healthcare Center",
+        "lat": 25.2960299,
+        "lng": 82.9434594,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Rajdhani Hospital and Maternity Centre",
+        "lat": 26.874404,
+        "lng": 80.9169191,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Pooja Hospital, Allahabad",
+        "lat": 25.4529673,
+        "lng": 81.8619901,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Popular Hospital",
+        "lat": 25.292644,
+        "lng": 82.9705367,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Harsh Maternity And Nursing Home",
+        "lat": 25.153709,
+        "lng": 82.5721331,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Raj Eye Hospital",
+        "lat": 26.7448169,
+        "lng": 83.3789191,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Seema Health Care and Research Center",
+        "lat": 26.7057053,
+        "lng": 82.1375115,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Lal Hospital and Research Centre",
+        "lat": 26.7965639,
+        "lng": 80.8925807,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Vijay Nursing Home,Fatehpur",
+        "lat": 25.9109642,
+        "lng": 80.8002323,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Jyoti Institute Of Medical and Rehabilitation Sciences(Jimars)",
+        "lat": 25.4573823,
+        "lng": 81.8597652,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Kabeer Hospital",
+        "lat": 26.407704,
+        "lng": 80.3314365,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Varadan Hospital",
+        "lat": 25.3509156,
+        "lng": 82.9768342,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Kumar Surgical Nursing Home",
+        "lat": 25.7496613,
+        "lng": 82.6933063,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Ashirwad Hospital, Faizabad",
+        "lat": 26.77115,
+        "lng": 82.1549071,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "J.C. Maternity Centre",
+        "lat": 25.474104,
+        "lng": 81.8517905,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Chandni Hospital",
+        "lat": 26.4796845,
+        "lng": 80.3224813,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Chandra Eye Hospital",
+        "lat": 26.928195,
+        "lng": 81.210276,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Ayodhya Eye Hospital",
+        "lat": 26.7980375,
+        "lng": 82.212587,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Baba Hospital, Raebareli",
+        "lat": 26.3501557,
+        "lng": 81.0447907,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Eye Care Hospital",
+        "lat": 26.0783822,
+        "lng": 83.1723598,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Deepak Life Sciences Hospital and Trauma Center",
+        "lat": 26.9247615,
+        "lng": 80.9360325,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Mall Hospital and Health Care",
+        "lat": 26.744899,
+        "lng": 83.3792581,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Arogya Chikitsalaya",
+        "lat": 25.3021699,
+        "lng": 82.9313258,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "National Hospital, Lucknow",
+        "lat": 26.8499426,
+        "lng": 80.8864076,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Kriti Cancer Institute and Research Centre",
+        "lat": 25.4491387,
+        "lng": 81.8545359,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sanjivini Lung Centre",
+        "lat": 26.8674679,
+        "lng": 81.0253572,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Maa Tara Hospital",
+        "lat": 25.7380913,
+        "lng": 82.6632856,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Priya Hospital, Kanpur Nagar",
+        "lat": 26.4304314,
+        "lng": 80.2998844,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Priya Multispeciality Hospital Pvt.Ltd.",
+        "lat": 25.3188013,
+        "lng": 82.9920584,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Saket Hospital",
+        "lat": 25.45784,
+        "lng": 81.8711485,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Savitri Hospital & Research Centre",
+        "lat": 26.7581991,
+        "lng": 83.3648278,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Iqbal Hospital",
+        "lat": 26.0766145,
+        "lng": 83.1816825,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "R.P. Medical Centre",
+        "lat": 26.4957485,
+        "lng": 80.2880752,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Hayat Hospital & Maternity Center",
+        "lat": 25.4024271,
+        "lng": 81.8696063,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Drs Hospital",
+        "lat": 25.4503565,
+        "lng": 81.7667388,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Manama Hospital",
+        "lat": 26.4665567,
+        "lng": 80.3367707,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Autar Hospital",
+        "lat": 26.842774,
+        "lng": 80.8945911,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Swami Vivekanand Jan Kalyan Hospital",
+        "lat": 25.2579469,
+        "lng": 82.961565,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Kumar Hospital and Orthopaedic Center",
+        "lat": 26.7767755,
+        "lng": 83.0536104,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Metro Hospital and Research Centre, Gorakhpur",
+        "lat": 26.7866168,
+        "lng": 83.3841249,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Brij Medical Centre",
+        "lat": 26.4633734,
+        "lng": 80.2436337,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Agrawal Orthopaedic Hospital",
+        "lat": 26.7530072,
+        "lng": 83.36556,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Swastik Merrygold Hospital, Gorakhpur",
+        "lat": 26.7856645,
+        "lng": 83.3532131,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Lucknow Eye Hospital",
+        "lat": 26.8379372,
+        "lng": 80.9277794,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Aashirwad Hospital And Research Centre",
+        "lat": 25.7376672,
+        "lng": 82.6737405,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sunflower Medical and Gynae Centre",
+        "lat": 26.8794264,
+        "lng": 80.9422727,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Kamla Hospital",
+        "lat": 25.7380768,
+        "lng": 82.6853894,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Pragya Hospital",
+        "lat": 26.7430307,
+        "lng": 83.3710827,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Kashi Hospital",
+        "lat": 25.2804967,
+        "lng": 82.9677971,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Asha Hospital",
+        "lat": 25.4662808,
+        "lng": 81.8269953,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Karma Health Centre",
+        "lat": 25.3474587,
+        "lng": 81.8309348,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Heiwel Hospital and Rehabilitaition Center",
+        "lat": 25.3527657,
+        "lng": 82.96783,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Muskan Ortho and Maternity Centre",
+        "lat": 26.5537765,
+        "lng": 80.5048601,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sunayan Eye Hospital",
+        "lat": 26.7834346,
+        "lng": 82.1423694,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sarnath Hospital",
+        "lat": 25.3605313,
+        "lng": 83.0265688,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Laxmi Health Care and Hospital",
+        "lat": 25.7801071,
+        "lng": 82.6904869,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "G.S.V.M. Medical College",
+        "lat": 26.4810191,
+        "lng": 80.3075287,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Forrd Hospital / Nova Hospital Ltd.",
+        "lat": 26.853093,
+        "lng": 80.9980117,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Aryan Hospital",
+        "lat": 26.7386077,
+        "lng": 83.3733599,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Apex Hospital",
+        "lat": 25.2831311,
+        "lng": 82.9684355,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Pindari Hospital",
+        "lat": 26.7968978,
+        "lng": 82.7178454,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Harshlok Eye Care Centre",
+        "lat": 25.3543803,
+        "lng": 82.9624132,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Mrittunjai Hospital",
+        "lat": 25.1456148,
+        "lng": 82.5711018,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Mrityunjay Hospital",
+        "lat": 25.3213263,
+        "lng": 83.0129261,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Pragya Multi Speciality Hospital and Research Center",
+        "lat": 25.3757006,
+        "lng": 82.9161931,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Ram Krishna Sewashram",
+        "lat": 25.1517029,
+        "lng": 82.530469,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Railway Hospital",
+        "lat": 26.7649588,
+        "lng": 83.3797529,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Aparajita Hospital",
+        "lat": 26.9113901,
+        "lng": 80.9504414,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Dr R D Memorial Charitable Hospital",
+        "lat": 25.2608414,
+        "lng": 83.2576293,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Savitri Devi Hospital",
+        "lat": 26.8890167,
+        "lng": 81.0562009,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Vandna Hospital",
+        "lat": 26.2361256,
+        "lng": 82.0656809,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Sahar Hospital",
+        "lat": 26.861037,
+        "lng": 80.9214449,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "District Hospital, Sultanpur",
+        "lat": 26.2627557,
+        "lng": 82.069966,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Ayushman Hospital and Trauma Centre",
+        "lat": 25.332967,
+        "lng": 83.0144739,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Eras Lucknow Medical College And Hospital - Lucknow",
+        "lat": 26.8784473,
+        "lng": 80.8726466,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Dr Lalchandani E N T and Laser Center",
+        "lat": 26.4795045,
+        "lng": 80.314271,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Narayan Swaroop Hospital",
+        "lat": 25.4498431,
+        "lng": 81.7643604,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Hospital Harsha",
+        "lat": 25.3007101,
+        "lng": 83.0023755,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Ashta Hospital",
+        "lat": 26.9345117,
+        "lng": 81.1864208,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Jp Hospital, Gorakhpur",
+        "lat": 26.7721209,
+        "lng": 83.3571037,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Institute Of Medical Science and S.S.Hospital",
+        "lat": 25.2744502,
+        "lng": 82.9995149,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Asha Hospital",
+        "lat": 26.767523,
+        "lng": 80.9444185,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Excel Hospital",
+        "lat": 26.4805512,
+        "lng": 80.3372837,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Balaji Hospital, Namakkal",
+        "lat": 26.8458773,
+        "lng": 80.9871507,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Goel Hospital, Lucknow",
+        "lat": 26.8697774,
+        "lng": 80.9723262,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Medwin Hospitals And Research Centre",
+        "lat": 25.3205662,
+        "lng": 83.0127322,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Kamla Nehru Memorial Hospital",
+        "lat": 25.4591151,
+        "lng": 81.8613611,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Alok Health Care Hospital Pvt Ltd",
+        "lat": 25.2879707,
+        "lng": 83.004762,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Dr Ram Bilas Fracture and Surgical Centre",
+        "lat": 25.3109998,
+        "lng": 82.9868113,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Apex Hospital and Research Centre",
+        "lat": 26.4840275,
+        "lng": 80.2497008,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Sudbhawana Hospital",
+        "lat": 25.2788183,
+        "lng": 82.9996276,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Eye-Q Super Speciality Eye Hospitals",
+        "lat": 26.4792296,
+        "lng": 80.3140309,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sant Kabir Eye Hospital",
+        "lat": 26.7978644,
+        "lng": 82.7184237,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Government Hospital Gaurihar",
+        "lat": 25.2662458,
+        "lng": 80.1952788,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital,Chandla",
+        "lat": 25.0694351,
+        "lng": 80.1919556,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "GOVT HOSPITAL BARIGARH",
+        "lat": 25.236472,
+        "lng": 80.0262929,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Goverment hospital,Laundi",
+        "lat": 25.1408036,
+        "lng": 80.0047065,
+        "city": "N/A",
+        "type": "centre"
+    },
+    {
+        "name": "Government Hospital SONGAR",
+        "lat": 25.9098683,
+        "lng": 82.7515923,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "CHC Itiyathok",
+        "lat": 27.2938865,
+        "lng": 82.0441765,
+        "city": "N/A",
+        "type": "centre"
+    },
+    {
+        "name": "Gov. Hospital Campierganj, Gorakhapur",
+        "lat": 27.0232049,
+        "lng": 83.2676768,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital Azmatgarh",
+        "lat": 26.1574109,
+        "lng": 83.3596833,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "District Women Hospital Basti",
+        "lat": 26.7978184,
+        "lng": 82.7439661,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Goverment hospital,HARRAIYA",
+        "lat": 26.7974988,
+        "lng": 82.4602488,
+        "city": "N/A",
+        "type": "centre"
+    },
+    {
+        "name": "DH,Basti",
+        "lat": 26.8005794,
+        "lng": 82.7595887,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "MAHARAJA BALAVANT SINGH COMBINED DISTRIC HOSPITAL",
+        "lat": 25.3956644,
+        "lng": 82.5650775,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital Khaga",
+        "lat": 25.7704506,
+        "lng": 81.1026433,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital",
+        "lat": 26.0400073,
+        "lng": 83.0479925,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "T.B. HOSPITAL THAKURGANJ",
+        "lat": 26.8710305,
+        "lng": 80.8963694,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "District Combined Hospital,Kaushambi",
+        "lat": 25.5254054,
+        "lng": 81.3811626,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Rajkiya Mahila Chikitsalaya Mughalsarai",
+        "lat": 25.2824618,
+        "lng": 83.1223165,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Hathiyagarh",
+        "lat": 27.0553159,
+        "lng": 82.4081227,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Uma Shanker Male Hospital",
+        "lat": 26.5382497,
+        "lng": 80.4784597,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "District Male Hospital Pratapgarh",
+        "lat": 25.9218299,
+        "lng": 81.9990201,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "District Women Hospital Jaunpur",
+        "lat": 25.7592013,
+        "lng": 82.6968142,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital Anapur",
+        "lat": 25.6193924,
+        "lng": 81.688077,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital Kadipur",
+        "lat": 26.1672645,
+        "lng": 82.3709553,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "District Combined Hospital Siddarthnagar",
+        "lat": 27.2740395,
+        "lng": 83.0703118,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital",
+        "lat": 26.0432547,
+        "lng": 83.2883379,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Goverment Hospital",
+        "lat": 26.813663,
+        "lng": 80.9036596,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Govt. Hospital",
+        "lat": 25.3295693,
+        "lng": 82.4653718,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "District Women Hospital Banda",
+        "lat": 25.4827962,
+        "lng": 80.3311193,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "District Women Hospital Pratapgarh",
+        "lat": 25.9221279,
+        "lng": 81.9986835,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital Kot",
+        "lat": 25.5221057,
+        "lng": 81.0996138,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital Pachewara",
+        "lat": 25.1581063,
+        "lng": 82.9559425,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "District Women Hospital Hamirpur",
+        "lat": 25.9572127,
+        "lng": 80.1446414,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "District Hospital,T.B. Hospital",
+        "lat": 26.8012683,
+        "lng": 82.7645387,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital",
+        "lat": 26.3964803,
+        "lng": 83.0721076,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "District Women Hospital Hardoi",
+        "lat": 27.3955482,
+        "lng": 80.1340641,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital Gonhatal",
+        "lat": 27.1585582,
+        "lng": 82.9940097,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital Painte pur",
+        "lat": 27.2800828,
+        "lng": 81.1796817,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Women's DH,Fatehpur",
+        "lat": 25.9356555,
+        "lng": 80.813351,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Government Hospital Chak Goraiya",
+        "lat": 25.1334662,
+        "lng": 82.8158741,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital Dewa-Tindola",
+        "lat": 27.033947,
+        "lng": 81.1660514,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "District Women Hospital Barabanki",
+        "lat": 26.9274758,
+        "lng": 81.1952882,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital PARMANPUR",
+        "lat": 25.7631436,
+        "lng": 83.1902173,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sri Ram Hospital Ayodhya",
+        "lat": 26.7926648,
+        "lng": 82.1990952,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital Diyara",
+        "lat": 26.218467,
+        "lng": 82.2821856,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Lokbandhu Sri Rajnarain Combined Hospital",
+        "lat": 26.7934993,
+        "lng": 80.9011249,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "District Women Hospital Gorakhpur",
+        "lat": 26.7494212,
+        "lng": 83.3665766,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "MAHATMA JYOTIBA PHULE DISTRICT HOSPITAL",
+        "lat": 26.4466468,
+        "lng": 82.5606868,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital,Danoo Pur",
+        "lat": 25.4215976,
+        "lng": 82.7122906,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "RANI LAXMI BAI COMBINED HOSPITAL",
+        "lat": 26.8313411,
+        "lng": 80.8917412,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital Airakunda",
+        "lat": 25.8158897,
+        "lng": 83.2969974,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital Babupaisiya",
+        "lat": 27.3655301,
+        "lng": 83.3844656,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "District Male Hospital Faizabad",
+        "lat": 26.7784289,
+        "lng": 82.1408781,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Bhau Rao Devras Hospital",
+        "lat": 26.8753323,
+        "lng": 80.9536104,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital Khoriya",
+        "lat": 26.6729884,
+        "lng": 82.9300437,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Shahgarh Govt. Hospital",
+        "lat": 26.043524,
+        "lng": 83.2210077,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "MANYAWAR KASHIRAM HOSPITAL",
+        "lat": 26.4144909,
+        "lng": 80.3815126,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Mahila Hospital",
+        "lat": 27.4299928,
+        "lng": 83.4204099,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital Biyawal",
+        "lat": 25.3377645,
+        "lng": 81.3499604,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "District Male Hospital Azamgarh",
+        "lat": 26.0827457,
+        "lng": 83.1900376,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Manohar Das EYE Hospital",
+        "lat": 25.4402567,
+        "lng": 81.8277544,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital Jungle Dhooshan N",
+        "lat": 26.8209238,
+        "lng": 83.4048215,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "District Women Hospital",
+        "lat": 25.1522759,
+        "lng": 82.5767586,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital Safipur-Barikheda",
+        "lat": 26.7398718,
+        "lng": 80.3493188,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "District Combind Hospital St. Kabir Nagar",
+        "lat": 26.7956756,
+        "lng": 83.0715014,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "District hospital gonda",
+        "lat": 27.1403341,
+        "lng": 81.9676517,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Govt Hospital Nonar Tulsi Ashram",
+        "lat": 25.340059,
+        "lng": 83.3494212,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government hospital",
+        "lat": 26.4213129,
+        "lng": 80.3920779,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "District Women Hospital Balrampur",
+        "lat": 27.4291173,
+        "lng": 82.1858051,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital Tikaitnagar",
+        "lat": 26.9382534,
+        "lng": 81.5661706,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital Semrahana",
+        "lat": 27.1831107,
+        "lng": 83.1699572,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Medical Collage Azamgarh",
+        "lat": 25.9046515,
+        "lng": 83.2049963,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "MAHILA HOSPITAL (Jarwal Kasba)",
+        "lat": 27.166941,
+        "lng": 81.5408613,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "District Female Hospital Azamgarh",
+        "lat": 26.0637645,
+        "lng": 83.1833871,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "UHM MALE HOSPITAL",
+        "lat": 26.4727543,
+        "lng": 80.3489359,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital Bhabhuwa",
+        "lat": 25.6212831,
+        "lng": 80.779596,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "RAM SAGAR MISRA 100 BEDED HOSPITAL",
+        "lat": 27.0097926,
+        "lng": 80.9139526,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "District Women Hospital Faizabad",
+        "lat": 26.7779548,
+        "lng": 82.1420825,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital Madhwapur",
+        "lat": 27.4318264,
+        "lng": 82.9944563,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government hospital",
+        "lat": 27.3005144,
+        "lng": 81.1214872,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Jiyanpur Goverment Hospital",
+        "lat": 26.1613935,
+        "lng": 83.3393991,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital",
+        "lat": 25.4912268,
+        "lng": 82.8273245,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Govt. Hospital",
+        "lat": 26.6321041,
+        "lng": 83.2994141,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital AMEYMAFI",
+        "lat": 26.1926847,
+        "lng": 81.9201538,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital Hatiya",
+        "lat": 25.847722,
+        "lng": 82.2924364,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital, MAHONA",
+        "lat": 26.5351962,
+        "lng": 81.5872608,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "MAHARAJA CHET SINGH DISTRICT HOSPITAL",
+        "lat": 25.3300687,
+        "lng": 82.4654724,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital Tiwaran",
+        "lat": 25.5154329,
+        "lng": 82.6785283,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital Ashayas",
+        "lat": 26.937371,
+        "lng": 80.3081354,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital Sathariya",
+        "lat": 25.6605677,
+        "lng": 82.235245,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "PT K P T Distt.Combined Hospital Chandauli",
+        "lat": 25.2589427,
+        "lng": 83.2734892,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Moti Lal Nehru District Hospital",
+        "lat": 25.4392781,
+        "lng": 81.8285215,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Government Hospital RAMGANJ",
+        "lat": 26.1161015,
+        "lng": 82.0410302,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government. hospital khajni",
+        "lat": 26.6652993,
+        "lng": 83.2497154,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sarkari Hospital",
+        "lat": 25.185554,
+        "lng": 82.6310129,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital,Pailani",
+        "lat": 25.7632958,
+        "lng": 80.4222152,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sarkari Hospital Anauni",
+        "lat": 25.6037091,
+        "lng": 83.1424512,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "District Male Hospital Barabanki",
+        "lat": 26.9372676,
+        "lng": 81.2062289,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "District Women Hospital Rae Bareli",
+        "lat": 26.221947,
+        "lng": 81.2372392,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Government Hospital Bhaipur",
+        "lat": 25.0811096,
+        "lng": 83.0860993,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "District Male Hospital hardoi",
+        "lat": 27.3959911,
+        "lng": 80.1344597,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital",
+        "lat": 26.3852081,
+        "lng": 81.271074,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital Padarkunda",
+        "lat": 26.1851542,
+        "lng": 83.4120964,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital,GOBARAHA",
+        "lat": 25.3613519,
+        "lng": 83.1609303,
+        "city": "N/A",
+        "type": "centre"
+    },
+    {
+        "name": "Government Hospital,Sirathu",
+        "lat": 25.6474311,
+        "lng": 81.3198325,
+        "city": "N/A",
+        "type": "centre"
+    },
+    {
+        "name": "Government Hospital Bajarang Nagar",
+        "lat": 25.6535266,
+        "lng": 82.9935095,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "District Male Hospital Mirzapur",
+        "lat": 25.1544088,
+        "lng": 82.5771099,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Atrauliya Government Hospital",
+        "lat": 26.3337516,
+        "lng": 82.9468001,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government. Hospital",
+        "lat": 26.9243227,
+        "lng": 80.7129224,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "JHALKARI BAI MAHILA HOSPITALS",
+        "lat": 26.8460131,
+        "lng": 80.9452862,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital",
+        "lat": 25.9765307,
+        "lng": 82.7512108,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sarkari Hospital",
+        "lat": 26.1353332,
+        "lng": 80.8181897,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government T.B. Hospital",
+        "lat": 25.4997681,
+        "lng": 81.8638247,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital Katra Tiraona",
+        "lat": 26.9674614,
+        "lng": 80.5979019,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "32INTACT",
+        "lat": 26.9106712,
+        "lng": 80.9449159,
+        "city": "Lucknow",
+        "type": "hospital"
+    },
+    {
+        "name": "Contonment Hospital",
+        "lat": 25.3318796,
+        "lng": 82.9791974,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Jayaan Hospital",
+        "lat": 26.798277,
+        "lng": 82.750477,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "SS Hospital",
+        "lat": 26.7943793,
+        "lng": 82.7601391,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Star Hospital Liver and Gastro Care",
+        "lat": 26.8021493,
+        "lng": 82.7492741,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sapna Fracture Hospital",
+        "lat": 26.8037818,
+        "lng": 82.747819,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Eye Care Centre",
+        "lat": 26.8034145,
+        "lng": 82.757685,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Nidan Chikitsa Kendra",
+        "lat": 26.7749701,
+        "lng": 82.1431447,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Renu Rai Hospital, Basti Pmc",
+        "lat": 26.7960956,
+        "lng": 82.7298015,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Dr. Ramendra Chaturvedi Hospital",
+        "lat": 26.7998731,
+        "lng": 82.7434478,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "PMC Hospital",
+        "lat": 26.7957394,
+        "lng": 82.7291515,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Haddi Hospital",
+        "lat": 26.7940938,
+        "lng": 82.7246746,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "R.K.Dental Hospital & Implant Centre",
+        "lat": 26.7957188,
+        "lng": 82.722427,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sunita Health Care Centre",
+        "lat": 26.7839165,
+        "lng": 82.148233,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Gorakhnath Hospital",
+        "lat": 26.799173,
+        "lng": 82.7328865,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Star Hospital",
+        "lat": 26.802721,
+        "lng": 82.7480025,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Tiwari Homoepathic Dawakhana",
+        "lat": 26.8012315,
+        "lng": 82.7600469,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Asheerwad Hospital",
+        "lat": 26.7701745,
+        "lng": 82.1630528,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Tahira Hospital &Heart Centre",
+        "lat": 26.8022265,
+        "lng": 82.749012,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Mehdi Dental Hospital",
+        "lat": 26.7830623,
+        "lng": 82.15742,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sitaram Hospital",
+        "lat": 26.7577483,
+        "lng": 82.142523,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Barkat Hospital and Trauma Centre",
+        "lat": 26.7978798,
+        "lng": 82.7189038,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Opec Kaili Hospital",
+        "lat": 26.7793873,
+        "lng": 82.7625907,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Om Sai Ram Hospital",
+        "lat": 26.8013775,
+        "lng": 82.1976949,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Ganga Hospital",
+        "lat": 26.7597377,
+        "lng": 82.149832,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Care Hospital",
+        "lat": 26.8044551,
+        "lng": 82.7569038,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "New Awadh Hospital",
+        "lat": 26.7970877,
+        "lng": 82.7589669,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Suriya Orthopaedic and Spainal Centre",
+        "lat": 26.8022357,
+        "lng": 82.7618427,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "M.P Health Care Centre",
+        "lat": 26.7958325,
+        "lng": 82.7291568,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Renu Memorial Ortho & Medical Centre",
+        "lat": 26.7759594,
+        "lng": 82.142935,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Jeevan Hospital",
+        "lat": 26.7627748,
+        "lng": 82.1412239,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Homeopathic Hospital",
+        "lat": 26.8009646,
+        "lng": 82.7600852,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "City Hospital",
+        "lat": 26.782324,
+        "lng": 81.75272,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Surya Hospital",
+        "lat": 26.8377761,
+        "lng": 82.7492317,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Vardan Hospital",
+        "lat": 26.7674786,
+        "lng": 82.1257978,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sewa Hospital",
+        "lat": 26.8003987,
+        "lng": 82.7404652,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Dr Mohammad Anis Hospital",
+        "lat": 26.7932056,
+        "lng": 82.7245504,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Partham Hospital",
+        "lat": 26.8177603,
+        "lng": 82.7632623,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Jai Dental Hospital, Jai Nagar",
+        "lat": 26.7716024,
+        "lng": 82.1678453,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Tulsi Governments Women Hospital",
+        "lat": 26.8042785,
+        "lng": 82.2033098,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sanjeevani Hospital",
+        "lat": 26.7533187,
+        "lng": 82.1407834,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Mariyam Hospital",
+        "lat": 26.7509452,
+        "lng": 81.7507541,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Anand Multispecialist Hospital",
+        "lat": 26.7882694,
+        "lng": 82.1393695,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Government Hospital, Sheikhpur Jafar",
+        "lat": 26.7605623,
+        "lng": 81.9713091,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Dr Pramila Singh and Aswani Singh Hospital",
+        "lat": 26.7992457,
+        "lng": 82.737073,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Jk Hospital",
+        "lat": 26.801241,
+        "lng": 82.748505,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Aaman Hospital",
+        "lat": 26.8262775,
+        "lng": 82.8111704,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sakun Hospital & Dialysis Centre",
+        "lat": 26.7969979,
+        "lng": 82.7187818,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Noor Hospital",
+        "lat": 26.804253,
+        "lng": 82.757908,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Madhu Charity Hospital",
+        "lat": 26.7814892,
+        "lng": 82.7296836,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Mishra Clinic & Hospital",
+        "lat": 26.7934712,
+        "lng": 82.72965,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Balaji Hospital",
+        "lat": 26.7584753,
+        "lng": 82.1379625,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Ayodhya Dental Hospital",
+        "lat": 26.7811693,
+        "lng": 82.1753829,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Dariyabad Hospital",
+        "lat": 26.8888778,
+        "lng": 81.5542751,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sunta Hospital",
+        "lat": 26.7732338,
+        "lng": 82.1442595,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Daffrin Hospital",
+        "lat": 26.7914568,
+        "lng": 82.7250991,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Surya Hospital",
+        "lat": 26.7656948,
+        "lng": 82.1275617,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Neelkanth Hospital & Research Centre",
+        "lat": 26.7997433,
+        "lng": 82.720702,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Shree Ram Hospital, Ayodhya",
+        "lat": 26.7870839,
+        "lng": 82.1939609,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Pratishtha Ayurvedic and Chinise Acupressure Treatment and Training Centre",
+        "lat": 26.811945,
+        "lng": 82.722142,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Aleena Eye Hospital",
+        "lat": 26.8173731,
+        "lng": 82.766813,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Maa Parmeshwari Devi Memorial Hospital",
+        "lat": 26.7788873,
+        "lng": 82.1424775,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Zayan Hospital",
+        "lat": 26.7997847,
+        "lng": 82.7495595,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "SMC Hospital",
+        "lat": 26.802564,
+        "lng": 82.7736889,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Baby Doll Hospital",
+        "lat": 26.797173,
+        "lng": 82.7299747,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Nirmala Hospital and Maternity Centre",
+        "lat": 26.7735892,
+        "lng": 82.1762251,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Mamata Hospital, Basti",
+        "lat": 26.7968855,
+        "lng": 82.7369622,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Sai Hospital",
+        "lat": 26.7767526,
+        "lng": 82.1431856,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Chiranjeev Hospital & Nursing Institute",
+        "lat": 26.7622903,
+        "lng": 82.1414676,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Gomti Hospital",
+        "lat": 26.7605028,
+        "lng": 82.1555192,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Aman Hospital",
+        "lat": 26.8004365,
+        "lng": 82.7341197,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Female Hospital",
+        "lat": 27.4299136,
+        "lng": 82.1854103,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Tathastu Institute Of Medical Sciences & Hospital",
+        "lat": 26.802003,
+        "lng": 82.7672336,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Alishba Hospital",
+        "lat": 27.2439047,
+        "lng": 81.5466714,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Dr Bp Tripathi Eye Care Centre",
+        "lat": 26.7924889,
+        "lng": 82.7225626,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Ayodhya Eye Hospital, Basti Branch",
+        "lat": 26.7987095,
+        "lng": 82.7190762,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Shakti Hospital",
+        "lat": 26.7635241,
+        "lng": 82.1482464,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Raj Hospital & Diagnostic",
+        "lat": 26.7493511,
+        "lng": 81.7472981,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Manchanda Eye Hospital",
+        "lat": 26.7802677,
+        "lng": 82.1409059,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Candy Hospital, Faizabad",
+        "lat": 26.7798019,
+        "lng": 82.1419805,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Narayan Hospital",
+        "lat": 26.755069,
+        "lng": 82.1344584,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Medicare Hospital",
+        "lat": 26.7605179,
+        "lng": 82.0541756,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Bhavya Medical Centre Private Limited",
+        "lat": 26.814823,
+        "lng": 82.7632125,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Savitri Paramedical College & Hospital",
+        "lat": 26.803103,
+        "lng": 82.7221392,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Krishna Hospital",
+        "lat": 26.7769326,
+        "lng": 82.1488879,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Dr.Mohammad Iqbal Child Specialist",
+        "lat": 26.8010622,
+        "lng": 82.7530476,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Satyam Pathology",
+        "lat": 26.801605,
+        "lng": 82.758153,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sambal Hospital",
+        "lat": 26.8023518,
+        "lng": 82.7642413,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Jila Hospital",
+        "lat": 26.798503,
+        "lng": 82.737696,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Tripathi Hospital",
+        "lat": 26.8010475,
+        "lng": 82.7574297,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Raj Rajeshwari Hospital",
+        "lat": 26.7845491,
+        "lng": 82.1425485,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "MSC Hospital",
+        "lat": 26.8037963,
+        "lng": 82.7206991,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Jagat Hospital",
+        "lat": 26.7601749,
+        "lng": 82.1402975,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Children Hospital",
+        "lat": 26.777755,
+        "lng": 82.1427642,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "J.P. Memorial Hospital",
+        "lat": 26.757865,
+        "lng": 82.1436867,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Amar Hospital",
+        "lat": 26.7815141,
+        "lng": 82.1646175,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Om Sanjeewani Chikitsa Kendra",
+        "lat": 26.987798,
+        "lng": 82.9267996,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Shri Krishna Mission Hospital",
+        "lat": 26.8127531,
+        "lng": 82.7192363,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "J J Hospital",
+        "lat": 26.794728,
+        "lng": 82.760389,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "City Hospital",
+        "lat": 26.7916172,
+        "lng": 82.7208444,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "RK Hospital",
+        "lat": 26.7748442,
+        "lng": 82.1648975,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Baba Hospital",
+        "lat": 26.7867447,
+        "lng": 82.1400467,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Tathastu Hospital",
+        "lat": 26.8037321,
+        "lng": 82.7668699,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Military Hospital",
+        "lat": 26.7821876,
+        "lng": 82.124235,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Patel Smh Hospital & Ayurvedic Paramedical College",
+        "lat": 26.7735731,
+        "lng": 82.6472608,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Navjyoti Eye Hospital, Basti",
+        "lat": 26.7979988,
+        "lng": 82.7184562,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "New Adarsh Hospital, Basti",
+        "lat": 26.8003603,
+        "lng": 82.7430602,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "S.N Hospital & Medical Institute",
+        "lat": 26.832074,
+        "lng": 82.788154,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Manas Hospital",
+        "lat": 26.7582924,
+        "lng": 82.1299871,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sunayan Eye Hospital",
+        "lat": 26.7853,
+        "lng": 82.1416346,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Prince Pharmacy & Medical Centre",
+        "lat": 26.8024972,
+        "lng": 82.7667638,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "New Anshuman Hospital",
+        "lat": 26.7831695,
+        "lng": 82.1386346,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Lucknow Dental Hospital",
+        "lat": 26.8274245,
+        "lng": 82.7828821,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Rama Hospital",
+        "lat": 26.759795,
+        "lng": 81.750552,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Happy Care Hospital, Basti",
+        "lat": 26.8015094,
+        "lng": 82.7617937,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Janaki Hospital",
+        "lat": 26.7610164,
+        "lng": 82.1385118,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Hajra Hospital",
+        "lat": 26.8029298,
+        "lng": 82.7582083,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Shiv Lalita Hospital",
+        "lat": 26.79916,
+        "lng": 82.7339023,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Kiran Surgical",
+        "lat": 26.794417,
+        "lng": 82.727151,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Prakash Pathology & Biopsy Centre",
+        "lat": 26.8037458,
+        "lng": 82.7579798,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "American Dental Hospital",
+        "lat": 26.779221,
+        "lng": 82.148742,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Crystal Hospital",
+        "lat": 26.7824013,
+        "lng": 82.1471064,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Awadhpuri Hospital and Maternity Centre",
+        "lat": 26.7826811,
+        "lng": 82.1726596,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "R P Singh Hospital",
+        "lat": 26.799842,
+        "lng": 82.7365748,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Public Hospital",
+        "lat": 26.7561242,
+        "lng": 82.1349065,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Samta Pathology",
+        "lat": 26.8011884,
+        "lng": 82.7580407,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Vishal Hospital",
+        "lat": 26.7774762,
+        "lng": 82.1565548,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Zyara Hospital",
+        "lat": 26.7983736,
+        "lng": 82.7505131,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Life Care Hospital",
+        "lat": 26.7648684,
+        "lng": 81.980878,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "P.M.C. Hospital",
+        "lat": 25.287653,
+        "lng": 83.0018096,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Jagat Hospital",
+        "lat": 25.3841559,
+        "lng": 82.9046875,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Oppo Hospital Maduadih",
+        "lat": 25.2947692,
+        "lng": 82.9713814,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Raju Hospital",
+        "lat": 25.3799982,
+        "lng": 82.9939926,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Pankhudi Hospital",
+        "lat": 25.3293525,
+        "lng": 83.0178987,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sadguru Hospital",
+        "lat": 25.3458516,
+        "lng": 82.9962729,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "LG Hospital",
+        "lat": 25.3527952,
+        "lng": 82.9819036,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Aryan Hospital",
+        "lat": 25.3790856,
+        "lng": 82.9758181,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Suresh Singh Memorial Hospital",
+        "lat": 25.3528561,
+        "lng": 83.0018585,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Jeevan Anmol Hospital",
+        "lat": 25.2791873,
+        "lng": 82.9988665,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Ritu Hospital",
+        "lat": 25.314058,
+        "lng": 82.956667,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Rama Medical Care Centre",
+        "lat": 25.3097288,
+        "lng": 82.9909972,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Delight Hospital",
+        "lat": 25.256901,
+        "lng": 82.9593747,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Vatsalya Children Hospital",
+        "lat": 25.3521054,
+        "lng": 82.9816775,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Usha Memorial Hospital",
+        "lat": 25.3397137,
+        "lng": 82.9256749,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Jiwan Jyoti Children Hospital",
+        "lat": 25.2680252,
+        "lng": 82.8472511,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Jyotirmay Hospital",
+        "lat": 25.3104055,
+        "lng": 82.9841904,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Heritage Hospital",
+        "lat": 25.2855147,
+        "lng": 82.9946911,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Popular Hospital",
+        "lat": 25.3053488,
+        "lng": 82.986451,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Sudha Surgical Multi Speciality Hospital",
+        "lat": 25.3508619,
+        "lng": 82.9760521,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Chadr Prabha Hospital",
+        "lat": 25.352927,
+        "lng": 82.9786969,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Amrit Milan Hospital",
+        "lat": 25.3840791,
+        "lng": 82.9710842,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Pragya Maternity & Child Care Hospital",
+        "lat": 25.2792438,
+        "lng": 83.0008893,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Dr. R S Singh Hospital",
+        "lat": 25.3618976,
+        "lng": 82.9523441,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Vanshika Children Hospital",
+        "lat": 25.3517441,
+        "lng": 82.9811912,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Prabhat Hospital Bhelupur",
+        "lat": 25.3039498,
+        "lng": 82.9900586,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Prakhar Hospital",
+        "lat": 25.360696,
+        "lng": 82.941177,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "R.S. Hospital and Research Centre",
+        "lat": 25.360778,
+        "lng": 82.9506846,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Bharti Hospital",
+        "lat": 25.3603471,
+        "lng": 82.9485332,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Guru Nanak Hospital",
+        "lat": 25.3071525,
+        "lng": 82.9931648,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Ramkrishna Hospital & Child Care Centre",
+        "lat": 25.2622943,
+        "lng": 82.9656,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Health Care Hospital",
+        "lat": 25.306562,
+        "lng": 82.9750547,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Sangam Hospital",
+        "lat": 25.356267,
+        "lng": 82.953296,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Friend's Hospital",
+        "lat": 25.3496643,
+        "lng": 83.0050064,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Smayan Hospital",
+        "lat": 25.311236,
+        "lng": 82.986316,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Medicity Hospital & Critical Care",
+        "lat": 25.300271,
+        "lng": 82.994653,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Shubham Banaras Hospital",
+        "lat": 25.3119109,
+        "lng": 82.9865396,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "New Khushbu Hospital",
+        "lat": 25.3646315,
+        "lng": 82.974667,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Vardan Hospital and Laparoscopic Centre",
+        "lat": 25.35072,
+        "lng": 82.977243,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Getwell Hospital",
+        "lat": 25.2760391,
+        "lng": 82.9682885,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Prasad Hospital",
+        "lat": 25.3503004,
+        "lng": 82.9930871,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Vijaya Hospital",
+        "lat": 25.2705135,
+        "lng": 82.7175129,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Trimurti Hospital",
+        "lat": 25.3520678,
+        "lng": 82.9714491,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Neelam Hospital",
+        "lat": 25.3793331,
+        "lng": 82.9935422,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Pratik Hospital",
+        "lat": 25.2838042,
+        "lng": 82.9699867,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Chirayu Medi Surgical Hospital",
+        "lat": 25.3083121,
+        "lng": 82.9849165,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "S-Base Hospital varanasi",
+        "lat": 25.2787979,
+        "lng": 83.0043951,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Maulana Azad Bunkar Hospital",
+        "lat": 25.331716,
+        "lng": 83.007717,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Police Line Hospital",
+        "lat": 25.3506005,
+        "lng": 82.9886554,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Jeevan Rekha Hospital",
+        "lat": 25.3536662,
+        "lng": 83.0027213,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Vaidik Hospital and Trauma Centre",
+        "lat": 25.2974834,
+        "lng": 82.9437303,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Shubhyash Hospital & Speciality Clinic",
+        "lat": 25.3507954,
+        "lng": 82.9752551,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Shivam Hospital",
+        "lat": 25.300895,
+        "lng": 82.9534599,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Janta Sewa Hospital",
+        "lat": 25.3042531,
+        "lng": 83.0029649,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "ASG Eye Hospital",
+        "lat": 25.305723,
+        "lng": 82.984596,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Prince Hospital",
+        "lat": 25.354029,
+        "lng": 83.004075,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Kunta Devi Hospital",
+        "lat": 25.3650305,
+        "lng": 82.9593359,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Baba Kinaram Hospital",
+        "lat": 25.2977607,
+        "lng": 82.9924693,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Jhumawati Hospital",
+        "lat": 25.3161662,
+        "lng": 82.9679451,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Filaria Hospital - NCDC",
+        "lat": 25.3350788,
+        "lng": 83.001357,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Kunjan Homeo Hospital & Research Centre",
+        "lat": 25.350619,
+        "lng": 82.9705221,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Healthmax Hospital",
+        "lat": 25.3242107,
+        "lng": 83.0031446,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Raj Memorial Hospital",
+        "lat": 25.3535393,
+        "lng": 83.0039329,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Laxmi Hospital",
+        "lat": 25.3276365,
+        "lng": 82.9903258,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Public Welfare Hospital",
+        "lat": 25.3051959,
+        "lng": 82.9937819,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "G.S.Memorial Plastic Surgery Hospital and Trauma Centre",
+        "lat": 25.3023319,
+        "lng": 82.974999,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Verma Hospital",
+        "lat": 25.302198,
+        "lng": 82.9644864,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "K.L.Hospital and Trauma Centre",
+        "lat": 25.2584064,
+        "lng": 83.0366509,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sanjeevni Hospital",
+        "lat": 25.3538348,
+        "lng": 82.9778179,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Global Hospital & Trauma Centre",
+        "lat": 25.2653332,
+        "lng": 82.9654152,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Versova Hospital",
+        "lat": 25.2576159,
+        "lng": 82.9611938,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Saroj Hospital",
+        "lat": 25.2470817,
+        "lng": 82.9510253,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Kalpana Hospital",
+        "lat": 25.35316,
+        "lng": 82.983488,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "\u092e\u0947\u091f\u094d\u0930\u094b \u090b\u0937\u093f\u0926\u0947\u0935 \u0905\u0938\u094d\u092a\u0924\u093e\u0932",
+        "lat": 25.2562993,
+        "lng": 82.9599053,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Midway Hospital",
+        "lat": 25.3150869,
+        "lng": 82.983205,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "M.S.D Hospital",
+        "lat": 25.3543255,
+        "lng": 82.9762314,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Rohit Hospital",
+        "lat": 25.3617698,
+        "lng": 82.9478768,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Maitri Hospital",
+        "lat": 25.3175707,
+        "lng": 82.9742152,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "New Phoenix Hospital",
+        "lat": 25.2827533,
+        "lng": 82.9683006,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Indra Multispeciality Hospital & Diagnostic Centre",
+        "lat": 25.2473308,
+        "lng": 82.9522276,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Mishal Hospital & Health Care Unit",
+        "lat": 25.2827214,
+        "lng": 82.9400178,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Anant Hospital",
+        "lat": 25.2862554,
+        "lng": 82.9228527,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Avi Hospital",
+        "lat": 25.330641,
+        "lng": 82.995829,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "City Ideal Hospital",
+        "lat": 25.3310155,
+        "lng": 83.0137611,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Pitambari Hospital",
+        "lat": 25.2488922,
+        "lng": 82.9866484,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Prithvi Hospital",
+        "lat": 25.2966727,
+        "lng": 82.9999593,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Gem Hospital",
+        "lat": 25.327632,
+        "lng": 83.027387,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Maa Gouri Hospital",
+        "lat": 25.346699,
+        "lng": 82.996889,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Janta Hospital and Maternity Centre",
+        "lat": 25.244814,
+        "lng": 82.951158,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Prakash Hospital",
+        "lat": 25.2699123,
+        "lng": 82.7185358,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Shri Gangaram Memorial Hospital",
+        "lat": 25.244372,
+        "lng": 82.979733,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Nityanand Hospital",
+        "lat": 25.3655945,
+        "lng": 83.0255416,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Nova Hospital Shivpur Varanasi",
+        "lat": 25.3620384,
+        "lng": 82.9461627,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Jain Hospital, Varanasi",
+        "lat": 25.3498326,
+        "lng": 82.9920187,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Mandhata Hospital and Trauma Centre",
+        "lat": 25.3650418,
+        "lng": 82.9745778,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Dirghayu Hospital and Surgical Centre",
+        "lat": 25.3600388,
+        "lng": 83.0201477,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Rudrakashi Hospital",
+        "lat": 25.34992,
+        "lng": 82.9831869,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Ansh Neuro and Maternity Centre",
+        "lat": 25.3486582,
+        "lng": 82.967746,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Bhargava Hospital and Trauma Centre",
+        "lat": 25.3497167,
+        "lng": 82.9911283,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Sarang Medicare Hospital and Dental Research Centre",
+        "lat": 25.3622154,
+        "lng": 83.0400049,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Ansh Neuro and Maternity Centre",
+        "lat": 25.3469853,
+        "lng": 82.9699986,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Chandra Hospital",
+        "lat": 25.3070243,
+        "lng": 82.9435133,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Shivangan Hospital",
+        "lat": 25.3079915,
+        "lng": 82.9349485,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Prakashdeep Hospital",
+        "lat": 25.3509938,
+        "lng": 82.9767235,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Peace Point Hospitals",
+        "lat": 25.2970026,
+        "lng": 82.9981729,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Rajapuriya Heart Hospital",
+        "lat": 25.293286,
+        "lng": 82.996088,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sabika Hospital",
+        "lat": 25.2943269,
+        "lng": 82.9797908,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Upkar Eye Hospital",
+        "lat": 25.283863,
+        "lng": 82.9792278,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Ashutosh Hospital",
+        "lat": 25.3010102,
+        "lng": 82.9468621,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "New Jagriti Hospital & Research Centre",
+        "lat": 25.2584272,
+        "lng": 82.9635472,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Ganga Sewa Sadan Hospital",
+        "lat": 25.3038069,
+        "lng": 82.9592991,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "\u091c\u093e\u0945\u0930\u094d\u091c\u093f\u092f\u0928 \u0938\u0941\u092a\u0930\u0938\u094d\u092a\u0947\u0936\u093f\u090f\u0932\u0940\u091f\u0940 \u0905\u0938\u094d\u092a\u0924\u093e\u0932",
+        "lat": 25.2626172,
+        "lng": 82.9649674,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Hemant Singh Hospital",
+        "lat": 25.357824,
+        "lng": 82.9651728,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Lilawati Hospital ,varansi",
+        "lat": 25.275215,
+        "lng": 83.010057,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Military Hospital",
+        "lat": 25.3334913,
+        "lng": 82.9701359,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Purnima Hospital",
+        "lat": 25.287879,
+        "lng": 82.9529316,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Holy City Hospital and Trauma Centre",
+        "lat": 25.3580501,
+        "lng": 83.0069587,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Sarvodaya Hospital",
+        "lat": 25.3334728,
+        "lng": 83.0025498,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Amarnath Seva Sansthan Hospital",
+        "lat": 25.3621084,
+        "lng": 82.9541844,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "New Medicare Hospital",
+        "lat": 25.3203803,
+        "lng": 82.9866726,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Prime Kidney Stone Centre & Urology Hospital",
+        "lat": 25.3001405,
+        "lng": 82.9945731,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "S N Yadav Hospital",
+        "lat": 25.350184,
+        "lng": 83.022946,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Arogya Hospital",
+        "lat": 25.2580075,
+        "lng": 82.9615306,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Ashirvad Hospital & Research Centre",
+        "lat": 25.3044817,
+        "lng": 82.9781929,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Uttakarsh Hospital",
+        "lat": 25.3040185,
+        "lng": 82.9536821,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sai Raj Hospital",
+        "lat": 25.3331628,
+        "lng": 82.9907332,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Maa Rajwati Hospital",
+        "lat": 25.2710147,
+        "lng": 82.9670171,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Yashoda Memorial Hospital",
+        "lat": 25.3528627,
+        "lng": 82.9831882,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Janseva Hospital and Research Centre Pvt Ltd",
+        "lat": 25.256328,
+        "lng": 83.0368468,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Saraswati Hospital",
+        "lat": 25.351731,
+        "lng": 82.975836,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Bhardwaj Hospital",
+        "lat": 25.3153178,
+        "lng": 82.9632672,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Maxwell Hospital",
+        "lat": 25.2474055,
+        "lng": 82.9933785,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Peace Point Hospital Pvt. Ltd.",
+        "lat": 25.2951669,
+        "lng": 83.0005744,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "K. P. Memorial Hospital",
+        "lat": 25.3622038,
+        "lng": 82.9540022,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Kashi Hospital",
+        "lat": 25.3506287,
+        "lng": 82.9783479,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Sri Ram Hospital & Maternity Centre",
+        "lat": 25.305302,
+        "lng": 82.978926,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Parma Hospital",
+        "lat": 25.314154,
+        "lng": 82.958277,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sarkari Hospital",
+        "lat": 25.311547,
+        "lng": 82.977666,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Shiva Hospital",
+        "lat": 25.3581659,
+        "lng": 82.9928698,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Prateek Hospital",
+        "lat": 25.3528259,
+        "lng": 82.9972908,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Ford Hospital varansi",
+        "lat": 25.2744193,
+        "lng": 83.010027,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Om Sai Hospital",
+        "lat": 25.2637524,
+        "lng": 82.9635564,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Yash Hospital",
+        "lat": 25.3491797,
+        "lng": 82.9918323,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "City Hospital",
+        "lat": 25.3104104,
+        "lng": 82.9853827,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Opus Hospital",
+        "lat": 25.3502471,
+        "lng": 82.9781808,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Kasih Hospital",
+        "lat": 25.3088398,
+        "lng": 82.938513,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Akanksha Hospital",
+        "lat": 25.3526203,
+        "lng": 82.9774508,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Amit Gupta Hospital",
+        "lat": 25.3087773,
+        "lng": 82.9843883,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Bramharshi Hospital",
+        "lat": 25.2784619,
+        "lng": 82.9474918,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Banaras Medicity Heart & Super Speciality Hospital",
+        "lat": 25.3080296,
+        "lng": 82.986806,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Chandra Mohan Hospital",
+        "lat": 25.3505789,
+        "lng": 82.9775258,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Apex Hospital, Varanasi",
+        "lat": 25.3257252,
+        "lng": 82.9845891,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Shruti Clinic - Dr.G.S. Singh",
+        "lat": 25.3502427,
+        "lng": 82.9905536,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Laxmi Memorial Children Hospital",
+        "lat": 25.343379,
+        "lng": 82.9883642,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Hajra Hospital",
+        "lat": 25.3253079,
+        "lng": 83.009261,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Manish Hospital",
+        "lat": 25.2669629,
+        "lng": 82.9669399,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Heritage Hospital",
+        "lat": 25.3130492,
+        "lng": 83.0041467,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Navjeevan Hospital",
+        "lat": 25.3492833,
+        "lng": 83.0031583,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Ganesh Hospital",
+        "lat": 26.4348052,
+        "lng": 80.3015697,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Ram Hospital",
+        "lat": 26.41613,
+        "lng": 80.2969922,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Dhanvantri Hospital",
+        "lat": 26.4211347,
+        "lng": 80.3180405,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Galaxy Hospital",
+        "lat": 26.4809198,
+        "lng": 80.2459457,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Narayan Hospital",
+        "lat": 26.4965306,
+        "lng": 80.2535283,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Reenadeep Woman & Child Care Centre",
+        "lat": 26.446065,
+        "lng": 80.292013,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Sai Eye Hospital, Govind Nagar",
+        "lat": 26.4520246,
+        "lng": 80.3068255,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Royal Children's Hospital",
+        "lat": 26.4235699,
+        "lng": 80.3201424,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Mahendru Hospital",
+        "lat": 26.4789036,
+        "lng": 80.304545,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Abhinav Nursing Home Hospital",
+        "lat": 26.4908616,
+        "lng": 80.2508829,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Asg Eye Hospital",
+        "lat": 26.4643404,
+        "lng": 80.3024695,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Chandra Hospital",
+        "lat": 26.4292042,
+        "lng": 80.3021013,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Arogya Hospital",
+        "lat": 26.467618,
+        "lng": 80.2487713,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Tirupati Hospital",
+        "lat": 26.490033,
+        "lng": 80.246573,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Drishti Hospital",
+        "lat": 26.4363234,
+        "lng": 80.3039944,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Kabira Hospital",
+        "lat": 26.4420488,
+        "lng": 80.2977356,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Shraddha Hospital",
+        "lat": 26.4412092,
+        "lng": 80.2931634,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Raunak Hospital",
+        "lat": 26.4082916,
+        "lng": 80.3226006,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "ESI Hospital, Kanpur",
+        "lat": 26.425111,
+        "lng": 80.3263608,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Mandakini Hospital",
+        "lat": 26.4226298,
+        "lng": 80.302848,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Swaraj Hospital",
+        "lat": 26.4762302,
+        "lng": 80.2868425,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Amogh Hospital",
+        "lat": 26.428073,
+        "lng": 80.3208681,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Aashvi Hospital",
+        "lat": 26.4407734,
+        "lng": 80.29936,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Jeewan Jyoti Hospital",
+        "lat": 26.4341246,
+        "lng": 80.3016336,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Samarpan Hospital",
+        "lat": 26.4779926,
+        "lng": 80.244155,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Apex Hospital",
+        "lat": 26.4844728,
+        "lng": 80.2508067,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "H2O Life Care Hospital",
+        "lat": 26.4840826,
+        "lng": 80.2446146,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Jagrati Hospital",
+        "lat": 26.396746,
+        "lng": 80.323418,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Kanha Hospital",
+        "lat": 26.496557,
+        "lng": 80.2436952,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Bmg Hospital",
+        "lat": 26.4395556,
+        "lng": 80.3108157,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Shri Jairam Hospital & Trauma Centre",
+        "lat": 26.4354633,
+        "lng": 80.2874106,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Regency Renal Sciences Centre",
+        "lat": 26.4793556,
+        "lng": 80.3160697,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Maa Jwala Hospital and Trauma Centre",
+        "lat": 26.4947458,
+        "lng": 80.2547548,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Ansh Hospital",
+        "lat": 26.4927666,
+        "lng": 80.2527644,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Shiv Hospital",
+        "lat": 26.4939082,
+        "lng": 80.2490212,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Sis Hospital",
+        "lat": 26.4848634,
+        "lng": 80.2562763,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Shaurya Hospital",
+        "lat": 26.4980692,
+        "lng": 80.2405193,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Ofc Hospital Armapur",
+        "lat": 26.4655444,
+        "lng": 80.2619627,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Maa Vindhyeshwari Hospital",
+        "lat": 26.4380686,
+        "lng": 80.2714112,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Merigold Hospital",
+        "lat": 26.471595,
+        "lng": 80.242583,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Krishna Hospital",
+        "lat": 26.4966226,
+        "lng": 80.2529902,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Guru Nanak Hospital",
+        "lat": 26.4668348,
+        "lng": 80.3065835,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Ppm Hospital",
+        "lat": 26.435452,
+        "lng": 80.3089165,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "New Angel Hospital & Research Centre",
+        "lat": 26.4271922,
+        "lng": 80.3350672,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "The Panacea Hospital, Kanpur",
+        "lat": 26.473978,
+        "lng": 80.293236,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Sagh Hospital",
+        "lat": 26.4506626,
+        "lng": 80.3063278,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Anuradha Hospital",
+        "lat": 26.4151589,
+        "lng": 80.319435,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "McRobert Memorial Hospital",
+        "lat": 26.4811998,
+        "lng": 80.3436045,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Regency Hospital",
+        "lat": 26.4486148,
+        "lng": 80.3090486,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Ma Hospital",
+        "lat": 26.4298594,
+        "lng": 80.2898738,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Dr. Murari Lal Chest Hospital",
+        "lat": 26.4820398,
+        "lng": 80.30321,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Nostrum Hospital",
+        "lat": 26.436185,
+        "lng": 80.2730833,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "SPM Hospital",
+        "lat": 26.424901,
+        "lng": 80.303751,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "ESI Hospital",
+        "lat": 26.4647984,
+        "lng": 80.3060965,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "South City Hospital & Trauma Centre",
+        "lat": 26.413303,
+        "lng": 80.2988164,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Shifa Hospital",
+        "lat": 26.3970138,
+        "lng": 80.3286391,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Vatsalya Hospital",
+        "lat": 26.4960542,
+        "lng": 80.2521237,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Ramraj Hospital and Trauma Centre",
+        "lat": 26.3929574,
+        "lng": 80.3171224,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Indian Hospital",
+        "lat": 26.4405956,
+        "lng": 80.2812601,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Amba Hospital",
+        "lat": 26.4782262,
+        "lng": 80.3486214,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Angel Hospital",
+        "lat": 26.4334214,
+        "lng": 80.3145196,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Mannat Hospital",
+        "lat": 26.3881898,
+        "lng": 80.3095276,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Mansrovar Medical Centre Hospital",
+        "lat": 26.4345552,
+        "lng": 80.3027312,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Khushi Hospital",
+        "lat": 26.432604,
+        "lng": 80.297997,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Emerald Hospital",
+        "lat": 26.4294583,
+        "lng": 80.3300111,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "City Hospital",
+        "lat": 26.4434516,
+        "lng": 80.2864849,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "South Hospital",
+        "lat": 26.4423466,
+        "lng": 80.2938076,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "S. S. Hospital",
+        "lat": 26.3943803,
+        "lng": 80.3128923,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Chandra Hospital",
+        "lat": 26.440292,
+        "lng": 80.2796814,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Sis Hospital & Research Centre",
+        "lat": 26.4842178,
+        "lng": 80.256,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Shanti Mission Hospital",
+        "lat": 26.412936,
+        "lng": 80.3246691,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Vimal Hospital",
+        "lat": 26.4412496,
+        "lng": 80.3208933,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "C L Memorial Hospital",
+        "lat": 26.4637792,
+        "lng": 80.2966156,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Jaigurudev Hospital",
+        "lat": 26.4041953,
+        "lng": 80.3033404,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Shivansh Hospital",
+        "lat": 26.4633274,
+        "lng": 80.2435715,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Gaytri Nursing Home",
+        "lat": 26.4382968,
+        "lng": 80.3333814,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Pulse Hospital",
+        "lat": 26.4949552,
+        "lng": 80.2495592,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "J K Hospital",
+        "lat": 26.411717,
+        "lng": 80.332896,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "Sahyog Hospital",
+        "lat": 26.3939435,
+        "lng": 80.3118793,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Sunrise Hospital",
+        "lat": 26.485006,
+        "lng": 80.2489416,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Ganga Devi Hospital",
+        "lat": 26.429673,
+        "lng": 80.3012719,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Bima Hospital",
+        "lat": 26.4731026,
+        "lng": 80.2959961,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Bliss Hospital",
+        "lat": 26.4298823,
+        "lng": 80.2901908,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Uttam Hospital and Trauma Centre",
+        "lat": 26.388799,
+        "lng": 80.31303,
+        "city": "N/A",
+        "type": "N/A"
+    },
+    {
+        "name": "New City Hospital",
+        "lat": 26.4373156,
+        "lng": 80.2826888,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Chanda Hospital",
+        "lat": 26.4826868,
+        "lng": 80.2811825,
+        "city": "N/A",
+        "type": "hospital"
+    },
+    {
+        "name": "Saine Hospital",
+        "lat": 26.489764,
+        "lng": 80.265679,
+        "city": "N/A",
+        "type": "hospital"
+    }
+];
