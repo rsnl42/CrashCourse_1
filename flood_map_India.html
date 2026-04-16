@@ -9,26 +9,46 @@
     <style>
         body, html { height: 100%; margin: 0; background: #f0f4f8; }
         #map { height: 100%; width: 100%; }
-        .panel {
-            position: absolute; top: 10px; right: 10px; z-index: 1000;
-            background: white; padding: 15px; border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 64, 128, 0.2); font-family: sans-serif; 
-            width: 250px; border-left: 5px solid #007bff;
+        
+        /* Legend styling */
+        .custom-legend {
+            background: white;
+            padding: 12px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 0.9em;
+            width: 180px;
+            border-left: 5px solid #007bff;
         }
-        h2 { margin: 0 0 5px 0; color: #004085; font-size: 1.2em; }
-        p { margin: 5px 0; font-size: 0.9em; color: #555; }
-        .legend-item { display: flex; align-items: center; margin-bottom: 5px; }
-        .dot { height: 12px; width: 12px; border-radius: 50%; display: inline-block; margin-right: 8px; border: 1px solid #333; }
+        .legend-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #004085;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 6px;
+            cursor: pointer;
+        }
+        .legend-item input {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .dot {
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 8px;
+            border: 1px solid #333;
+        }
     </style>
 </head>
 <body>
-    <div class="panel">
-        <h2>India Flood History</h2>
-        <p>Showing historical flood events recorded in India, categorized by severity level (1.0 to 2.0).</p>
-        <div class="legend-item"><span class="dot" style="background-color: #7fbfff;"></span> Severity 1.0</div>
-        <div class="legend-item"><span class="dot" style="background-color: #ff8c00;"></span> Severity 1.5</div>
-        <div class="legend-item"><span class="dot" style="background-color: #ff0000;"></span> Severity 2.0</div>
-    </div>
     <div id="map"></div>
     <script src="Day 2 Flood mapping/india_points.js"></script>
     <script>
@@ -38,10 +58,12 @@
             attribution: '© OpenStreetMap, © CARTO'
         }).addTo(map);
 
-        // Flood Layers (by Severity)
-        const floodLayer1 = L.layerGroup().addTo(map);
-        const floodLayer1_5 = L.layerGroup().addTo(map);
-        const floodLayer2 = L.layerGroup().addTo(map);
+        // Flood Layers
+        const layers = {
+            'sev1': L.layerGroup().addTo(map),
+            'sev1_5': L.layerGroup().addTo(map),
+            'sev2': L.layerGroup().addTo(map)
+        };
 
         indiaData.forEach(p => {
             const sev = p.severity;
@@ -50,20 +72,25 @@
             if (sev === 1 || String(sev) === '1.0') {
                 fillColor = '#7fbfff';
                 radius = 5;
-                targetLayer = floodLayer1;
+                targetLayer = layers.sev1;
             } else if (sev === 1.5 || String(sev) === '1.5') {
                 fillColor = '#ff8c00';
                 radius = 8; 
-                targetLayer = floodLayer1_5;
+                targetLayer = layers.sev1_5;
             } else if (sev === 2 || String(sev) === '2.0') {
                 fillColor = '#ff0000';
                 radius = 12;  
-                targetLayer = floodLayer2;
+                targetLayer = layers.sev2;
             } else {
                 fillColor = '#007bff';
                 radius = 5;
-                targetLayer = floodLayer1;
+                targetLayer = layers.sev1;
             }
+
+            // Only show Location for Severity 2.0 (Red points)
+            const locationHtml = (sev === 2 || String(sev) === '2.0') 
+                ? `<b>Location:</b> ${p.Place || 'N/A'}<br>` 
+                : '';
 
             L.circleMarker([p.lat, p.lng], {
                 radius: radius,
@@ -75,7 +102,7 @@
             }).bindPopup(`
                 <div style="font-family: sans-serif;">
                     <b style="color:#d32f2f">Flood Event</b><br>
-                    <b>Location:</b> ${p.Place || 'N/A'}<br>
+                    ${locationHtml}
                     <b>Date:</b> ${p.began || p.date || 'N/A'}<br>
                     <b>Cause:</b> ${p.cause || 'N/A'}<br>
                     <b>Severity:</b> ${p.severity || 'N/A'}
@@ -83,13 +110,41 @@
             `).addTo(targetLayer);
         });
 
-        const overlayMaps = {
-            "Severity 1.0": floodLayer1,
-            "Severity 1.5": floodLayer1_5,
-            "Severity 2.0": floodLayer2
+        // Custom Checkbox Legend at Bottom Left
+        const legend = L.control({ position: 'bottomleft' });
+
+        legend.onAdd = function(map) {
+            const div = L.DomUtil.create('div', 'custom-legend');
+            div.innerHTML = `
+                <div class="legend-title">Flood Severity</div>
+                <label class="legend-item">
+                    <input type="checkbox" checked onchange="toggleLayer('sev1', this)">
+                    <span class="dot" style="background-color: #7fbfff;"></span> Severity 1.0
+                </label>
+                <label class="legend-item">
+                    <input type="checkbox" checked onchange="toggleLayer('sev1_5', this)">
+                    <span class="dot" style="background-color: #ff8c00;"></span> Severity 1.5
+                </label>
+                <label class="legend-item">
+                    <input type="checkbox" checked onchange="toggleLayer('sev2', this)">
+                    <span class="dot" style="background-color: #ff0000;"></span> Severity 2.0
+                </label>
+            `;
+            
+            // Prevent map clicks through the legend
+            L.DomEvent.disableClickPropagation(div);
+            return div;
         };
 
-        L.control.layers(null, overlayMaps, { collapsed: false }).addTo(map);
+        legend.addTo(map);
+
+        function toggleLayer(key, checkbox) {
+            if (checkbox.checked) {
+                map.addLayer(layers[key]);
+            } else {
+                map.removeLayer(layers[key]);
+            }
+        }
     </script>
 </body>
 </html>
