@@ -107,18 +107,17 @@
         const risk5kmLayer = L.layerGroup();
         const risk10kmLayer = L.layerGroup();
 
-        const createPlusIcon = (color, size) => L.divIcon({
-            html: `
-                <svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 5V19M5 12H19" stroke="${color}" stroke-width="4" stroke-linecap="round"/>
-                </svg>`,
+        const createPlusIcon = (color, size, strokeWidth) => L.divIcon({
+            html: `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <path d="M12 5V19M5 12H19" stroke="${color}" stroke-width="${strokeWidth}" stroke-linecap="round"/>
+                   </svg>`,
             className: 'risk-marker',
             iconSize: [size, size],
             iconAnchor: [size/2, size/2]
         });
 
         hospitalsAtRiskUP.radius_5km.forEach(h => {
-            L.marker([h.lat, h.lng], { icon: createPlusIcon('#ff0000', 24) })
+            L.marker([h.lat, h.lng], { icon: createPlusIcon('#ff0000', 24, 4) })
             .bindPopup(`
                 <div style="font-family: sans-serif;">
                     <b style="color:#ff0000">⚠️ HIGH RISK HOSPITAL (5km)</b><br>
@@ -130,7 +129,7 @@
         });
 
         hospitalsAtRiskUP.radius_10km.forEach(h => {
-            L.marker([h.lat, h.lng], { icon: createPlusIcon('#ff8c00', 18) })
+            L.marker([h.lat, h.lng], { icon: createPlusIcon('#ff8c00', 18, 3) })
             .bindPopup(`
                 <div style="font-family: sans-serif;">
                     <b style="color:#ff8c00">⚠️ AT RISK HOSPITAL (10km)</b><br>
