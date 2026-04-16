@@ -9,7 +9,7 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f6;
+            background-color: #f0f2f5;
             margin: 0;
             padding: 20px;
         }
@@ -26,8 +26,8 @@
         }
         .card {
             background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
             padding: 20px;
             display: flex;
             flex-direction: column;
@@ -35,7 +35,8 @@
         }
         .card h3 {
             margin-top: 0;
-            color: #333;
+            color: #1a1a1a;
+            font-weight: 600;
         }
         canvas {
             width: 100% !important;
@@ -44,7 +45,7 @@
         footer {
             text-align: center;
             margin-top: 40px;
-            color: #777;
+            color: #666;
             font-size: 0.9em;
         }
     </style>
@@ -53,7 +54,7 @@
 
 <header>
     <h1>Global Flood Archive Dashboard</h1>
-    <p>Visualizing historical flood data from 1985 to present</p>
+    <p>Visualizing historical flood data from 1985 to 2021</p>
 </header>
 
 <div class="dashboard-grid">
@@ -87,20 +88,18 @@
 </footer>
 
 <script>
-    // Viridis Color Palette Helper
-    const viridisColors = [
-        '#440154', '#481567', '#482677', '#453781', '#404788', 
-        '#39568c', '#33638d', '#2d708e', '#287d8e', '#238a8d', 
-        '#1f968b', '#20a387', '#29af7f', '#3cbc75', '#55c667', 
-        '#73d055', '#95d840', '#b8de29', '#dce319', '#fde725'
+    // Vibrant Color Palette
+    const vibrantColors = [
+        '#FF007F', '#00E5FF', '#76FF03', '#FFAB00', '#D500F9', 
+        '#2979FF', '#FF3D00', '#00E676', '#FFFF00', '#F50057',
+        '#64FFDA', '#FF6E40', '#18FFFF', '#7C4DFF', '#EEFF41',
+        '#B2FF59', '#FFD740', '#FF4081', '#40C4FF', '#00B8D4'
     ];
 
-    function getViridisScale(count) {
-        if (count <= 1) return [viridisColors[0]];
+    function getVibrantScale(count) {
         const scale = [];
         for (let i = 0; i < count; i++) {
-            const index = Math.floor(i * (viridisColors.length - 1) / (count - 1));
-            scale.push(viridisColors[index]);
+            scale.push(vibrantColors[i % vibrantColors.length]);
         }
         return scale;
     }
@@ -114,8 +113,9 @@
             datasets: [{
                 label: '# of Events',
                 data: Object.values(dashboardData.events_by_country),
-                backgroundColor: getViridisScale(countryLabels.length),
-                borderWidth: 0
+                backgroundColor: getVibrantScale(countryLabels.length),
+                borderWidth: 0,
+                borderRadius: 4
             }]
         },
         options: {
@@ -134,10 +134,12 @@
                 label: 'Events per Year',
                 data: Object.values(dashboardData.events_by_year),
                 fill: true,
-                backgroundColor: 'rgba(33, 145, 140, 0.2)', // Viridis Teal-ish with transparency
-                borderColor: '#21918c',
-                tension: 0.1,
-                pointBackgroundColor: '#440154'
+                backgroundColor: 'rgba(0, 229, 255, 0.2)', // Bright Cyan with transparency
+                borderColor: '#00E5FF',
+                borderWidth: 3,
+                tension: 0.3,
+                pointBackgroundColor: '#FF007F',
+                pointRadius: 4
             }]
         },
         options: {
@@ -155,8 +157,9 @@
             datasets: [{
                 label: '# of Events',
                 data: Object.values(dashboardData.events_by_category),
-                backgroundColor: getViridisScale(categoryLabels.length),
-                borderWidth: 0
+                backgroundColor: getVibrantScale(categoryLabels.length),
+                borderWidth: 0,
+                borderRadius: 4
             }]
         },
         options: {
@@ -175,8 +178,9 @@
             datasets: [{
                 label: 'Total Displaced',
                 data: Object.values(dashboardData.displaced_by_severity),
-                backgroundColor: getViridisScale(severityLabels.length),
-                borderWidth: 0
+                backgroundColor: ['#76FF03', '#FFAB00', '#FF3D00'], // Bright Lime, Amber, Deep Red
+                borderWidth: 0,
+                borderRadius: 8
             }]
         },
         options: {
