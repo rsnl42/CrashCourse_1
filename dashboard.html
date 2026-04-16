@@ -87,17 +87,35 @@
 </footer>
 
 <script>
+    // Viridis Color Palette Helper
+    const viridisColors = [
+        '#440154', '#481567', '#482677', '#453781', '#404788', 
+        '#39568c', '#33638d', '#2d708e', '#287d8e', '#238a8d', 
+        '#1f968b', '#20a387', '#29af7f', '#3cbc75', '#55c667', 
+        '#73d055', '#95d840', '#b8de29', '#dce319', '#fde725'
+    ];
+
+    function getViridisScale(count) {
+        if (count <= 1) return [viridisColors[0]];
+        const scale = [];
+        for (let i = 0; i < count; i++) {
+            const index = Math.floor(i * (viridisColors.length - 1) / (count - 1));
+            scale.push(viridisColors[index]);
+        }
+        return scale;
+    }
+
     // 1. Events by Country
+    const countryLabels = Object.keys(dashboardData.events_by_country);
     new Chart(document.getElementById('countryChart'), {
         type: 'bar',
         data: {
-            labels: Object.keys(dashboardData.events_by_country),
+            labels: countryLabels,
             datasets: [{
                 label: '# of Events',
                 data: Object.values(dashboardData.events_by_country),
-                backgroundColor: 'rgba(54, 162, 235, 0.7)',
-                borderColor: 'rgba(54, 162, 235, 1)',
-                borderWidth: 1
+                backgroundColor: getViridisScale(countryLabels.length),
+                borderWidth: 0
             }]
         },
         options: {
@@ -116,9 +134,10 @@
                 label: 'Events per Year',
                 data: Object.values(dashboardData.events_by_year),
                 fill: true,
-                backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                borderColor: 'rgba(75, 192, 192, 1)',
-                tension: 0.1
+                backgroundColor: 'rgba(33, 145, 140, 0.2)', // Viridis Teal-ish with transparency
+                borderColor: '#21918c',
+                tension: 0.1,
+                pointBackgroundColor: '#440154'
             }]
         },
         options: {
@@ -128,16 +147,16 @@
     });
 
     // 3. Events by Category
+    const categoryLabels = Object.keys(dashboardData.events_by_category);
     new Chart(document.getElementById('categoryChart'), {
         type: 'bar',
         data: {
-            labels: Object.keys(dashboardData.events_by_category),
+            labels: categoryLabels,
             datasets: [{
                 label: '# of Events',
                 data: Object.values(dashboardData.events_by_category),
-                backgroundColor: 'rgba(255, 159, 64, 0.7)',
-                borderColor: 'rgba(255, 159, 64, 1)',
-                borderWidth: 1
+                backgroundColor: getViridisScale(categoryLabels.length),
+                borderWidth: 0
             }]
         },
         options: {
@@ -148,16 +167,16 @@
     });
 
     // 4. Total Displaced by Severity
+    const severityLabels = Object.keys(dashboardData.displaced_by_severity);
     new Chart(document.getElementById('severityChart'), {
         type: 'bar',
         data: {
-            labels: Object.keys(dashboardData.displaced_by_severity),
+            labels: severityLabels,
             datasets: [{
                 label: 'Total Displaced',
                 data: Object.values(dashboardData.displaced_by_severity),
-                backgroundColor: 'rgba(255, 99, 132, 0.7)',
-                borderColor: 'rgba(255, 99, 132, 1)',
-                borderWidth: 1
+                backgroundColor: getViridisScale(severityLabels.length),
+                borderWidth: 0
             }]
         },
         options: {
