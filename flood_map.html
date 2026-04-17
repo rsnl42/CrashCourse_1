@@ -37,6 +37,14 @@
             display: inline-block; border-radius: 50%; border: 1px solid #6c757d;
             margin-right: 5px;
         }
+        .drill-down-btn {
+            display: block; width: 100%; padding: 10px; margin-top: 15px;
+            background-color: var(--secondary, #3498db); color: white;
+            text-align: center; text-decoration: none; font-weight: bold;
+            border-radius: 5px; transition: background 0.3s; border: none;
+            cursor: pointer; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .drill-down-btn:hover { background-color: #2980b9; }
     </style>
 </head>
 <body>
@@ -59,6 +67,7 @@
                 <span class="na-marker"></span> <b>Gray</b> = Data Not Available
             </p>
         </div>
+        <a href="flood_map_India.html" class="drill-down-btn">Drill Down to India →</a>
     </div>
     <div id="map"></div>
     <script src="Day 2 Flood mapping/map_data.js"></script>

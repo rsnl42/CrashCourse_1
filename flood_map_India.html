@@ -46,6 +46,15 @@
             margin-right: 8px;
             border: 1px solid #333;
         }
+        .drill-down-btn {
+            display: block; width: 100%; padding: 10px; margin-top: 15px;
+            background-color: #3498db; color: white;
+            text-align: center; text-decoration: none; font-weight: bold;
+            border-radius: 5px; transition: background 0.3s; border: none;
+            cursor: pointer; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 0.9em;
+        }
+        .drill-down-btn:hover { background-color: #2980b9; }
     </style>
 </head>
 <body>
@@ -129,6 +138,7 @@
                     <input type="checkbox" checked onchange="toggleLayer('sev2', this)">
                     <span class="dot" style="background-color: #ff0000;"></span> Severity 2.0
                 </label>
+                <a href="Day 4 Dashboard and landing page/flood_risk_map_UP.html" class="drill-down-btn">Drill Down to Uttar Pradesh →</a>
             `;
             
             // Prevent map clicks through the legend
