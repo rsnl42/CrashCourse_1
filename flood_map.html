@@ -37,14 +37,32 @@
             display: inline-block; border-radius: 50%; border: 1px solid #6c757d;
             margin-right: 5px;
         }
-        .drill-down-btn {
-            display: block; width: 100%; padding: 10px; margin-top: 15px;
-            background-color: var(--secondary, #3498db); color: white;
-            text-align: center; text-decoration: none; font-weight: bold;
-            border-radius: 5px; transition: background 0.3s; border: none;
-            cursor: pointer; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        .drill-down-section {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+            text-align: center;
         }
-        .drill-down-btn:hover { background-color: #2980b9; }
+        .drill-down-btn {
+            display: block; width: 100%; padding: 12px;
+            background-color: #e67e22; color: white;
+            text-align: center; text-decoration: none; font-weight: bold;
+            border-radius: 5px; transition: all 0.3s; border: 2px solid #d35400;
+            cursor: pointer; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3);
+            animation: pulse-orange 2s infinite;
+        }
+        .drill-down-btn:hover { 
+            background-color: #d35400; 
+            transform: scale(1.02);
+            box-shadow: 0 6px 20px rgba(230, 126, 34, 0.5);
+        }
+        @keyframes pulse-orange {
+            0% { transform: scale(1); box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3); }
+            50% { transform: scale(1.03); box-shadow: 0 4px 20px rgba(230, 126, 34, 0.5); }
+            100% { transform: scale(1); box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3); }
+        }
     </style>
 </head>
 <body>
@@ -67,7 +85,10 @@
                 <span class="na-marker"></span> <b>Gray</b> = Data Not Available
             </p>
         </div>
-        <a href="flood_map_India.html" class="drill-down-btn">Drill Down to India →</a>
+        
+        <div class="drill-down-section">
+            <a href="flood_map_India.html" class="drill-down-btn">Drill Down to India View →</a>
+        </div>
     </div>
     <div id="map"></div>
     <script src="day2/map_data.js"></script>
@@ -79,7 +100,6 @@
 
         let layerGroup = L.layerGroup().addTo(map);
 
-        // Professional Blue Palette (Light Blue -> Bright Blue -> Navy)
         function getBlueScale(fraction) {
             const colors = [
                 [209, 233, 255], // Very Light Blue
