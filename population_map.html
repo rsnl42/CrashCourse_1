@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India Population Density Map</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCBitJg7sJpdrjX99sL5j2aQ="
+     crossorigin=""/>
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV194A7Zg5="
+     crossorigin=""></script>
+
+    <!-- GeoTIFF.js - Dependency for Leaflet.GeoTIFF -->
+    <!-- Download from: https://github.com/geotiffjs/geotiff.js -->
+    <script src="assets/js/geotiff.min.js"></script>
+
+    <!-- Leaflet.GeoTIFF Plugin -->
+    <!-- Download from: https://github.com/dynamic-web-tools/Leaflet.GeoTIFF -->
+    <script src="assets/js/Leaflet.GeoTIFF-master/dist/leaflet-geotiff-4.0.0.min.js"></script>
+
+    <style>
+        body { margin: 0; padding: 0; font-family: sans-serif; }
+        #map { height: 100vh; width: 100%; }
+        .info-control {
+            padding: 6px 8px;
+            font: 14px/16px Arial, Helvetica, sans-serif;
+            background: white;
+            background: rgba(255,255,255,0.8);
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            border-radius: 5px;
+            text-align: center;
+        }
+        .info-control h4 { margin: 0 0 5px; color: #333;}
+        .legend { text-align: left; color: #555; }
+        .legend span { display: inline-block; width: 12px; height: 12px; margin-right: 5px; border: 1px solid #333; }
+    </style>
+</head>
+<body>
+
+    <div id="map"></div>
+
+    <script>
+        // Initialize the Leaflet map
+        const map = L.map('map').setView([20.5937, 78.9629], 5); // Center on India
+
+        // Add a base map (e.g., OpenStreetMap)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // --- GeoTIFF Overlay Configuration ---
+        // ** IMPORTANT: Replace this URL with the actual URL of your hosted GeoTIFF file **
+        const geoTiffUrl = 'assets/data/india_population_density.tif'; // <-- Adjust this path
+
+        // Options for styling the GeoTIFF layer
+        const geoTiffOptions = {
+            // Example for a color scale (you might need to define one or use a library like Chroma.js)
+            colorScales: {
+                'population_density': ['#ffffcc', '#fdbe85', '#e77458', '#b30000'] // Example color ramp
+            },
+            opacity: 0.7, // Adjust transparency
+            // band: 1, // Use band 1 if your GeoTIFF has multiple bands and you want a specific one
+            // clip: true // Clip layer to map bounds if needed
+        };
+
+        // Load and add the GeoTIFF layer
+        L.GeoTIFFOverlay.fromUrl(geoTiffUrl, geoTiffOptions)
+            .addTo(map)
+            .on('ready', function(e) {
+                console.log('GeoTIFF layer loaded successfully:', e.layer);
+            })
+            .on('error', function(e) {
+                console.error('Error loading GeoTIFF layer:', e);
+                alert('Could not load the population density map. Please check the console for details and ensure the GeoTIFF file is correctly hosted and accessible.');
+            });
+
+        // Optional: Add an information control (e.g., a simple legend or title)
+        const info = L.control();
+        info.onAdd = function (map) {
+            this._div = L.DomUtil.create('div', 'info-control'); // create a div with a class for styling
+            this._div.innerHTML = '<h4>India Population Density</h4>';
+            // Add more info, like a basic color scale representation if desired
+            // this._div.innerHTML += '<div class="legend">' +
+            //    '<span style="background:#ffffcc;"></span> Low<br>' +
+            //    '<span style="background:#b30000;"></span> High' +
+            //    '</div>';
+            return this._div;
+        };
+        info.addTo(map);
+
+    </script>
+
+</body>
+</html>
