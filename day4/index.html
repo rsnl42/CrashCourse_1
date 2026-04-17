@@ -169,6 +169,20 @@
             font-weight: bold;
         }
 
+        .data-snippet {
+            background: #272822;
+            color: #f8f8f2;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.75rem;
+            overflow-x: auto;
+            white-space: pre;
+            margin-top: 10px;
+            max-height: 150px;
+            border: 1px solid #444;
+        }
+
         /* Maps Section Styles */
         .map-selector-container {
             background: var(--white);
@@ -209,7 +223,7 @@
         }
 
         #maps-container {
-            display: none;
+            display: none; /* Hidden by default */
             margin-top: 2rem;
             animation: fadeIn 0.5s ease-out;
         }
@@ -229,6 +243,7 @@
             <a href="#analysis">Analysis</a>
             <a href="#datasets">Datasets</a>
             <a href="rfp.html">RFP</a>
+            <a href="archives/index.html">Archives</a>
         </nav>
     </header>
 
@@ -307,7 +322,7 @@
                     <span class="tag">Infrastructure</span>
                     <h3><a href="https://overpass-turbo.eu/?Q=area%5B%22name%22%3D%22Uttar%20Pradesh%22%5D-%3E.a%3B%0A%28%0A%20%20node%5B%22amenity%22%3D%22hospital%22%5D%28area.a%29%3B%0A%20%20way%5B%22amenity%22%3D%22hospital%22%5D%28area.a%29%3B%0A%20%20rel%5B%22amenity%22%3D%22hospital%22%5D%28area.a%29%3B%0A%29%3B%0Aout%20center%3B" target="_blank">Health Facilities Data</a></h3>
                     <div class="card-meta">
-                        <p><strong>Source:</strong> OpenStreetMap (via Overpass API)</p>
+                        <p><strong>Source:</strong> OpenStreetMap (via Overpass API)</p>3
                         <p><strong>Format:</strong> JSON, GeoJSON</p>
                         <p><strong>Date Retrieved:</strong> April 16, 2026</p>
                         <p><strong>Description:</strong> Geospatial locations of hospitals and clinics in Uttar Pradesh, India.</p>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Archives | Civic Literacy Initiative</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --background: #f4f7f6;
+            --text: #333;
+            --white: #ffffff;
+            --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #7f8c8d, #2c3e50);
+            color: var(--white);
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            border-bottom: 3px solid #7f8c8d;
+            display: inline-block;
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #7f8c8d;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #7f8c8d;
+            color: var(--white);
+            padding: 0.8rem 1.2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            text-align: center;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--primary);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        .tag {
+            background: #ecf0f1;
+            color: #7f8c8d;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="../index.html">Back to Live Project</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Project Archives</h1>
+        <p>A repository of historical visualizations, experimental maps, and earlier iterations of the Disaster Preparedness Project.</p>
+    </div>
+
+    <div class="container">
+        
+        <section id="archived-maps">
+            <h2>Archived Visualizations</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <span class="tag">Version 1.0</span>
+                    <h3>Australia Bushfire Risk</h3>
+                    <p>Early visualization of high-risk bushfire interfaces in Australia's forested residential zones.</p>
+                    <a href="index_aus.html" class="btn">Launch Archived Map</a>
+                </div>
+                <div class="card">
+                    <span class="tag">Experimental</span>
+                    <h3>Comprehensive Risk Map</h3>
+                    <p>The original split-screen comparison of India and Australia risk profiles, used during the initial research phase.</p>
+                    <a href="comprehensive_risk_map.html" class="btn">Launch Archived Map</a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2026 Civic Literacy Initiative (CLI). Project Archive.</p>
+    </div>
+
+</body>
+</html>
