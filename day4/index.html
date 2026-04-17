@@ -182,56 +182,6 @@
             max-height: 150px;
             border: 1px solid #444;
         }
-
-        /* Maps Section Styles */
-        .map-selector-container {
-            background: var(--white);
-            border-radius: 8px;
-            padding: 2rem;
-            box-shadow: var(--card-shadow);
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        .map-toggle-btn {
-            background-color: var(--primary);
-            color: var(--white);
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 4px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.3s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto;
-            gap: 10px;
-        }
-
-        .map-toggle-btn:hover {
-            background-color: var(--secondary);
-        }
-
-        .map-toggle-btn .arrow {
-            transition: transform 0.3s;
-        }
-
-        .map-toggle-btn.active .arrow {
-            transform: rotate(180deg);
-        }
-
-        #maps-container {
-            display: none; /* Hidden by default */
-            margin-top: 2rem;
-            animation: fadeIn 0.5s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
     </style>
 </head>
 <body>
@@ -257,32 +207,13 @@
         <!-- Maps Section -->
         <section id="maps">
             <h2>Maps</h2>
-            <div class="map-selector-container">
-                <p style="margin-bottom: 1.5rem; font-size: 1.1rem; color: #666;">Explore our interactive geospatial visualizations for climate risks and health infrastructure.</p>
-                <button class="map-toggle-btn" onclick="toggleMaps()">
-                    <span>View Map Options</span>
-                    <span class="arrow">▼</span>
-                </button>
-
-                <div id="maps-container">
-                    <div class="card-grid">
-                        <div class="card">
-                            <span class="tag">Primary View</span>
-                            <h3>Global Historical Floods</h3>
-                            <p>Our main entry point. Start here to explore global trends and drill down into specific regional risks in India and Uttar Pradesh.</p>
-                            <a href="../flood_map.html" class="btn">Launch Global Map</a>
-                        </div>
-                        <div class="card">
-                            <h3>Australia Bushfire Risk</h3>
-                            <p>Visualization of high-risk bushfire interfaces in Australia's forested residential zones.</p>
-                            <a href="../index_aus.html" class="btn">Launch Map</a>
-                        </div>
-                        <div class="card">
-                            <h3>Comprehensive Risk Map</h3>
-                            <p>The original split-screen comparison of India and Australia risk profiles.</p>
-                            <a href="comprehensive_risk_map.html" class="btn">Launch Map</a>
-                        </div>
-                    </div>
+            <p style="margin-bottom: 2rem; font-size: 1.1rem; color: #666;">Explore our interactive geospatial visualizations for climate risks and health infrastructure.</p>
+            <div class="card-grid">
+                <div class="card">
+                    <span class="tag">Primary View</span>
+                    <h3>Global Historical Floods</h3>
+                    <p>Our main entry point. Start here to explore global trends and drill down into specific regional risks in India and Uttar Pradesh.</p>
+                    <a href="../flood_map.html" class="btn">Launch Global Map</a>
                 </div>
             </div>
         </section>
@@ -322,7 +253,7 @@
                     <span class="tag">Infrastructure</span>
                     <h3><a href="https://overpass-turbo.eu/?Q=area%5B%22name%22%3D%22Uttar%20Pradesh%22%5D-%3E.a%3B%0A%28%0A%20%20node%5B%22amenity%22%3D%22hospital%22%5D%28area.a%29%3B%0A%20%20way%5B%22amenity%22%3D%22hospital%22%5D%28area.a%29%3B%0A%20%20rel%5B%22amenity%22%3D%22hospital%22%5D%28area.a%29%3B%0A%29%3B%0Aout%20center%3B" target="_blank">Health Facilities Data</a></h3>
                     <div class="card-meta">
-                        <p><strong>Source:</strong> OpenStreetMap (via Overpass API)</p>3
+                        <p><strong>Source:</strong> OpenStreetMap (via Overpass API)</p>
                         <p><strong>Format:</strong> JSON, GeoJSON</p>
                         <p><strong>Date Retrieved:</strong> April 16, 2026</p>
                         <p><strong>Description:</strong> Geospatial locations of hospitals and clinics in Uttar Pradesh, India.</p>
@@ -346,24 +277,6 @@
     <div class="footer">
         <p>&copy; 2026 Civic Literacy Initiative (CLI). Built with AI for Disaster Preparedness.</p>
     </div>
-
-    <script>
-        function toggleMaps() {
-            const container = document.getElementById('maps-container');
-            const btn = document.querySelector('.map-toggle-btn');
-            const arrow = btn.querySelector('.arrow');
-            
-            if (container.style.display === 'block') {
-                container.style.display = 'none';
-                btn.classList.remove('active');
-                btn.querySelector('span').innerText = 'View Map Options';
-            } else {
-                container.style.display = 'block';
-                btn.classList.add('active');
-                btn.querySelector('span').innerText = 'Hide Map Options';
-            }
-        }
-    </script>
 
 </body>
 </html>
