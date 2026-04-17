@@ -115,6 +115,17 @@
             color: var(--secondary);
         }
 
+        .card h3 a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .card h3 a:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
         .card-meta {
             font-size: 0.9rem;
             color: #666;
@@ -156,20 +167,6 @@
             border-radius: 4px;
             font-size: 0.8rem;
             font-weight: bold;
-        }
-
-        .data-snippet {
-            background: #272822;
-            color: #f8f8f2;
-            padding: 10px;
-            border-radius: 4px;
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 0.75rem;
-            overflow-x: auto;
-            white-space: pre;
-            margin-top: 10px;
-            max-height: 150px;
-            border: 1px solid #444;
         }
 
         /* Maps Section Styles */
@@ -307,58 +304,32 @@
             <div class="card-grid">
                 <div class="card">
                     <span class="tag">Main Dataset</span>
-                    <h3>Global Flood Archive</h3>
+                    <h3><a href="https://ckan.rimes.int/sv/dataset/global-active-archive-of-large-flood-events/resource/1bc8c6f2-cdb8-44f0-bd81-412341ba944b" target="_blank">Global Flood Archive</a></h3>
                     <div class="card-meta">
-                        <p><strong>Source:</strong> <a href="https://ckan.rimes.int/sv/dataset/global-active-archive-of-large-flood-events/resource/1bc8c6f2-cdb8-44f0-bd81-412341ba944b" target="_blank" style="color: var(--secondary);">RIMES CKAN (DFO Archive)</a></p>
+                        <p><strong>Source:</strong> RIMES CKAN (DFO Archive)</p>
                         <p><strong>Format:</strong> CSV, Excel</p>
                         <p><strong>Date Retrieved:</strong> April 16, 2026</p>
                         <p><strong>Description:</strong> Curated list of historical flood events globally since 1985.</p>
-                        <div class="data-snippet">ID,GlideNumber,Country,long,lat,Year,Severity
-1,0,ALGERIA,5.23026,35.8142,1985,1.0
-2,0,BRAZIL,-45.3489,-18.7111,1985,2.0
-3,0,PHILIPPINES,122.974,10.0207,1985,1.0
-4,0,INDONESIA,124.606,1.01489,1985,1.0
-5,0,MOZAMBIQUE,32.3491,-25.8693,1985,2.0</div>
                     </div>
                 </div>
                 <div class="card">
                     <span class="tag">Infrastructure</span>
-                    <h3>Health Facilities Data</h3>
+                    <h3><a href="https://overpass-turbo.eu/?Q=area%5B%22name%22%3D%22Uttar%20Pradesh%22%5D-%3E.a%3B%0A%28%0A%20%20node%5B%22amenity%22%3D%22hospital%22%5D%28area.a%29%3B%0A%20%20way%5B%22amenity%22%3D%22hospital%22%5D%28area.a%29%3B%0A%20%20rel%5B%22amenity%22%3D%22hospital%22%5D%28area.a%29%3B%0A%29%3B%0Aout%20center%3B" target="_blank">Health Facilities Data</a></h3>
                     <div class="card-meta">
-                        <p><strong>Source:</strong> <a href="https://overpass-turbo.eu/" target="_blank" style="color: var(--secondary);">OpenStreetMap (via Overpass API)</a></p>
+                        <p><strong>Source:</strong> OpenStreetMap (via Overpass API)</p>
                         <p><strong>Format:</strong> JSON, GeoJSON</p>
                         <p><strong>Date Retrieved:</strong> April 16, 2026</p>
                         <p><strong>Description:</strong> Geospatial locations of hospitals and clinics in Uttar Pradesh, India.</p>
-                        <div class="data-snippet">{
-  "name": "Unnamed Hospital",
-  "lat": 25.2780, "lng": 82.9543,
-  "type": "hospital"
-},
-{
-  "name": "Mata Anandmayee Hospital",
-  "lat": 25.2794, "lng": 83.0116,
-  "type": "hospital"
-},
-{
-  "name": "Heritage Hospital",
-  "lat": 25.2810, "lng": 83.0012,
-  "type": "hospital"
-}</div>
                     </div>
                 </div>
                 <div class="card">
                     <span class="tag">Regional Risk</span>
-                    <h3>Climate Risk Indicators</h3>
+                    <h3><a href="https://www.ipcc.ch/" target="_blank">Climate Risk Indicators</a></h3>
                     <div class="card-meta">
-                        <p><strong>Source:</strong> <a href="https://www.ipcc.ch/" target="_blank" style="color: var(--secondary);">IPCC</a> & Regional Fire Services</p>
+                        <p><strong>Source:</strong> IPCC & Regional Fire Services</p>
                         <p><strong>Format:</strong> Python/JS Objects</p>
                         <p><strong>Date Retrieved:</strong> April 16, 2026</p>
                         <p><strong>Description:</strong> Synthetic indicators for drought and bushfire risk mapping.</p>
-                        <div class="data-snippet">{ name: "Bihar", coords: [25.5, 85.1], icon: "💧" },
-{ name: "Rajasthan", coords: [26.9, 75.7], icon: "🌵" },
-{ name: "Melbourne", coords: [-37.8, 145.3], icon: "🔥" },
-{ name: "Sydney", coords: [-33.7, 150.3], icon: "🔥" },
-{ name: "Gujarat", coords: [23.2, 72.6], icon: "💧🌵" }</div>
                     </div>
                 </div>
             </div>
