@@ -36,18 +36,26 @@
         .dot { height: 10px; width: 10px; border-radius: 50%; display: inline-block; margin-right: 8px; border: 1px solid #333; }
 
         .nav-btn {
-            display: inline-block; width: 100%; padding: 10px; margin-top: 10px;
-            background-color: #007bff; color: white;
+            display: inline-block; width: 100%; padding: 8px 15px; margin-top: 10px;
+            background-color: #ffffff; color: #007bff;
             text-align: center; text-decoration: none; font-weight: 600;
-            border-radius: 6px; transition: all 0.2s ease; border: none;
-            cursor: pointer; font-size: 0.9rem;
+            border-radius: 6px; transition: all 0.2s ease; border: 1px solid #b3cde3;
+            cursor: pointer; font-size: 0.85em;
         }
-        .nav-btn:hover { background-color: #0056b3; transform: translateY(-1px); box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .nav-btn:hover { 
+            background-color: #e6f2ff; 
+            transform: translateY(-1px); 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .nav-const { transform: translateY(0); }
+        
         .nav-btn.secondary {
-            background-color: #6c757d; color: white;
-            border-color: #6c757d;
+            background-color: #ced4da; color: #333;
+            border-color: #adb5bd;
         }
-        .nav-btn.secondary:hover { background-color: #5a6268; }
+        .nav-btn.secondary:hover { 
+            background-color: #adb5bd; 
+        }
     </style>
 </head>
 <body>
@@ -56,9 +64,18 @@
         
         <div class="legend-content">
             <div class="section-title">Toggle Severity</div>
-            <label class="legend-item"><input type="checkbox" checked onchange="toggleLayer('sev1', this)"> <span class="dot" style="background-color: #7fbfff;"></span> Sev 1.0</label>
-            <label class="legend-item"><input type="checkbox" checked onchange="toggleLayer('sev1_5', this)"> <span class="dot" style="background-color: #ff8c00;"></span> Sev 1.5</label>
-            <label class="legend-item"><input type="checkbox" checked onchange="toggleLayer('sev2', this)"> <span class="dot" style="background-color: #ff0000;"></span> Sev 2.0</label>
+            <label class="legend-item">
+                <input type="checkbox" checked onchange="toggleLayer('sev1', this)">
+                <span class="dot" style="background-color: #7fbfff;"></span> Severity 1.0
+            </label>
+            <label class="legend-item">
+                <input type="checkbox" checked onchange="toggleLayer('sev1_5', this)">
+                <span class="dot" style="background-color: #ff8c00;"></span> Severity 1.5
+            </label>
+            <label class="legend-item">
+                <input type="checkbox" checked onchange="toggleLayer('sev2', this)">
+                <span class="dot" style="background-color: #ff0000;"></span> Severity 2.0
+            </label>
         </div>
         
         <a href="day4/flood_risk_map_UP.html" class="nav-btn">Drill Down to Uttar Pradesh →</a>
