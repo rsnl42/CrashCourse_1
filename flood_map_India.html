@@ -10,64 +10,77 @@
         body, html { height: 100%; margin: 0; background: #f0f4f8; }
         #map { height: 100%; width: 100%; }
         
-        /* Legend styling */
-        .custom-legend {
-            background: white;
-            padding: 12px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 0.9em;
-            width: 180px;
-            border-left: 5px solid #007bff;
+        .panel {
+            position: absolute; top: 20px; right: 20px; z-index: 1000;
+            background: rgba(255, 255, 255, 0.98); padding: 20px; border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 40, 133, 0.15); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            width: 280px; border: 1px solid #d1e3f8;
         }
-        .legend-title {
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #004085;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 5px;
+        
+        h3 { margin: 0 0 15px 0; color: #004085; font-size: 1.25em; border-bottom: 2px solid #007bff; padding-bottom: 8px; }
+        
+        .legend-content {
+            background: #f8fbff; padding: 12px; border-radius: 8px;
+            font-size: 0.85em; border: 1px solid #e1e9f4; margin-bottom: 15px;
         }
+
         .legend-item {
             display: flex;
             align-items: center;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
             cursor: pointer;
+            color: #2c3e50;
+            font-weight: 500;
         }
-        .legend-item input {
-            margin-right: 10px;
-            cursor: pointer;
+        .legend-item input { margin-right: 12px; cursor: pointer; }
+        .dot { height: 10px; width: 10px; border-radius: 50%; display: inline-block; margin-right: 8px; border: 1px solid #333; }
+
+        .nav-btn {
+            display: inline-block; width: 100%; padding: 10px; margin-top: 10px;
+            background-color: #007bff; color: white;
+            text-align: center; text-decoration: none; font-weight: 600;
+            border-radius: 6px; transition: all 0.2s ease; border: none;
+            cursor: pointer; font-size: 0.9rem;
         }
-        .dot {
-            height: 10px;
-            width: 10px;
-            border-radius: 50%;
-            display: inline-block;
-            margin-right: 8px;
-            border: 1px solid #333;
-        }
-        .drill-down-btn {
-            display: block; width: 100%; padding: 10px; margin-top: 15px;
-            background-color: #3498db; color: white;
-            text-align: center; text-decoration: none; font-weight: bold;
-            border-radius: 5px; transition: background 0.3s; border: none;
-            cursor: pointer; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 0.9em;
-        }
-        .drill-down-btn:hover { background-color: #2980b9; }
+        .nav-btn:hover { background-color: #0056b3; transform: translateY(-1px); box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .nav-btn.secondary { background-color: #6c757d; }
+        .nav-btn.secondary:hover { background-color: #5a6268; }
     </style>
 </head>
 <body>
+    <div class="panel">
+        <h3>India Flood History</h3>
+        
+        <div class="legend-content">
+            <div style="font-weight: 600; color: #004085; margin-bottom: 10px; font-size: 0.9em;">Toggle Severity</div>
+            <label class="legend-item">
+                <input type="checkbox" checked onchange="toggleLayer('sev1', this)">
+                <span class="dot" style="background-color: #7fbfff;"></span> Severity 1.0
+            </label>
+            <label class="legend-item">
+                <input type="checkbox" checked onchange="toggleLayer('sev1_5', this)">
+                <span class="dot" style="background-color: #ff8c00;"></span> Severity 1.5
+            </label>
+            <label class="legend-item">
+                <input type="checkbox" checked onchange="toggleLayer('sev2', this)">
+                <span class="dot" style="background-color: #ff0000;"></span> Severity 2.0
+            </label>
+        </div>
+        
+        <a href="day4/flood_risk_map_UP.html" class="nav-btn">Drill Down to Uttar Pradesh</a>
+        <a href="flood_map.html" class="nav-btn secondary">← Back to Global Map</a>
+    </div>
+
     <div id="map"></div>
     <script src="day2/india_points.js"></script>
     <script>
-        const map = L.map('map').setView([22.5, 78.9], 5); 
-        
+        const map = L.map('map', { zoomControl: false }).setView([22.5, 78.9], 5); 
+        L.control.zoom({ position: 'bottomright' }).addTo(map);
+
         L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
             attribution: '© OpenStreetMap, © CARTO'
         }).addTo(map);
 
-        // Flood Layers
         const layers = {
             'sev1': L.layerGroup().addTo(map),
             'sev1_5': L.layerGroup().addTo(map),
@@ -79,35 +92,19 @@
             let fillColor, radius, targetLayer;
             
             if (sev === 1 || String(sev) === '1.0') {
-                fillColor = '#7fbfff';
-                radius = 5;
-                targetLayer = layers.sev1;
+                fillColor = '#7fbfff'; radius = 5; targetLayer = layers.sev1;
             } else if (sev === 1.5 || String(sev) === '1.5') {
-                fillColor = '#ff8c00';
-                radius = 8; 
-                targetLayer = layers.sev1_5;
+                fillColor = '#ff8c00'; radius = 8; targetLayer = layers.sev1_5;
             } else if (sev === 2 || String(sev) === '2.0') {
-                fillColor = '#ff0000';
-                radius = 12;  
-                targetLayer = layers.sev2;
+                fillColor = '#ff0000'; radius = 12; targetLayer = layers.sev2;
             } else {
-                fillColor = '#007bff';
-                radius = 5;
-                targetLayer = layers.sev1;
+                fillColor = '#007bff'; radius = 5; targetLayer = layers.sev1;
             }
 
-            // Only show Location for Severity 2.0 (Red points)
-            const locationHtml = (sev === 2 || String(sev) === '2.0') 
-                ? `<b>Location:</b> ${p.Place || 'N/A'}<br>` 
-                : '';
+            const locationHtml = (sev === 2 || String(sev) === '2.0') ? `<b>Location:</b> ${p.Place || 'N/A'}<br>` : '';
 
             L.circleMarker([p.lat, p.lng], {
-                radius: radius,
-                fillColor: fillColor,
-                color: "#004085",
-                weight: 1,
-                opacity: 0.8,
-                fillOpacity: 0.7
+                radius: radius, fillColor: fillColor, color: "#004085", weight: 1, opacity: 0.8, fillOpacity: 0.7
             }).bindPopup(`
                 <div style="font-family: sans-serif;">
                     <b style="color:#d32f2f">Flood Event</b><br>
@@ -119,41 +116,9 @@
             `).addTo(targetLayer);
         });
 
-        // Custom Checkbox Legend at Bottom Left
-        const legend = L.control({ position: 'bottomleft' });
-
-        legend.onAdd = function(map) {
-            const div = L.DomUtil.create('div', 'custom-legend');
-            div.innerHTML = `
-                <div class="legend-title">Flood Severity</div>
-                <label class="legend-item">
-                    <input type="checkbox" checked onchange="toggleLayer('sev1', this)">
-                    <span class="dot" style="background-color: #7fbfff;"></span> Severity 1.0
-                </label>
-                <label class="legend-item">
-                    <input type="checkbox" checked onchange="toggleLayer('sev1_5', this)">
-                    <span class="dot" style="background-color: #ff8c00;"></span> Severity 1.5
-                </label>
-                <label class="legend-item">
-                    <input type="checkbox" checked onchange="toggleLayer('sev2', this)">
-                    <span class="dot" style="background-color: #ff0000;"></span> Severity 2.0
-                </label>
-                <a href="day4/flood_risk_map_UP.html" class="drill-down-btn">Drill Down to Uttar Pradesh →</a>
-            `;
-            
-            // Prevent map clicks through the legend
-            L.DomEvent.disableClickPropagation(div);
-            return div;
-        };
-
-        legend.addTo(map);
-
         function toggleLayer(key, checkbox) {
-            if (checkbox.checked) {
-                map.addLayer(layers[key]);
-            } else {
-                map.removeLayer(layers[key]);
-            }
+            if (checkbox.checked) map.addLayer(layers[key]);
+            else map.removeLayer(layers[key]);
         }
     </script>
 </body>
