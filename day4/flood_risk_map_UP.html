@@ -37,13 +37,20 @@
         .hosp-icon { vertical-align: middle; margin-right: 8px; }
 
         .nav-btn {
-            display: inline-block; width: 100%; padding: 10px; margin-top: 5px;
-            background-color: #6c757d; color: white;
+            display: inline-block; width: 100%; padding: 10px; margin-top: 10px;
+            background-color: #007bff; color: white;
             text-align: center; text-decoration: none; font-weight: 600;
             border-radius: 6px; transition: all 0.2s ease; border: none;
             cursor: pointer; font-size: 0.9rem;
         }
-        .nav-btn:hover { background-color: #5a6268; transform: translateY(-1px); box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .nav-btn:hover { background-color: #0056b3; transform: translateY(-1px); box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .nav-btn:active { transform: translateY(0); }
+        
+        .nav-btn.secondary {
+            background-color: #6c757d; color: white;
+            border-color: #6c757d;
+        }
+        .nav-btn.secondary:hover { background-color: #5a6268; }
     </style>
 </head>
 <body>

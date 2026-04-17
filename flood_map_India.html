@@ -15,6 +15,7 @@
             background: rgba(255, 255, 255, 0.98); padding: 20px; border-radius: 12px;
             box-shadow: 0 8px 24px rgba(0, 40, 133, 0.15); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
             width: 280px; border: 1px solid #d1e3f8;
+            max-height: 85vh; overflow-y: auto;
         }
         
         h3 { margin: 0 0 15px 0; color: #004085; font-size: 1.25em; border-bottom: 2px solid #007bff; padding-bottom: 8px; }
@@ -24,15 +25,14 @@
             font-size: 0.85em; border: 1px solid #e1e9f4; margin-bottom: 15px;
         }
 
+        .section-title { font-weight: 600; color: #004085; margin-bottom: 10px; font-size: 0.9em; text-transform: uppercase; letter-spacing: 0.5px; }
+
         .legend-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 8px;
-            cursor: pointer;
-            color: #2c3e50;
-            font-weight: 500;
+            display: flex; align-items: center; margin-bottom: 8px;
+            cursor: pointer; color: #2c3e50; font-weight: 500;
         }
         .legend-item input { margin-right: 12px; cursor: pointer; }
+        
         .dot { height: 10px; width: 10px; border-radius: 50%; display: inline-block; margin-right: 8px; border: 1px solid #333; }
 
         .nav-btn {
@@ -43,7 +43,10 @@
             cursor: pointer; font-size: 0.9rem;
         }
         .nav-btn:hover { background-color: #0056b3; transform: translateY(-1px); box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        .nav-btn.secondary { background-color: #6c757d; }
+        .nav-btn.secondary {
+            background-color: #6c757d; color: white;
+            border-color: #6c757d;
+        }
         .nav-btn.secondary:hover { background-color: #5a6268; }
     </style>
 </head>
@@ -52,22 +55,13 @@
         <h3>India Flood History</h3>
         
         <div class="legend-content">
-            <div style="font-weight: 600; color: #004085; margin-bottom: 10px; font-size: 0.9em;">Toggle Severity</div>
-            <label class="legend-item">
-                <input type="checkbox" checked onchange="toggleLayer('sev1', this)">
-                <span class="dot" style="background-color: #7fbfff;"></span> Severity 1.0
-            </label>
-            <label class="legend-item">
-                <input type="checkbox" checked onchange="toggleLayer('sev1_5', this)">
-                <span class="dot" style="background-color: #ff8c00;"></span> Severity 1.5
-            </label>
-            <label class="legend-item">
-                <input type="checkbox" checked onchange="toggleLayer('sev2', this)">
-                <span class="dot" style="background-color: #ff0000;"></span> Severity 2.0
-            </label>
+            <div class="section-title">Toggle Severity</div>
+            <label class="legend-item"><input type="checkbox" checked onchange="toggleLayer('sev1', this)"> <span class="dot" style="background-color: #7fbfff;"></span> Sev 1.0</label>
+            <label class="legend-item"><input type="checkbox" checked onchange="toggleLayer('sev1_5', this)"> <span class="dot" style="background-color: #ff8c00;"></span> Sev 1.5</label>
+            <label class="legend-item"><input type="checkbox" checked onchange="toggleLayer('sev2', this)"> <span class="dot" style="background-color: #ff0000;"></span> Sev 2.0</label>
         </div>
         
-        <a href="day4/flood_risk_map_UP.html" class="nav-btn">Drill Down to Uttar Pradesh</a>
+        <a href="day4/flood_risk_map_UP.html" class="nav-btn">Drill Down to Uttar Pradesh →</a>
         <a href="flood_map.html" class="nav-btn secondary">← Back to Global Map</a>
     </div>
 
